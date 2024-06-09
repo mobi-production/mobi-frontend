@@ -1,0 +1,40 @@
+{
+  "name": "mobi",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "turbo dev",
+    "dev:academy": "turbo dev --filter=academy",
+    "dev:lms": "turbo dev --filter=lms",
+    "build": "turbo build",
+    "build:academy": "turbo build --filter=academy",
+    "build:lms": "turbo build --filter=lms",
+    "storybook": "pnpm --filter=storybook storybook",
+    "build-storybook": "pnpm --filter storybook run chromatic",
+    "lint": "turbo lint",
+    "lint:academy": "turbo lint --filter=academy",
+    "lint:lms": "turbo lint --filter=lms",
+    "lint:storybook": "turbo lint --filter=storybook",
+    "test": "turbo test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.6.1",
+    "pretty-quick": "^4.0.0",
+    "turbo": "^2.0.3"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "eslint": "^9.4.0"
+  }
+}
