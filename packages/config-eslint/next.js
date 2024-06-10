@@ -24,6 +24,9 @@ module.exports = {
       typescript: {
         project
       }
+    },
+    react: {
+      version: 'detect'
     }
   },
   ignorePatterns: [
