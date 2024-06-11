@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <button>아 그랭냐</button>
+      </body>
     </html>
   )
 }

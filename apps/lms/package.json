@@ -14,10 +14,10 @@
     "next": "14.2.3",
     "@repo/hook": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@repo/util": "workspace:*",
-    "@repo/design": "workspace:*"
+    "@repo/util": "workspace:*"
   },
   "devDependencies": {
+    "@mobi/config": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "typescript": "^5",
