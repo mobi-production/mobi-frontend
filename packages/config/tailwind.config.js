@@ -2,10 +2,9 @@
 module.exports = {
   ...require('../ui/tailwind.config'),
   content: [
-    '../../apps/academy/**/*.{js,ts,jsx,tsx}',
-    '../../apps/lms/**/*.{js,ts,jsx,tsx}',
-    '../../packages/ui/src/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}'
+    './app/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    '../../packages/ui/src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
