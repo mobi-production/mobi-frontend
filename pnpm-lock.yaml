@@ -14,24 +14,18 @@ importers:
       '@commitlint/cli':
         specifier: ^19.3.0
         version: 19.3.0(@types/node@20.13.0)(typescript@5.4.5)
-      '@commitlint/config-conventional':
-        specifier: ^19.2.2
-        version: 19.2.2
+      '@mobi/config':
+        specifier: workspace:*
+        version: link:packages/config
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:packages/config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:packages/config-typescript
+        version: link:packages/eslint
       husky:
         specifier: ^9.0.11
         version: 9.0.11
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
-      prettier-plugin-tailwindcss:
-        specifier: ^0.6.1
-        version: 0.6.1(prettier@3.2.5)
       pretty-quick:
         specifier: ^4.0.0
         version: 4.0.0(prettier@3.2.5)
@@ -41,18 +35,15 @@ importers:
 
   apps/academy:
     dependencies:
-      '@repo/design':
-        specifier: workspace:*
-        version: link:../../packages/share-design
       '@repo/hook':
         specifier: workspace:*
-        version: link:../../packages/share-hook
+        version: link:../../packages/hook
       '@repo/ui':
         specifier: workspace:*
-        version: link:../../packages/share-ui
+        version: link:../../packages/ui
       '@repo/util':
         specifier: workspace:*
-        version: link:../../packages/share-util
+        version: link:../../packages/util
       next:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -63,12 +54,15 @@ importers:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@mobi/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/config-eslint
+        version: link:../../packages/eslint
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/config-typescript
+        version: link:../../packages/tsconfig
       '@types/node':
         specifier: ^20
         version: 20.13.0
@@ -78,6 +72,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8
         version: 8.57.0
@@ -96,18 +93,15 @@ importers:
 
   apps/lms:
     dependencies:
-      '@repo/design':
-        specifier: workspace:*
-        version: link:../../packages/share-design
       '@repo/hook':
         specifier: workspace:*
-        version: link:../../packages/share-hook
+        version: link:../../packages/hook
       '@repo/ui':
         specifier: workspace:*
-        version: link:../../packages/share-ui
+        version: link:../../packages/ui
       '@repo/util':
         specifier: workspace:*
-        version: link:../../packages/share-util
+        version: link:../../packages/util
       next:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -118,12 +112,15 @@ importers:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@mobi/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/config-eslint
+        version: link:../../packages/eslint
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/config-typescript
+        version: link:../../packages/tsconfig
       '@types/node':
         specifier: ^20
         version: 20.13.0
@@ -151,18 +148,15 @@ importers:
 
   apps/storybook:
     dependencies:
-      '@repo/design':
-        specifier: workspace:*
-        version: link:../../packages/share-design
       '@repo/hook':
         specifier: workspace:*
-        version: link:../../packages/share-hook
+        version: link:../../packages/hook
       '@repo/ui':
         specifier: workspace:*
-        version: link:../../packages/share-ui
+        version: link:../../packages/ui
       '@repo/util':
         specifier: workspace:*
-        version: link:../../packages/share-util
+        version: link:../../packages/util
       next:
         specifier: 14.2.3
         version: 14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -176,12 +170,15 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^1.5.0
         version: 1.5.0(react@18.3.1)
+      '@mobi/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/config-eslint
+        version: link:../../packages/eslint
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/config-typescript
+        version: link:../../packages/tsconfig
       '@storybook/addon-essentials':
         specifier: ^8.1.5
         version: 8.1.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -243,7 +240,19 @@ importers:
         specifier: ^5
         version: 5.4.5
 
-  packages/config-eslint:
+  packages/config:
+    dependencies:
+      '@commitlint/config-conventional':
+        specifier: ^19.2.2
+        version: 19.2.2
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      prettier-plugin-tailwindcss:
+        specifier: ^0.6.1
+        version: 0.6.1(prettier@3.2.5)
+
+  packages/eslint:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.11.0
@@ -288,15 +297,7 @@ importers:
         specifier: ^5.3.3
         version: 5.4.5
 
-  packages/config-typescript: {}
-
-  packages/share-design:
-    devDependencies:
-      typescript:
-        specifier: ^5.3.3
-        version: 5.4.5
-
-  packages/share-hook:
+  packages/hook:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -336,14 +337,13 @@ importers:
         specifier: ^5.2.0
         version: 5.2.12(@types/node@20.13.0)(terser@5.31.0)
 
-  packages/share-ui:
+  packages/tsconfig: {}
+
+  packages/ui:
     dependencies:
-      '@repo/design':
-        specifier: workspace:*
-        version: link:../share-design
       '@repo/util':
         specifier: workspace:*
-        version: link:../share-util
+        version: link:../util
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -394,7 +394,7 @@ importers:
         specifier: ^5.2.0
         version: 5.2.12(@types/node@20.13.0)(terser@5.31.0)
 
-  packages/share-util:
+  packages/util:
     dependencies:
       class-variance-authority:
         specifier: ^0.7.0

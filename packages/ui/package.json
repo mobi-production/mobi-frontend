@@ -10,7 +10,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@repo/design": "workspace:*",
     "@repo/util": "workspace:*",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0",
