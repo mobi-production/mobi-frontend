@@ -1,0 +1,1 @@
+export { LandingCharityInfoSection } from './LandingCharityInfoSection'
