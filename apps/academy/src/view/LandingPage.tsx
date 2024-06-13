@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { LandingCharityInfoSection } from '@/landing/ui'
+import { LandingCharityInfoSection } from '@/widget/landing/ui'
 
 export function LandingPage() {
   return (
