@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { LandingCharityInfoSection } from '@/widget/landing/ui'
+import { LandingCharityInfoSection, LandingStatisticsBanner } from '@/widget/landing/ui'
 
 export function LandingPage() {
   return (
@@ -42,13 +42,14 @@ export function LandingPage() {
           </LandingCharityInfoSection.ImageSlider>
         }
       />
-      <section>
+      <LandingStatisticsBanner />
+      {/* <section>
         LandingStatisticsBanner
         <div>
           LandingStatisticCardList
           <div>LandingStatisticCard</div>
         </div>
-      </section>
+      </section> */}
 
       <section>LandingTextAnimatedSection</section>
 
