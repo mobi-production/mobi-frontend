@@ -7,9 +7,9 @@ import {
   ApplyScheduleBanner,
   ApplySection,
   ApplyTopBanner,
-  BenefitCardList
+  BenefitCardList,
+  DescriptionCardList
 } from '@/widget/apply/ui'
-import { DescriptionCardList } from '@/widget/apply/ui/DescriptionCardList'
 
 export function ApplyPage() {
   return (
