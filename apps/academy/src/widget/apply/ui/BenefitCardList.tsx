@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
+import ComputerSvg from '/public/svg/computer.svg'
+import IdeaSvg from '/public/svg/idea.svg'
+import MusicSvg from '/public/svg/music.svg'
 import { BenefitCard } from '@/widget/apply/ui/BenefitCard'
-
-import ComputerSvg from '../../../../public/svg/computer.svg'
-import IdeaSvg from '../../../../public/svg/idea.svg'
-import MusicSvg from '../../../../public/svg/music.svg'
 
 export function BenefitCardList() {
   return (

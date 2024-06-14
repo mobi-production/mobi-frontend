@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
+import CalenderSvg from '/public/svg/calender.svg'
+import ChatSvg from '/public/svg/chat.svg'
+import MailSvg from '/public/svg/mail.svg'
+import SendSvg from '/public/svg/send.svg'
 import { ApplyScheduleCard } from '@/widget/apply/ui/ApplyScheduleCard'
-
-import CalenderSvg from '../../../../public/svg/calender.svg'
-import ChatSvg from '../../../../public/svg/chat.svg'
-import MailSvg from '../../../../public/svg/mail.svg'
-import SendSvg from '../../../../public/svg/send.svg'
 
 export function ApplyScheduleCardList() {
   return (

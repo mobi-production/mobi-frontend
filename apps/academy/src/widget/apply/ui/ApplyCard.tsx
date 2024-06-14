@@ -2,7 +2,7 @@ import { cn } from '@repo/util'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
-import EllipseSvg from '../../../../public/svg/ellipse.svg'
+import EllipseSvg from '/public/svg/ellipse.svg'
 
 type Props = {
   className?: string
