@@ -27,63 +27,72 @@ module.exports = {
           '64px',
           {
             fontcolor: '#212529',
-            fontWeight: 700
+            fontWeight: 700,
+            lineHeight: '120%'
           }
         ],
         'text-heading-2': [
           '48px',
           {
             fontcolor: '#212529',
-            fontWeight: 700
+            fontWeight: 700,
+            lineHeight: '120%'
           }
         ],
         'text-heading-3': [
           '36px',
           {
             fontcolor: '#212529',
-            fontWeight: 700
+            fontWeight: 700,
+            lineHeight: '120%'
           }
         ],
         'text-title-1': [
           '24px',
           {
             fontcolor: '#212529',
-            fontWeight: 600
+            fontWeight: 600,
+            lineHeight: '120%'
           }
         ],
         'text-title-2': [
           '20px',
           {
             fontcolor: '#212529',
-            fontWeight: 600
+            fontWeight: 600,
+            lineHeight: '120%'
           }
         ],
         'text-title-3': [
           '18px',
           {
             fontcolor: '#212529',
-            fontWeight: 600
+            fontWeight: 600,
+            lineHeight: '120%'
           }
         ],
         'text-body-1': [
           '16px',
           {
             fontcolor: '#212529',
-            fontWeight: 600
+            fontWeight: 600,
+            lineHeight: '120%'
           }
         ],
         'text-body-2': [
           '14px',
           {
             fontcolor: '#212529',
-            fontWeight: 600
+            fontWeight: 600,
+            lineHeight: '120%'
           }
         ],
         'text-body-3': [
           '12px',
           {
             fontcolor: '#212529',
-            fontWeight: 400
+            fontWeight: 400,
+            lineHeight: '120%'
           }
         ]
       },
