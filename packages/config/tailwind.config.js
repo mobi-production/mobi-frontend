@@ -23,14 +23,82 @@ module.exports = {
         red: '#F03838'
       },
       fontSize: {
-        'text-heading-1': '64px',
-        'text-heading-2': '48px',
-        'text-heading-3': '36px',
-        'text-title-1': '24px',
-        'text-title-2': '18px',
-        'text-body-1': '16px',
-        'text-body-2': '14px',
-        'text-body-3': '12px'
+        'text-heading-1': [
+          '64px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 700,
+            lineHeight: '120%'
+          }
+        ],
+        'text-heading-2': [
+          '48px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 700,
+            lineHeight: '120%'
+          }
+        ],
+        'text-heading-3': [
+          '36px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 700,
+            lineHeight: '120%'
+          }
+        ],
+        'text-title-1': [
+          '24px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 600,
+            lineHeight: '120%'
+          }
+        ],
+        'text-title-2': [
+          '20px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 600,
+            lineHeight: '120%'
+          }
+        ],
+        'text-title-3': [
+          '18px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 600,
+            lineHeight: '120%'
+          }
+        ],
+        'text-body-1': [
+          '16px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 600,
+            lineHeight: '120%'
+          }
+        ],
+        'text-body-2': [
+          '14px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 600,
+            lineHeight: '120%'
+          }
+        ],
+        'text-body-3': [
+          '12px',
+          {
+            fontcolor: '#212529',
+            fontWeight: 400,
+            lineHeight: '120%'
+          }
+        ]
+      },
+      backgroundImage: {
+        'apply-background-gradient':
+          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)'
       }
     }
   },
