@@ -14,10 +14,10 @@
     "react-dom": "^18",
     "@repo/hook": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@repo/util": "workspace:*",
-    "@repo/design": "workspace:*"
+    "@repo/util": "workspace:*"
   },
   "devDependencies": {
+    "@mobi/config": "workspace:*",
     "@chromatic-com/storybook": "^1.5.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
@@ -33,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
     "chromatic": "^11.5.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
