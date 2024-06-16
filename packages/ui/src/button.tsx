@@ -8,7 +8,8 @@ const button = cva('button', {
       apply: ['bg-primary', 'text-white', 'rounded-full'],
       primary: ['bg-blue-500', 'border-transparent', 'hover:bg-blue-600'],
       secondary: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
-      ghost: ['bg-transparent', 'border', 'border-2', 'border-green', 'text-green']
+      ghost: ['bg-transparent', 'border', 'border-2', 'border-green', 'text-green'],
+      empty: ['bg-transparent', 'p-0']
     },
     size: {
       small: ['text-sm', 'py-1', 'px-2'],
