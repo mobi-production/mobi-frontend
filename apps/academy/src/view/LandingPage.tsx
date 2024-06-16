@@ -53,12 +53,6 @@ export function LandingPage() {
       <LandingTextAnimatedSection />
       <LandingEducationFeatureListSection />
 
-      {/* <section>
-        LandingEducationFeaturesSection
-        <div>LandingEducationTitle</div>
-        <div>LandingEducationCard</div>
-      </section> */}
-
       {/* LandingPage Bottom Section */}
     </main>
   )
