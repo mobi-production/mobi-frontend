@@ -32,6 +32,7 @@ function ContentMapSection<T>({ renderItems, Component, className }: ContentMapS
 }
 
 type MobiDescriptionContent = {
+  isVisible: boolean
   title: ReactNode
   subtitle: ReactNode
   detail: ReactNode
@@ -40,11 +41,13 @@ type MobiDescriptionContent = {
 type MobiDescriptionCardContainerProps = Partial<MobiDescriptionContent> & Props
 
 function MobiDescriptionCardContainer({
+  isVisible,
   title,
   subtitle,
   detail,
   className
 }: MobiDescriptionCardContainerProps) {
+  if (!isVisible) return <></>
   return (
     <section className={cn('flex h-screen w-full flex-col', className)}>
       {title}

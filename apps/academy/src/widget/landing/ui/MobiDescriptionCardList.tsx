@@ -1,12 +1,21 @@
-import { MOBI_DESCRIPTION } from '../constants/MobiDescription'
+'use client'
+
+import { forwardRef } from 'react'
+
+import { MOBI_DESCRIPTION } from '../constants'
 import { MobiDescriptionCard } from './MobiDescriptionCard'
 
-export function MobiDescriptionCardList() {
-  return (
-    <div className='flex w-full'>
-      <div>
+type MobiDescriptionCardProps = { activeSectionIndex: number }
+
+export const MobiDescriptionCardList = forwardRef<HTMLDivElement, MobiDescriptionCardProps>(
+  ({ activeSectionIndex }, ref) => {
+    return (
+      <div
+        className='w-full pt-[8.75rem]'
+        ref={ref}>
         {MOBI_DESCRIPTION.map((description) => (
           <MobiDescriptionCard
+            isVisible={description.id === activeSectionIndex}
             key={description.id}
             title={
               <MobiDescriptionCard.ContentMapSection
@@ -32,6 +41,8 @@ export function MobiDescriptionCardList() {
           />
         ))}
       </div>
-    </div>
-  )
-}
+    )
+  }
+)
+
+MobiDescriptionCardList.displayName = 'MobiDescriptionCardList'

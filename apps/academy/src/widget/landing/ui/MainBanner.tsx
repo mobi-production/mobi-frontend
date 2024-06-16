@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { NavigationButton } from '@/feature/link/ui/NavigationButton'
+import { NavigationButton } from '@/feature/link/ui'
 
 export function MainBanner() {
   return (
