@@ -1,5 +1,7 @@
+import { cn } from '@repo/util'
 import Image from 'next/image'
 
+import { pretendard } from '@/common/font'
 import {
   LandingCharityInfoSection,
   LandingEducationFeatureListSection,
@@ -9,7 +11,7 @@ import {
 
 export function LandingPage() {
   return (
-    <main>
+    <main className={cn(pretendard.className)}>
       {/* LandingPage Top Section */}
 
       {/* LandingPage Center Section */}
