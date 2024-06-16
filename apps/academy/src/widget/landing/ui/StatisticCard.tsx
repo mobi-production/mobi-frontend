@@ -38,6 +38,6 @@ function StatisticCardContainer({ title, count, className }: StatisticCardProps)
 }
 
 export const StatisticCard = Object.assign(StatisticCardContainer, {
-  Title,
-  Count
+  title: Title,
+  count: Count
 })

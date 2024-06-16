@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import {
   LandingCharityInfoSection,
+  LandingEducationFeatureListSection,
   LandingStatisticsBanner,
   LandingTextAnimatedSection
 } from '@/widget/landing/ui'
@@ -35,7 +36,7 @@ export function LandingPage() {
         }
         images={
           <LandingCharityInfoSection.ImageSlider>
-            {/* Todo: 실제 슬라이드 기능 추가하기 */}
+            {/* Todo: 실제 슬라이드 기능 컴포넌트 추가하기 */}
             <Image
               className='object-cover'
               src='/svg/landing/charity-sample.svg'
@@ -48,12 +49,13 @@ export function LandingPage() {
       />
       <LandingStatisticsBanner />
       <LandingTextAnimatedSection />
+      <LandingEducationFeatureListSection />
 
-      <section>
+      {/* <section>
         LandingEducationFeaturesSection
         <div>LandingEducationTitle</div>
         <div>LandingEducationCard</div>
-      </section>
+      </section> */}
 
       {/* LandingPage Bottom Section */}
     </main>

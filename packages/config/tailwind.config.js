@@ -31,15 +31,6 @@ module.exports = {
         'text-body-1': '16px',
         'text-body-2': '14px',
         'text-body-3': '12px'
-      },
-      keyframes: {
-        textHighlight: {
-          '0%, 100%': { color: 'black', textShadow: '0 0 10px rgba(255, 255, 255, 0)' },
-          '50%': { color: 'black', textShadow: '0 0 10px rgba(255, 255, 255, 1)' }
-        }
-      },
-      animation: {
-        textHighlight: 'textHighlight 3s ease-in-out infinite'
       }
     }
   },
