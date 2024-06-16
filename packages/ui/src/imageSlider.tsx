@@ -4,11 +4,6 @@ import { ComponentPropsWithoutRef, HTMLProps, PropsWithChildren } from 'react'
 
 import { VariantProps, cva } from 'class-variance-authority'
 
-/**
- * @todo
- * - speed 등 애니메이션 관련 속성 추가
- */
-
 const imageSlider = cva('div', {
   variants: {
     direction: {

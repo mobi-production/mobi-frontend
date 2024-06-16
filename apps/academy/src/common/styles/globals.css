@@ -22,3 +22,12 @@ html {
 body {
   -ms-overflow-style: scrollbar;
 }
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(100px));
+  }
+}
