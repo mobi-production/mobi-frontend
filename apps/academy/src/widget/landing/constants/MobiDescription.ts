@@ -1,4 +1,4 @@
-export const MobiDescription = [
+export const MOBI_DESCRIPTION = [
   {
     id: 1,
     title: ['모비는', '부트캠프가 아닙니다.'],
@@ -41,7 +41,7 @@ export const MobiDescription = [
   }
 ]
 
-export const MobiDescriptionImages = [
+export const MOBI_DESCRIPTION_IMAGES = [
   { id: 1, src: '/webp/landing/landing-top-image-1.webp' },
   { id: 2, src: '/webp/landing/landing-top-image-2.webp' },
   { id: 3, src: '/webp/landing/landing-top-image-3.webp' },

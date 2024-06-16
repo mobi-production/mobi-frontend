@@ -1,11 +1,11 @@
-import { MobiDescription } from '../constants/MobiDescription'
+import { MOBI_DESCRIPTION } from '../constants/MobiDescription'
 import { MobiDescriptionCard } from './MobiDescriptionCard'
 
 export function MobiDescriptionCardList() {
   return (
     <div className='flex w-full'>
       <div>
-        {MobiDescription.map((description) => (
+        {MOBI_DESCRIPTION.map((description) => (
           <MobiDescriptionCard
             key={description.id}
             title={

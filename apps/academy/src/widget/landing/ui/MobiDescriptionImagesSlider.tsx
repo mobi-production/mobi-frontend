@@ -1,14 +1,14 @@
 import { ImageSlider } from '@repo/ui'
 import Image from 'next/image'
 
-import { MobiDescriptionImages } from '../constants/MobiDescription'
+import { MOBI_DESCRIPTION_IMAGES } from '../constants/MobiDescription'
 
 export function MobiDescriptionImagesSlider() {
   return (
     <ImageSlider
       spacing='lg'
       direction='vertical'>
-      {MobiDescriptionImages.map((image) => (
+      {MOBI_DESCRIPTION_IMAGES.map((image) => (
         <div key={image.id}>
           <Image
             src={image.src}

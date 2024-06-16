@@ -1,18 +1,21 @@
 'use client'
 
 import { Button } from '@repo/ui'
+import { useRouter } from 'next/navigation'
+import { ButtonProps } from 'node_modules/@repo/ui/src/button'
 
-import { useMoveToOtherPage } from '@/feature/link/lib'
+type NavigationButtonProps = { href: string } & PropsNeedChildren & ButtonProps
 
-export function NavigationButton() {
-  const onClick = useMoveToOtherPage()
+export function NavigationButton({ href, children, className, ...rest }: NavigationButtonProps) {
+  const router = useRouter()
+  const MoveToHref = () => router.push(href)
+
   return (
     <Button
-      className='box-content flex items-center justify-center'
-      intent='apply'
-      size='big'
-      onClick={onClick}>
-      지원하기
+      className={className}
+      onClick={MoveToHref}
+      {...rest}>
+      {children}
     </Button>
   )
 }

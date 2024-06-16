@@ -1,5 +1,8 @@
-import { Button } from '@repo/ui'
+'use client'
+
 import Image from 'next/image'
+
+import { NavigationButton } from '@/feature/link/ui/NavigationButton'
 
 export function MainBanner() {
   return (
@@ -27,13 +30,14 @@ export function MainBanner() {
           모비의 수익금은 최소한의 운영비를 제외하고 소외 계층과 어려운 이웃에게 기부하고 있습니다.
         </div>
         <div>
-          <Button
+          <NavigationButton
+            href='/apply'
             intent='ghost'
             rounded='full'
             size='large'
             className='font-semibold text-green'>
             지원하기
-          </Button>
+          </NavigationButton>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ const button = cva('button', {
   }
 })
 
-type Props = {
+export type ButtonProps = {
   className?: HTMLProps<HTMLElement>['className']
 } & VariantProps<typeof button> &
   ComponentPropsWithoutRef<'button'>
@@ -38,7 +38,7 @@ export function Button({
   className,
   children,
   ...rest
-}: PropsWithChildren<Props>) {
+}: PropsWithChildren<ButtonProps>) {
   return (
     <button
       className={cn(button({ intent, size, rounded }), className)}
