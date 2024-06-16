@@ -7,14 +7,12 @@ type Props = {
 
 function Title({ className, children }: PropsNeedChildren<Props>) {
   return (
-    <h2 className={cn('text-center text-[48px] font-bold text-[#191919]', className)}>
-      {children}
-    </h2>
+    <h2 className={cn('text-center text-[48px] font-bold text-black', className)}>{children}</h2>
   )
 }
 
 function Info({ className, children }: PropsNeedChildren<Props>) {
-  return <h2 className={cn('', className)}>{children}</h2>
+  return <h2 className={className}>{children}</h2>
 }
 
 type LandingEducationFeatureSectionProps = {

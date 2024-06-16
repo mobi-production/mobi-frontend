@@ -10,7 +10,7 @@ export function LandingEducationFeatureListSection() {
         className='pb-[140px] pt-[140px]'
         title={
           <LandingEducationFeatureSection.Title className='mb-[80px]'>
-            체계적인 커리큘럼으로부터 배우는 <span className='text-[#00C892]'>코딩</span>부터!
+            체계적인 커리큘럼으로부터 배우는 <span className='text-primary'>코딩</span>부터!
           </LandingEducationFeatureSection.Title>
         }
         info={
@@ -74,7 +74,7 @@ export function LandingEducationFeatureListSection() {
         className='pb-[140px] pt-[140px]'
         title={
           <LandingEducationFeatureSection.Title className='mb-[80px]'>
-            조별 학습과 페어프로그래밍을 통한 <span className='text-[#00C892]'>협업</span>
+            조별 학습과 페어프로그래밍을 통한 <span className='text-primary'>협업</span>
           </LandingEducationFeatureSection.Title>
         }
         info={
@@ -117,7 +117,7 @@ export function LandingEducationFeatureListSection() {
         className='pb-[140px] pt-[140px]'
         title={
           <LandingEducationFeatureSection.Title className='mb-[80px]'>
-            실무진의 멘토링과 코드 리뷰까지!<span className='text-[#00C892]'>플래너와 관리</span>
+            실무진의 멘토링과 코드 리뷰까지!<span className='text-primary'>플래너와 관리</span>
           </LandingEducationFeatureSection.Title>
         }
         info={
