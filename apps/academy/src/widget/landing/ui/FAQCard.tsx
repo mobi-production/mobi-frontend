@@ -1,56 +1,76 @@
+'use client'
+import { useToggle } from '@repo/hook'
 import { cn } from '@repo/util'
-import Image from 'next/image'
-import { PropsWithChildren, ReactNode } from 'react'
+import React, { PropsWithChildren, ReactNode } from 'react'
 
-import ArrowWebp from '/public/webp/arrow-down.webp'
+import { FAQToggleButton } from '@/feature/link/ui'
 
 type Props = {
   className?: string
 }
 
-function Question({ className, children }: PropsNeedChildren<Props>) {
+type QuestionProps = {
+  isToggle: boolean
+  toggle: () => void
+} & PropsNeedChildren<Props>
+
+function Question({ className, children, isToggle, toggle }: QuestionProps) {
   return (
     <div
       className={cn(
-        'flex w-full justify-between rounded-lg border border-gray-4 px-8 py-6',
+        'flex w-full justify-between rounded-lg border px-8 py-6',
+        {
+          'border-gray-4': !isToggle,
+          'border-primary bg-primary bg-opacity-5': isToggle
+        },
         className
       )}>
       <div className='flex gap-2 text-text-title-2'>
         <h4 className='text-secondary'>Q</h4>
         <h4>{children}</h4>
       </div>
-      <div>
-        <Image
-          src={ArrowWebp}
-          alt='arrow toggle icon'
-        />
-      </div>
+      <FAQToggleButton
+        onClick={toggle}
+        isToggle={isToggle}
+      />
     </div>
   )
 }
 
-function Answer({ children }: PropsWithChildren<Props>) {
+type AnswerProps = PropsWithChildren<Props> & {
+  isToggle: boolean
+}
+
+function Answer({ isToggle, children }: AnswerProps) {
   return (
-    <div className='px-8 pb-10 pt-6'>
-      <span className='text-gray-1'>{children}</span>
+    <div
+      className={cn('transition-max-height overflow-hidden duration-700 ease-in-out', {
+        'max-h-0': !isToggle,
+        'max-h-screen': isToggle
+      })}>
+      <div className='px-8 pb-10 pt-6 text-gray-1'>{children}</div>
     </div>
   )
 }
 
-type FAQCarsProps = {
+type FAQCardProps = {
   question: ReactNode
   answer: ReactNode
 }
 
-function FAQCardContainer({ question, answer }: FAQCarsProps) {
+function FAQCardContainer({ question, answer }: FAQCardProps) {
+  const { isToggle, toggle } = useToggle()
+
   return (
     <div className='xl:w-full xl:max-w-[1244px]'>
-      {question}
-      {answer}
+      <Question
+        isToggle={isToggle}
+        toggle={toggle}>
+        {question}
+      </Question>
+      <Answer isToggle={isToggle}>{answer}</Answer>
     </div>
   )
 }
-export const FAQCard = Object.assign(FAQCardContainer, {
-  Question,
-  Answer
-})
+
+export const FAQCard = Object.assign(FAQCardContainer)

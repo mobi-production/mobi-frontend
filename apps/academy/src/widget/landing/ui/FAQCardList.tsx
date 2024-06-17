@@ -4,12 +4,12 @@ import { FAQCard } from './FAQCard'
 
 export function FAQCardList() {
   return (
-    <div>
+    <div className='flex w-full flex-col gap-5'>
       {FAQ_DATA.map((faq) => (
         <FAQCard
           key={faq.idx}
-          question={<FAQCard.Question>{faq.question}</FAQCard.Question>}
-          answer={<FAQCard.Answer>{faq.answer}</FAQCard.Answer>}
+          question={faq.question}
+          answer={faq.answer}
         />
       ))}
     </div>
