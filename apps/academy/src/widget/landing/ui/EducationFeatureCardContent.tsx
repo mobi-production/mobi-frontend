@@ -3,16 +3,18 @@ import { ReactNode } from 'react'
 import { EducationFeatureCard } from './EducationFeatureCard'
 
 type Props = {
-  imageBg: string
+  bgGradient: string
   image: ReactNode
   title: ReactNode
   descriptions: ReactNode[]
 }
 
-export function EducationFeatureCardContent({ imageBg, image, title, descriptions }: Props) {
+export function EducationFeatureCardContent({ bgGradient, image, title, descriptions }: Props) {
   return (
     <EducationFeatureCard
-      image={<EducationFeatureCard.Image bgImage={imageBg}>{image}</EducationFeatureCard.Image>}
+      image={
+        <EducationFeatureCard.Image bgGradient={bgGradient}>{image}</EducationFeatureCard.Image>
+      }
       title={<EducationFeatureCard.Title>{title}</EducationFeatureCard.Title>}
       info={
         <EducationFeatureCard.DescriptionList>

@@ -24,7 +24,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-01.svg'
+              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   체계적인 커리큘럼을 통해
@@ -49,7 +49,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-02.svg'
+              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   매 과정 학습을 복기할 수 있는
@@ -88,7 +88,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-03.svg'
+              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   페어가 모여 하나의 팀으로
@@ -131,7 +131,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-04.svg'
+              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   학습 동기 부여를 위한
@@ -158,7 +158,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-05.svg'
+              bgGradient='landing-card-background-gradient-green'
               title='나만의 플래너'
               descriptions={[
                 <>
@@ -192,7 +192,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-06.svg'
+              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   모비만이 가능한
@@ -219,7 +219,7 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              imageBg='/svg/landing/education-card-bg-07.svg'
+              bgGradient='red'
               title='반면 교사 학습'
               descriptions={['다른 조의 모범 사례와 비교하며 반면 교사 학습을 진행해요!']}
             />

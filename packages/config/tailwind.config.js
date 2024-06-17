@@ -98,7 +98,8 @@ module.exports = {
       },
       backgroundImage: {
         'apply-background-gradient':
-          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)'
+          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)',
+        'landing-card-background-gradient-green': 'linear-gradient(90deg, #1CD8D2 0%, #93EDC7 100%)'
       }
     }
   },

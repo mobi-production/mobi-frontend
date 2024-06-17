@@ -2,18 +2,19 @@ import { cn } from '@repo/util'
 import { ReactNode } from 'react'
 
 type CardImageProps = {
-  bgImage: string
+  bgGradient: string
   className?: string
 }
-function Image({ bgImage, className, children }: PropsNeedChildren<CardImageProps>) {
+function Image({ bgGradient, className, children }: PropsNeedChildren<CardImageProps>) {
+  const gradientClass = `bg-${bgGradient}`
+
   return (
     <div
-      className={cn('relative flex h-[370px] w-[622px] items-center justify-center p-4', className)}
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
+      className={cn(
+        'relative flex h-[370px] w-[622px] items-center justify-center p-4',
+        gradientClass,
+        className
+      )}>
       {children}
     </div>
   )
