@@ -24,14 +24,14 @@ export const useScrollLayoutChange = (ref: RefObject<HTMLDivElement>, length: nu
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
             observed = true
           } else {
             observed = false
           }
         })
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     )
 
     if (ref.current) {

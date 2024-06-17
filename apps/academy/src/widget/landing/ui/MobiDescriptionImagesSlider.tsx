@@ -6,13 +6,14 @@ import Image from 'next/image'
 import { MOBI_DESCRIPTION_IMAGES } from '../constants'
 
 export function MobiDescriptionImagesSlider() {
+  const ImageArray = [...MOBI_DESCRIPTION_IMAGES.reverse(), ...MOBI_DESCRIPTION_IMAGES]
   return (
-    <div className='relative h-screen'>
+    <div className='relative mt-[5rem] h-screen overflow-hidden'>
       <ImageSlider
-        className='vertical-scroll'
+        className='vertical-slider mt-[-140rem] h-[200rem]'
         spacing='lg'
         direction='vertical'>
-        {MOBI_DESCRIPTION_IMAGES.map((image) => (
+        {ImageArray.map((image) => (
           <div key={image.id}>
             <Image
               src={image.src}

@@ -23,7 +23,7 @@ body {
   -ms-overflow-style: scrollbar;
 }
 
-@keyframes verticalScroll {
+@keyframes verticalSlider {
   0% {
     transform: translateY(0);
   }
@@ -32,8 +32,8 @@ body {
   }
 }
 
-.vertical-scroll {
-  animation: verticalScroll 3s linear infinite;
+.vertical-slider {
+  animation: verticalSlider 3s linear infinite;
 }
 
 @keyframes fadein {
