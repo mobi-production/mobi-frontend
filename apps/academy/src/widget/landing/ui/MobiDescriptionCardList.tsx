@@ -5,18 +5,20 @@ import { forwardRef } from 'react'
 import { MOBI_DESCRIPTION } from '../constants'
 import { MobiDescriptionCard } from './MobiDescriptionCard'
 
-type MobiDescriptionCardProps = { activeSectionIndex: number }
+type MobiDescriptionCardListProps = {
+  currentIndex: number
+}
 
-export const MobiDescriptionCardList = forwardRef<HTMLDivElement, MobiDescriptionCardProps>(
-  ({ activeSectionIndex }, ref) => {
+export const MobiDescriptionCardList = forwardRef<HTMLDivElement, MobiDescriptionCardListProps>(
+  ({ currentIndex }, ref) => {
     return (
       <div
         className='w-full pt-[8.75rem]'
         ref={ref}>
-        {MOBI_DESCRIPTION.map((description) => (
+        {MOBI_DESCRIPTION.map((description, index) => (
           <MobiDescriptionCard
-            isVisible={description.id === activeSectionIndex}
             key={description.id}
+            className={`${index === currentIndex ? 'block' : 'hidden'}`}
             title={
               <MobiDescriptionCard.ContentMapSection
                 renderItems={description.title}

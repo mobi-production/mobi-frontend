@@ -7,7 +7,7 @@ import { MOBI_DESCRIPTION_IMAGES } from '../constants'
 
 export function MobiDescriptionImagesSlider() {
   return (
-    <div className='relative'>
+    <div className='relative h-screen overflow-hidden'>
       <ImageSlider
         className='pt-[5rem]'
         spacing='lg'

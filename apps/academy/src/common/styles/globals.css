@@ -31,3 +31,12 @@ body {
     transform: translateY(calc(100px));
   }
 }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
