@@ -6,11 +6,7 @@ type TitleProps = {
 }
 
 function Title({ className, children }: PropsNeedChildren<TitleProps>) {
-  return (
-    <h1 className={cn('pt-[140px] text-center text-[48px] font-bold text-[#191919]', className)}>
-      {children}
-    </h1>
-  )
+  return <h1 className={cn('text-heading-2 pt-[140px]', className)}>{children}</h1>
 }
 
 type DescriptionProps = {
