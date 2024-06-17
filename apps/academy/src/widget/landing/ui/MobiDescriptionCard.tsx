@@ -46,9 +46,7 @@ function MobiDescriptionCardContainer({
   className
 }: MobiDescriptionCardContainerProps) {
   return (
-    <section
-      className={cn('animate-fadein flex h-screen w-full flex-col', className)}
-      style={{ animation: 'fadein 2s' }}>
+    <section className={cn('fade-in flex h-screen w-full flex-col', className)}>
       {title}
       {subtitle}
       {detail}

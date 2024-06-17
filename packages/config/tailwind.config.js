@@ -99,6 +99,19 @@ module.exports = {
       backgroundImage: {
         'apply-background-gradient':
           'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)'
+      },
+      keyframes: {
+        slider: {
+          '0%': {
+            transform: 'translateY(0px)'
+          },
+          '100%': {
+            transform: 'translateY(100px)'
+          }
+        }
+      },
+      animation: {
+        slider: 'slider 5s linear infinite'
       }
     }
   },

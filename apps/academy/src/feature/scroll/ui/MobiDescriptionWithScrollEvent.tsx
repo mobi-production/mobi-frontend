@@ -2,9 +2,9 @@
 
 import { useRef } from 'react'
 
-import { MobiDescriptionImagesSlider } from '@/feature/imageSlider/ui'
 import { MOBI_DESCRIPTION } from '@/widget/landing/constants'
 import { MobiDescriptionCardList } from '@/widget/landing/ui'
+import { MobiDescriptionImagesSlider } from '@/widget/landing/ui/MobiDescriptionImagesSlider'
 
 import { useScrollLayoutChange } from '../lib'
 

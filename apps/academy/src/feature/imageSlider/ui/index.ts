@@ -1,1 +1,0 @@
-export { MobiDescriptionImagesSlider } from './MobiDescriptionImagesSlider'

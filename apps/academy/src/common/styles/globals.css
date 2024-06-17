@@ -28,8 +28,12 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(calc(100px));
+    transform: translateY(100px);
   }
+}
+
+.vertical-scroll {
+  animation: verticalScroll 3s linear infinite;
 }
 
 @keyframes fadein {
@@ -39,4 +43,8 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.fade-in {
+  animation: fadein 2s;
 }

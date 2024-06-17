@@ -7,12 +7,11 @@ import { MOBI_DESCRIPTION_IMAGES } from '../constants'
 
 export function MobiDescriptionImagesSlider() {
   return (
-    <div className='relative h-screen overflow-hidden'>
+    <div className='relative h-screen'>
       <ImageSlider
-        className='pt-[5rem]'
+        className='vertical-scroll'
         spacing='lg'
-        direction='vertical'
-        style={{ animation: 'verticalScroll 3s linear infinite' }}>
+        direction='vertical'>
         {MOBI_DESCRIPTION_IMAGES.map((image) => (
           <div key={image.id}>
             <Image
