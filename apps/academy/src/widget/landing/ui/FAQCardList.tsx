@@ -1,4 +1,4 @@
-import { FAQ_DATA } from '@/widget/landing/consts'
+import { FAQ_DATA } from '@/widget/landing/constants'
 
 import { FAQCard } from './FAQCard'
 
