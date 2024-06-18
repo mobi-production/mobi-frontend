@@ -14,9 +14,7 @@ type DescriptionProps = {
 }
 
 function Description({ className, children }: PropsNeedChildren<DescriptionProps>) {
-  return (
-    <p className={cn('text-center text-[16px] font-[400] text-[#545454]', className)}>{children}</p>
-  )
+  return <p className={cn('text-body-1 text-center text-[#545454]', className)}>{children}</p>
 }
 
 type ImageSliderProps = {

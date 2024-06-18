@@ -2,7 +2,7 @@
 export function LandingTextAnimatedSection() {
   return (
     <div className='relative flex h-screen flex-col items-center justify-center'>
-      <h2 className='text-center text-[64px] font-bold text-black'>
+      <h2 className='text-heading-1 text-center text-black'>
         모비에서는 이런 것을 경험 할 수 있어요
       </h2>
     </div>

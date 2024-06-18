@@ -6,11 +6,11 @@ type Props = {
 }
 
 function Title({ children, className }: PropsNeedChildren<Props>) {
-  return <h6 className={cn('text-[18px] font-semibold text-gray-1', className)}>{children}</h6>
+  return <h6 className={cn('text-title-3 text-gray-1', className)}>{children}</h6>
 }
 
 function Count({ children, className }: PropsNeedChildren<Props>) {
-  return <h1 className={cn('text-[64px] font-bold text-black', className)}>{children}</h1>
+  return <h1 className={cn('text-heading-1 text-black', className)}>{children}</h1>
 }
 
 type StatisticCardProps = {
