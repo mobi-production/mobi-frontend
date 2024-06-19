@@ -13,7 +13,10 @@ export function EducationFeatureCardContent({ bgGradient, image, title, descript
   return (
     <EducationFeatureCard
       image={
-        <EducationFeatureCard.Image bgGradient={bgGradient}>{image}</EducationFeatureCard.Image>
+        <EducationFeatureCard.Image
+          className={`${bgGradient} relative flex h-[370px] w-[622px] items-center justify-center rounded-bl-[16px] rounded-tl-[16px] p-4`}>
+          {image}
+        </EducationFeatureCard.Image>
       }
       title={<EducationFeatureCard.Title>{title}</EducationFeatureCard.Title>}
       info={

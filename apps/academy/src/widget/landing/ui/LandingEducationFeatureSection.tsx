@@ -10,7 +10,7 @@ function Title({ className, children }: PropsNeedChildren<Props>) {
 }
 
 function Info({ className, children }: PropsNeedChildren<Props>) {
-  return <h2 className={className}>{children}</h2>
+  return <div className={className}>{children}</div>
 }
 
 type LandingEducationFeatureSectionProps = {

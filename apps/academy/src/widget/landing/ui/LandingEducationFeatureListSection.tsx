@@ -16,6 +16,7 @@ export function LandingEducationFeatureListSection() {
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-green'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -24,7 +25,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   체계적인 커리큘럼을 통해
@@ -41,6 +41,7 @@ export function LandingEducationFeatureListSection() {
               ]}
             />
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-purple'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -49,7 +50,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   매 과정 학습을 복기할 수 있는
@@ -80,6 +80,7 @@ export function LandingEducationFeatureListSection() {
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-orange'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -88,7 +89,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   페어가 모여 하나의 팀으로
@@ -117,12 +117,13 @@ export function LandingEducationFeatureListSection() {
         className='pb-[140px] pt-[140px]'
         title={
           <LandingEducationFeatureSection.Title className='mb-[80px]'>
-            실무진의 멘토링과 코드 리뷰까지!<span className='text-primary'>플래너와 관리</span>
+            동기부여를 위한 학습 <span className='text-primary'>플래너와 관리</span>
           </LandingEducationFeatureSection.Title>
         }
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-red'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -131,7 +132,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   학습 동기 부여를 위한
@@ -150,6 +150,7 @@ export function LandingEducationFeatureListSection() {
               ]}
             />
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-blue'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -158,7 +159,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='landing-card-background-gradient-green'
               title='나만의 플래너'
               descriptions={[
                 <>
@@ -184,6 +184,7 @@ export function LandingEducationFeatureListSection() {
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-green'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -192,7 +193,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='landing-card-background-gradient-green'
               title={
                 <>
                   모비만이 가능한
@@ -211,6 +211,7 @@ export function LandingEducationFeatureListSection() {
               ]}
             />
             <EducationFeatureCardContent
+              bgGradient='bg-landing-card-background-gradient-lavender'
               image={
                 <Image
                   src={`data:image/svg+xml;charset=UTF-8,<svg width='384' height='242' xmlns='http://www.w3.org/2000/svg'><rect width='384' height='242' fill='%23cccccc'/><text x='50%' y='50%' font-family='Arial' font-size='20' fill='%23777777' dy='.3em' text-anchor='middle'>384x242</text></svg>`}
@@ -219,7 +220,6 @@ export function LandingEducationFeatureListSection() {
                   height={242}
                 />
               }
-              bgGradient='red'
               title='반면 교사 학습'
               descriptions={['다른 조의 모범 사례와 비교하며 반면 교사 학습을 진행해요!']}
             />

@@ -2,20 +2,12 @@ import { cn } from '@repo/util'
 import { ReactNode } from 'react'
 
 type CardImageProps = {
-  bgGradient: string
   className?: string
 }
-function Image({ bgGradient, className, children }: PropsNeedChildren<CardImageProps>) {
-  const gradientClass = `bg-${bgGradient}`
-
+function Image({ className, children }: PropsNeedChildren<CardImageProps>) {
   return (
-    <div
-      className={cn(
-        'relative flex h-[370px] w-[622px] items-center justify-center p-4',
-        gradientClass,
-        className
-      )}>
-      {children}
+    <div className={className}>
+      <div>{children}</div>
     </div>
   )
 }
@@ -55,11 +47,11 @@ function EducationFeatureCardContainer({
   return (
     <section
       className={cn(
-        'flex h-[370px] w-[1244px] flex-row items-center rounded-[16px] bg-white',
+        'flex h-[370px] w-[1244px] flex-row items-center rounded-[16px] bg-transparent',
         className
       )}>
       <div>{image}</div>
-      <div className='pb-[77px] pl-[64px] pr-[64px] pt-[77px]'>
+      <div className='border-color-gray-4 flex h-[370px] w-[622px] flex-col justify-center rounded-br-[16px] rounded-tr-[16px] border bg-white pl-[64px] shadow-[0px_0px_40px_0px_rgba(0,0,0,0.05)]'>
         {title}
         {info}
       </div>
