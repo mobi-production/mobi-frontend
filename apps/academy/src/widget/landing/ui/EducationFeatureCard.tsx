@@ -24,7 +24,7 @@ type Props = {
   className?: string
 }
 function Title({ className, children }: PropsNeedChildren<Props>) {
-  return <h2 className={cn('text-heading-3 mb-[32px] text-black', className)}>{children}</h2>
+  return <h2 className={cn('mb-[32px] text-text-heading-3', className)}>{children}</h2>
 }
 
 function DescriptionList({ className, children }: PropsNeedChildren<Props>) {
@@ -32,7 +32,11 @@ function DescriptionList({ className, children }: PropsNeedChildren<Props>) {
 }
 
 function Description({ className, children }: PropsNeedChildren<Props>) {
-  return <li className={cn('text-body-1 text-gray-1', className)}>{children}</li>
+  return (
+    <li className={cn('text-text-body-1', className)}>
+      <span className='font-normal text-gray-1'>{children}</span>
+    </li>
+  )
 }
 
 type EducationFeatureCardProps = {

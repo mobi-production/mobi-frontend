@@ -6,7 +6,7 @@ type Props = {
 }
 
 function Title({ className, children }: PropsNeedChildren<Props>) {
-  return <h2 className={cn('text-heading-2 text-center text-black', className)}>{children}</h2>
+  return <h2 className={cn('text-center text-text-heading-2', className)}>{children}</h2>
 }
 
 function Info({ className, children }: PropsNeedChildren<Props>) {
