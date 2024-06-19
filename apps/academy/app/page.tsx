@@ -1,14 +1,9 @@
-import { Button } from '@repo/ui'
+import { LandingPage } from '@/view'
+
+export const metadata = {
+  title: 'Mobi | 소개'
+}
 
 export default function Home() {
-  return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <Button
-        className='border-[2px] border-black'
-        size='small'
-        intent='primary'>
-        academy
-      </Button>
-    </main>
-  )
+  return <LandingPage />
 }
