@@ -1,17 +1,20 @@
 'use client'
 
+import type { NavTab } from '@/feature/nav/constants'
+import { NAV_TABS } from '@/feature/nav/constants'
+import { useNavTab } from '@/feature/nav/lib'
 import { Nav } from '@/widget/nav/Nav'
-
-import { NAV_TABS } from '../constants'
-import { useNavTab } from '../lib'
 
 export function NavBar() {
   const { landingTab, handleTabLogo, handleTabClick, handleTabClassName } = useNavTab()
+  const handleTapClick = (tab: NavTab) => () => {
+    handleTabClick(tab.text, tab.href)
+  }
 
   return (
     <Nav
       logo={
-        <Nav.NavLogo
+        <Nav.Logo
           intent='empty'
           className='absolute left-[10rem] top-3 text-center text-green'>
           <span
@@ -19,19 +22,19 @@ export function NavBar() {
             onClick={handleTabLogo}>
             MOBI
           </span>
-        </Nav.NavLogo>
+        </Nav.Logo>
       }
       navTabs={
-        <Nav.NavTabSection className='mx-auto'>
+        <Nav.TabSection className='mx-auto'>
           {NAV_TABS.map((tab) => (
-            <Nav.NavTab
+            <Nav.Tab
               key={tab.text}
               className={handleTabClassName(tab.text === landingTab)}
-              onClick={() => handleTabClick(tab.text, tab.href)}>
+              onClick={handleTapClick(tab)}>
               {tab.text}
-            </Nav.NavTab>
+            </Nav.Tab>
           ))}
-        </Nav.NavTabSection>
+        </Nav.TabSection>
       }></Nav>
   )
 }

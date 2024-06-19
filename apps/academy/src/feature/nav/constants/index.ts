@@ -1,1 +1,1 @@
-export { NAV_TABS, type NavTexts } from './navTabs'
+export { NAV_TABS, type NavTab, type NavTexts } from './navTabs'

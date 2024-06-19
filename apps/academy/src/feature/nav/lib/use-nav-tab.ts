@@ -2,7 +2,7 @@ import { cn } from '@repo/util'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-import type { NavTexts } from '../constants/navTabs'
+import type { NavTexts } from '@/feature/nav/constants'
 
 export const useNavTab = () => {
   const router = useRouter()

@@ -1,13 +1,12 @@
 import { Button } from '@repo/ui'
 import { cn } from '@repo/util'
-import { ButtonProps } from 'node_modules/@repo/ui/src/button'
-import { HTMLProps, ReactNode } from 'react'
+import { ComponentPropsWithoutRef, HTMLProps, ReactNode } from 'react'
 
 type Props = { className?: string }
 
-type NavTabButtonProps = PropsNeedChildren<Props> & ButtonProps
+type NavTabButtonProps = PropsNeedChildren<Props> & ComponentPropsWithoutRef<typeof Button>
 
-function NavLogo({ children, className, ...rest }: NavTabButtonProps) {
+function Logo({ children, className, ...rest }: NavTabButtonProps) {
   return (
     <Button
       className={cn(className)}
@@ -19,11 +18,11 @@ function NavLogo({ children, className, ...rest }: NavTabButtonProps) {
 
 type NavTabProps = PropsNeedChildren<Props> & HTMLProps<HTMLDivElement>
 
-function NavTab({ children, className }: NavTabProps) {
+function Tab({ children, className }: NavTabProps) {
   return <div className={cn(className)}>{children}</div>
 }
 
-function NavTabSection({ children, className }: PropsNeedChildren<Props>) {
+function TabSection({ children, className }: PropsNeedChildren<Props>) {
   return <div className={cn('flex', className)}>{children}</div>
 }
 
@@ -32,7 +31,7 @@ type NavContainerProps = {
   navTabs: ReactNode
 }
 
-function NavContainer({ logo, navTabs }: NavContainerProps) {
+function Container({ logo, navTabs }: NavContainerProps) {
   return (
     <div className='fixed top-0 z-[2] flex h-20 w-full items-center bg-transparent py-5 align-middle text-xl backdrop-blur'>
       {logo}
@@ -41,4 +40,4 @@ function NavContainer({ logo, navTabs }: NavContainerProps) {
   )
 }
 
-export const Nav = Object.assign(NavContainer, { NavLogo, NavTab, NavTabSection })
+export const Nav = Object.assign(Container, { Logo, Tab, TabSection })

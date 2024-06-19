@@ -3,7 +3,7 @@
 import { ImageSlider } from '@repo/ui'
 import Image from 'next/image'
 
-import { MOBI_DESCRIPTION_IMAGES } from '../constants'
+import { MOBI_DESCRIPTION_IMAGES } from '@/widget/landing/constants'
 
 export function MobiDescriptionImagesSlider() {
   const ImageArray = [...MOBI_DESCRIPTION_IMAGES.reverse(), ...MOBI_DESCRIPTION_IMAGES]

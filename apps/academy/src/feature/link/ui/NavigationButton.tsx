@@ -2,9 +2,10 @@
 
 import { Button } from '@repo/ui'
 import { useRouter } from 'next/navigation'
-import { ButtonProps } from 'node_modules/@repo/ui/src/button'
+import { ComponentPropsWithoutRef } from 'react'
 
-type NavigationButtonProps = { href: string } & PropsNeedChildren & ButtonProps
+type NavigationButtonProps = { href: string } & PropsNeedChildren &
+  ComponentPropsWithoutRef<typeof Button>
 
 export function NavigationButton({ href, children, className, ...rest }: NavigationButtonProps) {
   const router = useRouter()

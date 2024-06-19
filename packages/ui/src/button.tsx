@@ -27,7 +27,7 @@ const button = cva('button', {
   }
 })
 
-export type ButtonProps = {
+type ButtonProps = {
   className?: HTMLProps<HTMLElement>['className']
 } & VariantProps<typeof button> &
   ComponentPropsWithoutRef<'button'>

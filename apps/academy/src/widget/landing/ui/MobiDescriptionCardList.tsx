@@ -2,8 +2,8 @@
 
 import { forwardRef } from 'react'
 
-import { MOBI_DESCRIPTION } from '../constants'
-import { MobiDescriptionCard } from './MobiDescriptionCard'
+import { MOBI_DESCRIPTION } from '@/widget/landing/constants'
+import { MobiDescriptionCard } from '@/widget/landing/ui'
 
 type MobiDescriptionCardListProps = {
   currentIndex: number
