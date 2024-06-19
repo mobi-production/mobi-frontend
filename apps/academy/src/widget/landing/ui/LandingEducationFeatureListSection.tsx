@@ -7,14 +7,14 @@ export function LandingEducationFeatureListSection() {
   return (
     <section>
       <LandingEducationFeatureSection
-        className='pb-[140px] pt-[140px]'
+        className='pb-[8.75rem] pt-[8.75rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[80px]'>
+          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
             체계적인 커리큘럼으로부터 배우는 <span className='text-primary'>코딩</span>부터!
           </LandingEducationFeatureSection.Title>
         }
         info={
-          <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
+          <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
             <EducationFeatureCardContent
               bgGradient='bg-landing-card-background-gradient-green'
               image={
@@ -71,14 +71,14 @@ export function LandingEducationFeatureListSection() {
         }
       />
       <LandingEducationFeatureSection
-        className='pb-[140px] pt-[140px]'
+        className='pb-[8.75rem] pt-[8.75rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[80px]'>
+          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
             조별 학습과 페어프로그래밍을 통한 <span className='text-primary'>협업</span>
           </LandingEducationFeatureSection.Title>
         }
         info={
-          <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
+          <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
             <EducationFeatureCardContent
               bgGradient='bg-landing-card-background-gradient-orange'
               image={
@@ -111,14 +111,14 @@ export function LandingEducationFeatureListSection() {
         }
       />
       <LandingEducationFeatureSection
-        className='pb-[140px] pt-[140px]'
+        className='pb-[8.75rem] pt-[8.75rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[80px]'>
+          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
             동기부여를 위한 학습 <span className='text-primary'>플래너와 관리</span>
           </LandingEducationFeatureSection.Title>
         }
         info={
-          <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
+          <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
             <EducationFeatureCardContent
               bgGradient='bg-landing-card-background-gradient-red'
               image={
@@ -172,14 +172,14 @@ export function LandingEducationFeatureListSection() {
         }
       />
       <LandingEducationFeatureSection
-        className='pb-[140px] pt-[140px]'
+        className='pb-[8.75rem] pt-[8.75rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[80px]'>
+          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
             실무진의 멘토링과 코드 리뷰까지!
           </LandingEducationFeatureSection.Title>
         }
         info={
-          <LandingEducationFeatureSection.Info className='flex flex-col gap-[24px]'>
+          <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
             <EducationFeatureCardContent
               bgGradient='bg-landing-card-background-gradient-green'
               image={

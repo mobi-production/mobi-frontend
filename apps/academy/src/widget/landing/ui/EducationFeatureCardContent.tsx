@@ -14,7 +14,7 @@ export function EducationFeatureCardContent({ bgGradient, image, title, descript
     <EducationFeatureCard
       image={
         <EducationFeatureCard.Image
-          className={`${bgGradient} relative flex h-[370px] w-[622px] items-center justify-center rounded-bl-[16px] rounded-tl-[16px] p-4`}>
+          className={`${bgGradient} relative flex h-[23.125rem] w-[38.875rem] items-center justify-center rounded-bl-[1rem] rounded-tl-[1rem] p-4`}>
           {image}
         </EducationFeatureCard.Image>
       }
@@ -23,7 +23,7 @@ export function EducationFeatureCardContent({ bgGradient, image, title, descript
         <EducationFeatureCard.DescriptionList>
           {descriptions.map((desc, index) => (
             <EducationFeatureCard.Description
-              className='mb-[24px]'
+              className='mb-[1.5rem]'
               key={index}>
               {desc}
             </EducationFeatureCard.Description>

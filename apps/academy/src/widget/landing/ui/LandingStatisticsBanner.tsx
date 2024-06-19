@@ -6,7 +6,7 @@ import { StatisticCardList } from './StatisticCardList'
 
 export function LandingStatisticsBanner() {
   return (
-    <section className='relative flex h-[546px] w-full items-center justify-center'>
+    <section className='relative flex h-[34.125rem] w-full items-center justify-center'>
       <Image
         src={landingStatisticImage}
         alt='landing-statistics-banner-image'

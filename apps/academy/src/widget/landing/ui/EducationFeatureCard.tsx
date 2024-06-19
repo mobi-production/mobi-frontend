@@ -47,11 +47,11 @@ function EducationFeatureCardContainer({
   return (
     <section
       className={cn(
-        'flex h-[370px] w-[1244px] flex-row items-center rounded-[16px] bg-transparent',
+        'flex h-[23.125rem] w-[77.75rem] flex-row items-center rounded-[1rem] bg-transparent',
         className
       )}>
       <div>{image}</div>
-      <div className='border-color-gray-4 flex h-[370px] w-[622px] flex-col justify-center rounded-br-[16px] rounded-tr-[16px] border bg-white pl-[64px] shadow-[0px_0px_40px_0px_rgba(0,0,0,0.05)]'>
+      <div className='border-color-gray-4 flex h-[23.125rem] w-[38.875rem] flex-col justify-center rounded-br-[1rem] rounded-tr-[1rem] border bg-white pl-[4rem] shadow-[0_0_2.5rem_0_rgba(0,0,0,0.05)]'>
         {title}
         {info}
       </div>
