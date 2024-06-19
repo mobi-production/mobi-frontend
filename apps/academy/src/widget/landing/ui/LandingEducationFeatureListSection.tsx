@@ -104,10 +104,7 @@ export function LandingEducationFeatureListSection() {
                   매주 본인의 학습 내용을 발표하는 WIL
                   <br /> 그새 정이 들어버린 페어들과 학습 내용을 공유해요!
                 </>,
-                <>
-                  힘든 시간을 이기고 나면 끈끈해진 전우애가 함께 할 거<br />
-                  에요!
-                </>
+                <>힘든 시간을 이기고 나면 끈끈해진 전우애가 함께 할 거에요!</>
               ]}
             />
           </LandingEducationFeatureSection.Info>
