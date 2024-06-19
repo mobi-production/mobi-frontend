@@ -1,6 +1,7 @@
 import { cn } from '@repo/util'
 import Image from 'next/image'
 
+import SlideImage from '/public/svg/landing/charity-sample.svg'
 import { pretendard } from '@/common/font'
 import {
   LandingCharityInfoSection,
@@ -40,11 +41,8 @@ export function LandingPage() {
           <LandingCharityInfoSection.ImageSlider>
             {/* Todo: 실제 슬라이드 기능 컴포넌트 추가하기 */}
             <Image
-              className='object-cover'
-              src='/svg/landing/charity-sample.svg'
-              alt='landing-charity-slide-image'
-              height='4060'
-              width='2090'
+              src={SlideImage}
+              alt='slide_image'
             />
           </LandingCharityInfoSection.ImageSlider>
         }
