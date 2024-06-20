@@ -42,14 +42,14 @@ export function ApplyPage() {
         info={
           <>
             <Image
-              className='rounded-2xl object-cover mobile:hidden mobileAndTablet:hidden'
+              className='w-full rounded-2xl object-cover mobile:hidden mobileAndTablet:hidden'
               src='/webp/apply/middle-banner-desktop.webp'
               alt='apply-middle-banner'
               height='360'
               width='1244'
             />
             <Image
-              className='rounded-2xl object-cover tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+              className='w-full rounded-2xl object-cover tablet:hidden tabletAndLaptop:hidden desktop:hidden'
               src='/webp/apply/middle-banner-mobile.webp'
               alt='apply-middle-banner'
               height='200'
