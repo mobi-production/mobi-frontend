@@ -43,7 +43,7 @@ export function ApplyPage() {
         info={
           <Image
             className='rounded-2xl object-cover'
-            src='/webp/apply-middle-banner.webp'
+            src='/webp/apply/middle-banner.webp'
             alt='apply-middle-banner'
             height='360'
             width='1244'

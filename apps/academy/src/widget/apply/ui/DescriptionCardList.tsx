@@ -6,7 +6,7 @@ export function DescriptionCardList() {
       <DescriptionCard
         image={
           <DescriptionCard.Img
-            src='/webp/apply-description-1.webp'
+            src='/webp/apply/description-1.webp'
             alt='description-1'
           />
         }
@@ -27,7 +27,7 @@ export function DescriptionCardList() {
       <DescriptionCard
         image={
           <DescriptionCard.Img
-            src='/webp/apply-description-2.webp'
+            src='/webp/apply/description-2.webp'
             alt='description-2'
           />
         }

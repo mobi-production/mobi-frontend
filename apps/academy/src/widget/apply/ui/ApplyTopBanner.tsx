@@ -6,7 +6,7 @@ export function ApplyTopBanner() {
       <div className='absolute z-10 h-full w-full bg-apply-background-gradient' />
       <Image
         className='object-cover'
-        src='/webp/apply-top-banner.webp'
+        src='/webp/apply/top-banner.webp'
         alt='apply-top-banner'
         fill={true}
       />
