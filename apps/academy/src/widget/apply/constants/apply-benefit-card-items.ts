@@ -23,7 +23,7 @@ export const BENEFIT_CARD_ITEM: ApplyScheduleItems[] = [
     icon: MusicSvg,
     iconClass: 'p-[14px 14px 10px 16px]',
     alt: 'music',
-    title: '동료들과 함께하는 분위기를 만들고 있어요.',
+    title: '동료들과 함께하는\n' + '분위기를 만들고 있어요.',
     description:
       '자신이 학습할 수 있는 시간에는 정말 몰입할 수 있도록 열정적인 동료들과 함께할 수 있도록 분위기를 만들고자 하고 있어요!'
   },
@@ -31,7 +31,7 @@ export const BENEFIT_CARD_ITEM: ApplyScheduleItems[] = [
     icon: IdeaSvg,
     iconClass: 'px-4 py-[10px]',
     alt: 'idea',
-    title: '효율적인 학습을 위해 가능한 모든 시간을 투자해주세요.',
+    title: '효율적인 학습을 위해\n' + '가능한 모든 시간을 투자해주세요.',
     description:
       '바쁜 시간 겨우 짬내서 진행한 학습이 가장 효율적으로 이루어질 수 있도록 가능한 할애 가능한 모든 시간을 투자해주세요! 무엇보다 소중한 여러분들의 시간이니까요 :)'
   }

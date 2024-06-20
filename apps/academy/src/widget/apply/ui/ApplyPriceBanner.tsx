@@ -9,18 +9,25 @@ export function ApplyPriceBanner() {
     <section className='relative max-h-fit w-full'>
       <div className='absolute z-10 h-full w-full'>
         <Image
-          src='/webp/apply/bottom-banner.webp'
+          className='mobile:hidden mobileAndTablet:hidden'
+          src='/webp/apply/bottom-banner-desktop.webp'
           alt='bottom-banner'
           fill
           objectFit='cover'
-          quality={100}
+        />
+        <Image
+          className='tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+          src='/webp/apply/bottom-banner-mobile.webp'
+          alt='bottom-banner'
+          fill
+          objectFit='cover'
         />
       </div>
-      <ApplyBox>
-        <div className='relative z-20 flex flex-col items-center gap-8'>
-          <h1 className='text-text-heading-2 text-white'>{APPLY_TITLE.price_banner.title}</h1>
-          <ApplyCardList />
-        </div>
+      <ApplyBox className='relative z-20 flex flex-col items-center gap-8 mobile:gap-10 mobileAndTablet:gap-10'>
+        <h1 className='text-text-heading-2 text-white mobile:text-text-heading-3 mobileAndTablet:text-text-heading-3'>
+          {APPLY_TITLE.price_banner.title}
+        </h1>
+        <ApplyCardList />
       </ApplyBox>
     </section>
   )

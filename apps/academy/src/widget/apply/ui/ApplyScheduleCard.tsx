@@ -35,7 +35,8 @@ function ApplyScheduleContainer({ icon, title, date }: ApplyScheduleContainerPro
   return (
     <section
       className={cn(
-        'relative h-[288px] w-[290px] flex-shrink-0 rounded-2xl bg-white p-8 pb-[5.875rem]'
+        'relative h-[18rem] w-[18.125rem] flex-shrink-0 rounded-2xl bg-white p-8 pb-[5.875rem] mobile:h-[15.25rem] mobile:w-full mobile:p-6 mobileAndTablet:h-[15.25rem] mobileAndTablet:w-full mobileAndTablet:p-6',
+        'mobile:py-8'
       )}>
       {date}
       <div className='absolute left-1/2 top-1/2 flex w-full translate-x-[-50%] translate-y-[-50%] flex-col items-center gap-4'>

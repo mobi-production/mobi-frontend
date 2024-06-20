@@ -30,7 +30,7 @@ export const APPLY_CARD_ITEM: ApplyCard[] = [
   },
   {
     title: '일반과정',
-    price: 19800,
+    price: 10900,
     intro: [
       {
         className: 'font-medium text-red',

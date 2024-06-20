@@ -5,7 +5,7 @@ import { ApplyScheduleCard } from '@/widget/apply/ui/ApplyScheduleCard'
 
 export function ApplyScheduleCardList() {
   return (
-    <div className='flex justify-between xl:w-full xl:max-w-[1244px]'>
+    <div className='mobile: flex w-full max-w-[1244px] justify-between mobile:flex-col mobile:gap-4 mobileAndTablet:flex-col mobileAndTablet:gap-4'>
       {APPLY_SCHEDULE_ITEM.map((item, index) => {
         {
           const { icon, title, date, alt } = item

@@ -6,27 +6,44 @@ type Props = {
   className?: string
 }
 
-function Img({ width = 592, height = 394, ...rest }: ComponentPropsWithoutRef<typeof Image>) {
+function Img({ ...rest }: ComponentPropsWithoutRef<typeof Image>) {
   return (
-    <Image
-      width={width}
-      height={height}
-      {...rest}
-    />
+    <>
+      <Image
+        className='mobileAndTablet::hidden mobile:hidden'
+        height={394}
+        width={592}
+        {...rest}
+      />
+      <Image
+        className='tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+        height={212}
+        width={320}
+        {...rest}
+      />
+    </>
   )
 }
 
 function Title({ className, children }: PropsNeedChildren<Props>) {
-  return <h4 className={cn('text-text-title-1', className)}>{children}</h4>
+  return (
+    <h4
+      className={cn(
+        'whitespace-pre-wrap text-text-title-1 mobile:text-text-title-1 mobileAndTablet:text-text-title-1',
+        className
+      )}>
+      {children}
+    </h4>
+  )
 }
 
 function Description({ className, children, ...rest }: PropsNeedChildren<Props>) {
   return (
-    <span
-      className={cn('text-text-body-1', 'text-gray-1', className)}
+    <h4
+      className={cn('whitespace-pre-wrap', 'text-text-body-1', 'text-gray-1', className)}
       {...rest}>
       {children}
-    </span>
+    </h4>
   )
 }
 
@@ -37,9 +54,11 @@ type DescriptionContainerProps = {
 
 function DescriptionContainer({ info, image }: DescriptionContainerProps) {
   return (
-    <section className='flex-shrink-0 rounded-t-2xl'>
+    <section className='col-span-1 rounded-t-2xl'>
       {image}
-      <div className='flex flex-col items-start gap-8 bg-gray-5 px-8 py-6'>{info}</div>
+      <div className='flex w-full flex-col items-start gap-8 whitespace-pre-wrap bg-gray-5 px-8 py-6 mobile:px-4 mobile:py-[32px] mobileAndTablet:px-4 mobileAndTablet:py-[32px]'>
+        {info}
+      </div>
     </section>
   )
 }

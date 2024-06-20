@@ -18,7 +18,7 @@ function Icon({ children, className, ...rest }: PropsNeedChildren<Props>) {
 function Title({ children, className, ...rest }: PropsNeedChildren<Props>) {
   return (
     <h4
-      className={cn('text-text-title-1 leading-8', className)}
+      className={cn('whitespace-pre-wrap text-text-title-1', className)}
       {...rest}>
       {children}
     </h4>
@@ -35,7 +35,7 @@ function BenefitContainer({ icon, title, info, className, ...rest }: BenefitCont
   return (
     <section
       className={cn(
-        'flex h-[332px] w-[392px] flex-shrink-0 flex-col items-start gap-8 rounded-2xl bg-gray-5 p-8',
+        'mobileAndTablet:p:6 flex h-[20.75rem] w-[24.5rem] flex-shrink-0 flex-col items-start gap-8 rounded-2xl bg-gray-5 p-8 mobile:h-auto mobile:w-full mobile:p-6 mobile:py-8 mobileAndTablet:h-auto mobileAndTablet:w-full mobileAndTablet:py-8',
         className
       )}
       {...rest}>
@@ -44,7 +44,10 @@ function BenefitContainer({ icon, title, info, className, ...rest }: BenefitCont
         {title}
       </div>
       <span
-        className={cn('text-text-body-1', 'text-gray-1', className)}
+        className={cn(
+          'text-text-body-1 text-gray-1 mobile:text-text-body-1 mobileAndTablet:text-text-body-1',
+          className
+        )}
         {...rest}>
         {info}
       </span>

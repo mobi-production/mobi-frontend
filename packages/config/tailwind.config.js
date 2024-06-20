@@ -7,7 +7,7 @@ module.exports = {
     '../../packages/ui/src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    screen: {
+    screens: {
       mobile: {
         max: '479px'
       },
