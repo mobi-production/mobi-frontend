@@ -1,6 +1,6 @@
 import { ContentCardProps } from '@/widget/landing/ui/CurriculumScheduleCard'
 
-export const initialCourses: ContentCardProps[] = [
+export const INITIAL_COURSES: ContentCardProps[] = [
   {
     subject: 'pre-course',
     title: '프리코스',
@@ -28,7 +28,7 @@ export const initialCourses: ContentCardProps[] = [
     endDate: new Date(2025, 6, 30)
   }
 ]
-export const advancedCourses: ContentCardProps[] = [
+export const ADVANCED_COURSES: ContentCardProps[] = [
   {
     subject: 'typescript',
     title: '타입스크립트',
@@ -55,14 +55,14 @@ export const advancedCourses: ContentCardProps[] = [
   }
 ]
 
-export const projectCourses: ContentCardProps = {
+export const PROJECT_COURSES: ContentCardProps = {
   subject: '프로젝트',
   title: '팀빌딩, 일정관리, 멘토링',
   startDate: new Date(2025, 2, 1),
   endDate: new Date(2025, 8, 1)
 }
 
-export const employmentSupportCourses: ContentCardProps = {
+export const EMPLOYMENT_SUPPORT_COURSES: ContentCardProps = {
   subject: '전 과정 수료자',
   title: '이력서 작성 및 첨삭, 모의 면접과 면접 스터디',
   startDate: new Date(2025, 3, 1),

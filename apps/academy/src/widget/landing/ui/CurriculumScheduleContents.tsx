@@ -1,14 +1,12 @@
 import { getBoundaryProps } from '@repo/util'
-import Image from 'next/image'
 
-import css from '/public/svg/css.svg'
 import {
-  advancedCourses,
-  employmentSupportCourses,
-  initialCourses,
-  projectCourses
+  ADVANCED_COURSES,
+  EMPLOYMENT_SUPPORT_COURSES,
+  INITIAL_COURSES,
+  PROJECT_COURSES
 } from '@/widget/landing/constants'
-import { CurriculumScheduleCard } from '@/widget/landing/ui'
+import { CurriculumScheduleCard, StackBanner } from '@/widget/landing/ui'
 
 export function CurriculumScheduleContents() {
   return (
@@ -16,8 +14,8 @@ export function CurriculumScheduleContents() {
       <CurriculumScheduleCard
         contents={
           <CurriculumScheduleCard.ContentList>
-            {initialCourses.map((cardData, index) => {
-              const boundaryProps = getBoundaryProps(index, initialCourses.length)
+            {INITIAL_COURSES.map((cardData, index) => {
+              const boundaryProps = getBoundaryProps(index, INITIAL_COURSES.length)
               return (
                 <CurriculumScheduleCard.List
                   key={index}
@@ -30,15 +28,12 @@ export function CurriculumScheduleContents() {
         }
       />
       {/* 이미지 롤링 영역 */}
-      <Image
-        src={css}
-        alt='css'
-      />
+      <StackBanner />
       <CurriculumScheduleCard
         contents={
           <CurriculumScheduleCard.ContentList>
-            {advancedCourses.map((cardData, index) => {
-              const boundaryProps = getBoundaryProps(index, advancedCourses.length)
+            {ADVANCED_COURSES.map((cardData, index) => {
+              const boundaryProps = getBoundaryProps(index, ADVANCED_COURSES.length)
               return (
                 <CurriculumScheduleCard.List
                   key={index}
@@ -57,7 +52,7 @@ export function CurriculumScheduleContents() {
         contents={
           <CurriculumScheduleCard.ContentList>
             <CurriculumScheduleCard.List
-              {...projectCourses}
+              {...PROJECT_COURSES}
               boundaryProps={{ isFirst: true, isLast: true, isSingle: true }}
             />
           </CurriculumScheduleCard.ContentList>
@@ -70,7 +65,7 @@ export function CurriculumScheduleContents() {
         contents={
           <CurriculumScheduleCard.ContentList>
             <CurriculumScheduleCard.List
-              {...employmentSupportCourses}
+              {...EMPLOYMENT_SUPPORT_COURSES}
               boundaryProps={{ isFirst: true, isLast: true, isSingle: true }}
             />
           </CurriculumScheduleCard.ContentList>
