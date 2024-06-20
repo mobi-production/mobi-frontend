@@ -1,5 +1,7 @@
 import { getBoundaryProps } from '@repo/util'
+import Image from 'next/image'
 
+import css from '/public/svg/css.svg'
 import {
   advancedCourses,
   employmentSupportCourses,
@@ -28,6 +30,10 @@ export function CurriculumScheduleContents() {
         }
       />
       {/* 이미지 롤링 영역 */}
+      <Image
+        src={css}
+        alt='css'
+      />
       <CurriculumScheduleCard
         contents={
           <CurriculumScheduleCard.ContentList>
