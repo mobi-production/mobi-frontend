@@ -74,14 +74,13 @@ function DateRange({ startDate, endDate }: { startDate: Date; endDate: Date }) {
   )
 }
 
-type ContentCardProps = {
+export type ContentCardProps = {
   subject: ReactNode
   title: ReactNode
   description?: ReactNode
   stack?: ReactNode
   startDate: Date
   endDate: Date
-  useBackground?: boolean
 }
 
 function ContentList({ className, children }: PropsNeedChildren<Props>) {
