@@ -7,6 +7,26 @@ module.exports = {
     '../../packages/ui/src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    screen: {
+      mobile: {
+        max: '479px'
+      },
+      mobileAndTablet: {
+        min: '480px',
+        max: '767px'
+      },
+      tablet: {
+        min: '768px',
+        max: '1023px'
+      },
+      tabletAndLaptop: {
+        min: '1024px',
+        max: '1279px'
+      },
+      desktop: {
+        min: '1280px'
+      }
+    },
     extend: {
       colors: {
         primary: '#00C892',

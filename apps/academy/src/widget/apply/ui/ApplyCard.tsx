@@ -2,7 +2,7 @@ import { cn } from '@repo/util'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
-import EllipseSvg from '/public/svg/ellipse.svg'
+import EllipseSvg from '/public/svg/apply/ellipse.svg'
 
 type Props = {
   className?: string
@@ -61,7 +61,7 @@ type ApplyCardProps = {
 
 function DescriptionContainer({ info, title, price }: ApplyCardProps) {
   return (
-    <section className='filter-[7px] box-content flex w-[528px] flex-col items-center gap-8 rounded-2xl bg-white px-8 py-16'>
+    <section className='filter-[0.438rem] box-content flex flex-col items-center gap-8 rounded-2xl bg-white px-8 py-16'>
       {title}
       {price}
       {info}

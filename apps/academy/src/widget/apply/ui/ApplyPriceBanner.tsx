@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { APPLY_TITLE } from '@/widget/apply/constants'
+import { ApplyBox } from '@/widget/apply/ui/ApplyBox'
 import { ApplyCardList } from '@/widget/apply/ui/ApplyCardList'
 
 export function ApplyPriceBanner() {
@@ -14,12 +16,12 @@ export function ApplyPriceBanner() {
           quality={100}
         />
       </div>
-      <div className='relative z-20 flex flex-col items-center gap-8 py-[140px]'>
-        <h1 className='text-text-heading-2 text-white'>배우고싶다면?</h1>
-        <div className='xl:w-full xl:max-w-[1244px]'>
+      <ApplyBox>
+        <div className='relative z-20 flex flex-col items-center gap-8'>
+          <h1 className='text-text-heading-2 text-white'>{APPLY_TITLE.price_banner.title}</h1>
           <ApplyCardList />
         </div>
-      </div>
+      </ApplyBox>
     </section>
   )
 }
