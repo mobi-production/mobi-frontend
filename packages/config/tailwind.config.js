@@ -20,7 +20,8 @@ module.exports = {
         'gray-4': '#dddddd',
         'gray-5': '#F3F3F3',
         'gray-6': '#F9F9F9',
-        red: '#F03838'
+        red: '#F03838',
+        'glass-stroke': 'rgba(255, 255, 255, 0.97)'
       },
       fontSize: {
         'text-heading-1': [
@@ -98,7 +99,12 @@ module.exports = {
       },
       backgroundImage: {
         'apply-background-gradient':
-          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)'
+          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)',
+        'curriculum-background-gradient': 'linear-gradient(to bottom, #F1FBF8, #F9F9F9)',
+        'curriculum-subject-background-gradient':
+          'linear-gradient(15deg, #00C892 53.73%, #A5E9BC 129.63%)',
+        'curriculum-contents-background-gradient':
+          'radial-gradient(58.73% 58.73% at 50% 50%, rgba(0, 200, 146, 0.20) 0%, rgba(255, 255, 255, 0.00) 70%)'
       }
     }
   },
