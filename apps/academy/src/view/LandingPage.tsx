@@ -2,7 +2,7 @@ import { cn } from '@repo/util'
 
 import { pretendard } from '@/common/font'
 import { MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
-import { MainBanner } from '@/widget/landing/ui/MainBanner'
+import { MainBanner } from '@/widget/landing/ui'
 
 export function LandingPage() {
   return (
