@@ -22,3 +22,11 @@ html {
 body {
   -ms-overflow-style: scrollbar;
 }
+
+.original {
+  @apply animate-rollingleft1;
+}
+
+.clone {
+  @apply absolute left-0 top-0 animate-rollingleft2;
+}

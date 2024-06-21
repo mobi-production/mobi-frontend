@@ -105,6 +105,22 @@ module.exports = {
           'linear-gradient(15deg, #00C892 53.73%, #A5E9BC 129.63%)',
         'curriculum-contents-background-gradient':
           'radial-gradient(58.73% 58.73% at 50% 50%, rgba(0, 200, 146, 0.20) 0%, rgba(255, 255, 255, 0.00) 70%)'
+      },
+      keyframes: {
+        rollingleft1: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-100%)' },
+          '50.01%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
+        rollingleft2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        }
+      },
+      animation: {
+        rollingleft1: 'rollingleft1 66s linear infinite',
+        rollingleft2: 'rollingleft2 66s linear infinite'
       }
     }
   },

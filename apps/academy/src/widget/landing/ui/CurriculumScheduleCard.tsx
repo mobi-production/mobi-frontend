@@ -132,7 +132,7 @@ function ContentsContainer({
   return (
     <section
       className={`relative flex w-full justify-center gap-8 ${isBackground ? 'bg-curriculum-contents-background-gradient' : ''}`}>
-      <div className='absolute bottom-[60px] left-8 right-8 z-[1] h-px w-auto bg-green'></div>
+      <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green'></div>
       {contents}
     </section>
   )

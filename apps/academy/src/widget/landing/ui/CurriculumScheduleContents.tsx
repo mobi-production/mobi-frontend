@@ -10,7 +10,7 @@ import { CurriculumScheduleCard, StackBanner } from '@/widget/landing/ui'
 
 export function CurriculumScheduleContents() {
   return (
-    <div className='flex flex-col gap-20'>
+    <div className='flex w-full flex-col gap-20'>
       <CurriculumScheduleCard
         contents={
           <CurriculumScheduleCard.ContentList>
