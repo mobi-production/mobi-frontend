@@ -98,7 +98,17 @@ module.exports = {
       },
       backgroundImage: {
         'apply-background-gradient':
-          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)'
+          'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)',
+        'landing-card-background-gradient-green':
+          'linear-gradient(90deg, #1CD8D2 0%, #93EDC7 100%)',
+        'landing-card-background-gradient-purple':
+          'linear-gradient(90deg, #439CFB 0%, #F187FB 100%)',
+        'landing-card-background-gradient-orange':
+          'linear-gradient(90deg, #F9C58D 0%, #F492F0 100%)',
+        'landing-card-background-gradient-red': 'linear-gradient(90deg, #FF5858 0%, #FA9372 100%)',
+        'landing-card-background-gradient-blue': 'linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)',
+        'landing-card-background-gradient-lavender':
+          'linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%)'
       },
       keyframes: {
         slider: {
@@ -112,7 +122,7 @@ module.exports = {
       },
       animation: {
         slider: 'slider 5s linear infinite'
-      }
+      },
     }
   },
   plugins: []
