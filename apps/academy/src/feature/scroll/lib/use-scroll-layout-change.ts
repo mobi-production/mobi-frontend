@@ -7,7 +7,6 @@ export const useScrollLayoutChange = (ref: RefObject<HTMLDivElement>, length: nu
     let observed: boolean
 
     const handleScroll = (e: WheelEvent) => {
-      e.preventDefault()
       clearTimeout(wheeling)
       if (!observed) return
       wheeling = window.setTimeout(() => {

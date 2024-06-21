@@ -18,12 +18,24 @@ function Logo({ children, className, ...rest }: NavTabButtonProps) {
 
 type NavTabProps = PropsNeedChildren<Props> & HTMLProps<HTMLDivElement>
 
-function Tab({ children, className }: NavTabProps) {
-  return <div className={cn(className)}>{children}</div>
+function Tab({ children, className, ...rest }: NavTabProps) {
+  return (
+    <div
+      className={cn(className)}
+      {...rest}>
+      {children}
+    </div>
+  )
 }
 
-function TabSection({ children, className }: PropsNeedChildren<Props>) {
-  return <div className={cn('flex', className)}>{children}</div>
+function TabSection({ children, className, ...rest }: PropsNeedChildren<Props>) {
+  return (
+    <div
+      className={cn('flex', className)}
+      {...rest}>
+      {children}
+    </div>
+  )
 }
 
 type NavContainerProps = {
@@ -31,9 +43,11 @@ type NavContainerProps = {
   navTabs: ReactNode
 }
 
-function Container({ logo, navTabs }: NavContainerProps) {
+function Container({ logo, navTabs, ...rest }: NavContainerProps) {
   return (
-    <div className='fixed top-0 z-[2] flex h-20 w-full items-center bg-transparent py-5 align-middle text-xl backdrop-blur'>
+    <div
+      className='fixed top-0 z-[2] flex h-20 w-full items-center bg-transparent py-5 align-middle text-xl backdrop-blur'
+      {...rest}>
       {logo}
       {navTabs}
     </div>
