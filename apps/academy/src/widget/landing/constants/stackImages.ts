@@ -83,12 +83,6 @@ export const STACK_IMAGES: Props[] = [
     src: Axios,
     alt: 'Axios Logo'
   },
-
-  {
-    id: 'Recoil',
-    src: Recoil,
-    alt: 'Recoil Logo'
-  },
   {
     id: 'StyledComponent',
     src: StyledComponent,
@@ -98,5 +92,10 @@ export const STACK_IMAGES: Props[] = [
     id: 'Rhf',
     src: Rhf,
     alt: 'Rhf Logo'
+  },
+  {
+    id: 'Recoil',
+    src: Recoil,
+    alt: 'Recoil Logo'
   }
 ]

@@ -1,59 +1,37 @@
-// import Image from 'next/image'
-
-// import { STACK_IMAGES } from '@/widget/landing/constants'
-
-// export function StackBanner() {
-//   return (
-//     <section className='flex gap-8'>
-//       {STACK_IMAGES.map((image) => (
-//         <Image
-//           key={image.id}
-//           src={image.src}
-//           alt={image.alt}
-//         />
-//       ))}
-//     </section>
-//   )
-// }
-
 'use client'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
-import { STACK_IMAGES } from '../constants'
+import { STACK_IMAGES } from '@/widget/landing/constants'
 
 export function StackBanner() {
-  const rollerRef = useRef<HTMLDivElement | null>(null)
+  const [cloneCreated, setCloneCreated] = useState(false)
 
   useEffect(() => {
-    const roller = rollerRef.current
-    if (roller) {
-      const clone = roller.cloneNode(true) as HTMLDivElement
-      clone.classList.add('clone')
-      roller.parentNode?.appendChild(clone)
-
-      roller.classList.add('original')
-    }
+    setCloneCreated(true)
   }, [])
+
+  const imageList = (className: string) => (
+    <div className={`rolling-list flex gap-8 ${className}`}>
+      {STACK_IMAGES.map((image) => (
+        <div
+          key={image.id}
+          className='h-[96px] w-[96px] flex-none'>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={96}
+            height={96}
+          />
+        </div>
+      ))}
+    </div>
+  )
 
   return (
     <div className='relative flex overflow-hidden'>
-      <div
-        ref={rollerRef}
-        className='rolling-list flex gap-8'>
-        {STACK_IMAGES.map((image) => (
-          <div
-            key={image.id}
-            className='h-[96px] w-[96px] flex-none'>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={96}
-              height={96} // Image height 추가
-            />
-          </div>
-        ))}
-      </div>
+      {imageList('curriculum-stack-original')}
+      {cloneCreated && imageList('clone')}
     </div>
   )
 }

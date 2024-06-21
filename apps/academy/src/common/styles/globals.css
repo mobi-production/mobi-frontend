@@ -23,7 +23,7 @@ body {
   -ms-overflow-style: scrollbar;
 }
 
-.original {
+.curriculum-stack-original {
   @apply animate-rollingleft1;
 }
 
