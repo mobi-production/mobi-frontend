@@ -1,7 +1,5 @@
 import { Button } from '@repo/ui'
 
-import { FAQCardList, FAQSection } from '@/widget/landing/ui'
-
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
@@ -11,10 +9,6 @@ export default function Home() {
         intent='primary'>
         academy
       </Button>
-      <FAQSection
-        title={<FAQSection.title>자주 묻는 질문</FAQSection.title>}
-        faq={<FAQCardList />}
-      />
     </main>
   )
 }
