@@ -27,9 +27,9 @@ function Question({ className, children, isToggle, openToggle, closeToggle }: Qu
         },
         className
       )}>
-      <div className='flex gap-2 text-text-title-2'>
-        <h4 className='text-secondary'>Q</h4>
-        <h4>{children}</h4>
+      <div className='flex gap-2'>
+        <h4 className='text-text-title-2 text-secondary'>Q</h4>
+        <h4 className='text-text-title-2'>{children}</h4>
       </div>
       <FAQToggleButton
         onClick={isToggle ? closeToggle : openToggle}
