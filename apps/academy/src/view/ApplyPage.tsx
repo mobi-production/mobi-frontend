@@ -19,10 +19,10 @@ export function ApplyPage() {
       <ApplySection
         title={
           <>
-            <ApplySection.title className='mobile:hidden mobileAndTablet:hidden'>
+            <ApplySection.title className='mobile-hidden'>
               {APPLY_TITLE.section_1.title}
             </ApplySection.title>
-            <ApplySection.title className='tablet:hidden tabletAndLaptop:hidden desktop:hidden'>
+            <ApplySection.title className='desktop-hidden'>
               {APPLY_TITLE.section_1.mobile_title}
             </ApplySection.title>
           </>
@@ -42,14 +42,14 @@ export function ApplyPage() {
         info={
           <>
             <Image
-              className='w-full rounded-2xl object-cover mobile:hidden mobileAndTablet:hidden'
+              className='mobile-hidden w-full rounded-2xl object-cover'
               src='/webp/apply/middle-banner-desktop.webp'
               alt='apply-middle-banner'
               height='360'
               width='1244'
             />
             <Image
-              className='w-full rounded-2xl object-cover tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+              className='desktop-hidden w-full rounded-2xl object-cover'
               src='/webp/apply/middle-banner-mobile.webp'
               alt='apply-middle-banner'
               height='200'
@@ -61,10 +61,10 @@ export function ApplyPage() {
       <ApplySection
         title={
           <>
-            <ApplySection.title className='mobile:hidden mobileAndTablet:hidden'>
+            <ApplySection.title className='mobile-hidden'>
               {APPLY_TITLE.section_3.title}
             </ApplySection.title>
-            <ApplySection.title className='tablet:hidden tabletAndLaptop:hidden desktop:hidden'>
+            <ApplySection.title className='desktop-hidden'>
               {APPLY_TITLE.section_3.mobile_title}
             </ApplySection.title>
           </>

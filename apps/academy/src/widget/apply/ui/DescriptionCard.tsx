@@ -10,13 +10,13 @@ function Img({ ...rest }: ComponentPropsWithoutRef<typeof Image>) {
   return (
     <>
       <Image
-        className='mobile:hidden mobileAndTablet:hidden'
+        className='mobile-hidden'
         height={394}
         width={592}
         {...rest}
       />
       <Image
-        className='w-full tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+        className='desktop-hidden w-full'
         height={212}
         width={320}
         {...rest}

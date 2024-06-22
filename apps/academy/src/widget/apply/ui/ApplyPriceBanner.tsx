@@ -9,14 +9,14 @@ export function ApplyPriceBanner() {
     <section className='relative max-h-fit w-full'>
       <div className='absolute z-10 h-full w-full'>
         <Image
-          className='mobile:hidden mobileAndTablet:hidden'
+          className='mobile-hidden'
           src='/webp/apply/bottom-banner-desktop.webp'
           alt='bottom-banner'
           fill
           objectFit='cover'
         />
         <Image
-          className='tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+          className='desktop-hidden'
           src='/webp/apply/bottom-banner-mobile.webp'
           alt='bottom-banner'
           fill

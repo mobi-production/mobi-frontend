@@ -22,3 +22,13 @@ html {
 body {
   -ms-overflow-style: scrollbar;
 }
+
+@layer base {
+  .mobile-hidden {
+    @apply mobile:hidden mobileAndTablet:hidden;
+  }
+
+  .desktop-hidden {
+    @apply tablet:hidden tabletAndLaptop:hidden desktop:hidden;
+  }
+}
