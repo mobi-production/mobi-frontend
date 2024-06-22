@@ -22,7 +22,7 @@ export function ApplyPage() {
             <ApplySection.title className='mobile-hidden'>
               {APPLY_TITLE.section_1.title}
             </ApplySection.title>
-            <ApplySection.title className='desktop-hidden'>
+            <ApplySection.title className='desktop-hidden text-balance'>
               {APPLY_TITLE.section_1.mobile_title}
             </ApplySection.title>
           </>
@@ -64,8 +64,8 @@ export function ApplyPage() {
             <ApplySection.title className='mobile-hidden'>
               {APPLY_TITLE.section_3.title}
             </ApplySection.title>
-            <ApplySection.title className='desktop-hidden'>
-              {APPLY_TITLE.section_3.mobile_title}
+            <ApplySection.title className='desktop-hidden text-balance'>
+              {APPLY_TITLE.section_3.title}
             </ApplySection.title>
           </>
         }

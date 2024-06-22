@@ -4,14 +4,14 @@ export const APPLY_TITLE = {
     subTitle: '모비에서는 이러한 분들과 함께 발전하기를 바라고 있어요.'
   },
   schedule_banner: {
-    title: '모비 2기 1과정 지원 일정'
+    title: '모비 2기 1과정\n 지원 일정'
   },
   price_banner: {
     title: '배우고싶다면?'
   },
   section_1: {
     title: '하루 평균 4시간 이상\n' + '학습이 가능하신 분',
-    mobile_title: '하루 평균\n' + '4시간 이상\n' + '학습이 가능하신 분'
+    mobile_title: '하루 평균 4시간 이상\n' + '학습이 가능하신 분'
   },
   section_2: {
     title: '다른 사람과 소통하고 공유하는 것에 스스럼이 없는 분',

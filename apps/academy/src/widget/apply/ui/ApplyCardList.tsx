@@ -3,7 +3,7 @@ import { ApplyCard } from '@/widget/apply/ui/ApplyCard'
 
 export function ApplyCardList() {
   return (
-    <div className='flex w-full justify-center gap-[3.75rem] mobile:flex-col mobile:gap-4 mobileAndTablet:flex-col'>
+    <div className='grid w-full max-w-[1244px] grid-cols-2 justify-center gap-[3.75rem] mobile:grid-cols-1 mobileAndTablet:grid-cols-1'>
       {APPLY_CARD_ITEM.map((apply_card, card_index) => {
         const { title, price, intro } = apply_card
         return (
