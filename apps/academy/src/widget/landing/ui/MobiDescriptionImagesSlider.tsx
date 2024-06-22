@@ -9,7 +9,7 @@ export function MobiDescriptionImagesSlider() {
   return (
     <div className='relative mt-[5rem] h-screen overflow-hidden'>
       <ImageSlider
-        className='vertical-slider mt-[-50rem] h-[200rem]'
+        className='mt-[-50rem] h-[200rem] animate-vertical-slider'
         spacing='lg'
         direction='vertical'>
         {MOBI_DESCRIPTION_IMAGES.map((image) => (

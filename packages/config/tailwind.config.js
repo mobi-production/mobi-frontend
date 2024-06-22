@@ -131,6 +131,10 @@ module.exports = {
           'linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%)'
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
         slider: {
           '0%': {
             transform: 'translateY(0px)'
@@ -141,9 +145,10 @@ module.exports = {
         }
       },
       animation: {
-        slider: 'slider 5s linear infinite'
+        'fade-in': 'fadeIn 2s ease-in-out',
+        'vertical-slider': 'slider 3s linear infinite'
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animate')]
 }
