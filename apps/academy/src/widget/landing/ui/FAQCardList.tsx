@@ -4,7 +4,7 @@ import { FAQCard } from './FAQCard'
 
 export function FAQCardList() {
   return (
-    <div className='flex w-full flex-col gap-5'>
+    <ul className='flex w-full flex-col gap-5'>
       {FAQ_DATA.map((faq) => (
         <FAQCard
           key={faq.idx}
@@ -12,6 +12,6 @@ export function FAQCardList() {
           answer={faq.answer}
         />
       ))}
-    </div>
+    </ul>
   )
 }

@@ -63,7 +63,7 @@ function FAQCardContainer({ question, answer }: FAQCardProps) {
   const { isToggle, openToggle, closeToggle } = useToggle()
 
   return (
-    <div className='xl:w-full xl:max-w-[1244px]'>
+    <li className='xl:w-full xl:max-w-[1244px]'>
       <Question
         isToggle={isToggle}
         openToggle={openToggle}
@@ -71,7 +71,7 @@ function FAQCardContainer({ question, answer }: FAQCardProps) {
         {question}
       </Question>
       <Answer isToggle={isToggle}>{answer}</Answer>
-    </div>
+    </li>
   )
 }
 
