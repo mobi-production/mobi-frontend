@@ -2,24 +2,29 @@
 
 import { Button } from '@repo/ui'
 
-import { useMoveToApplyLink } from '@/feature/link/lib'
+import { blankOpener } from '@/feature/link/lib'
 
 export function ApplyButton() {
-  const onClick = useMoveToApplyLink()
   return (
     <>
       <Button
-        className='box-content flex items-center justify-center mobile:hidden mobileAndTablet:hidden'
+        className='mobile-hidden box-content'
         intent='apply'
         size='big'
-        onClick={onClick}>
-        지원하기
+        onClick={blankOpener(process.env.ACADEMY_APPLY_FORM_URL)}
+        rounded='full'>
+        <div className='absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]'>
+          지원하기
+        </div>
       </Button>
       <Button
-        className='box-content flex items-center justify-center px-0 mobile:mx-5 mobile:w-full mobileAndTablet:mx-5 mobileAndTablet:w-full tablet:hidden tabletAndLaptop:hidden desktop:hidden'
+        className='desktop-hidden box-content'
         intent='apply'
-        onClick={onClick}>
-        지원하기
+        onClick={blankOpener(process.env.ACADEMY_APPLY_FORM_URL)}
+        rounded='full'>
+        <div className='absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]'>
+          지원하기
+        </div>
       </Button>
     </>
   )

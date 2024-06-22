@@ -1,1 +1,1 @@
-export { useMoveToApplyLink } from './use-move-to-apply-link'
+export { blankOpener } from './blank-opener'
