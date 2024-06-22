@@ -4,7 +4,7 @@ import { cn } from '@repo/util'
 import React, { PropsWithChildren } from 'react'
 
 import { FAQToggleButton } from '@/feature/link/ui'
-import type { FaqList } from '@/widget/landing/constants/faqList'
+import type { FaqList } from '@/widget/landing/constants'
 
 type Props = {
   className?: string
