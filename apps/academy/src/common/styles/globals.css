@@ -24,9 +24,9 @@ body {
 }
 
 .curriculum-stack-original {
-  @apply animate-rollingleft1;
+  @apply animate-stackBannerLoop;
 }
 
 .clone {
-  @apply absolute left-0 top-0 animate-rollingleft2;
+  @apply absolute left-0 top-0 animate-stackBannerSlideContinuous;
 }
