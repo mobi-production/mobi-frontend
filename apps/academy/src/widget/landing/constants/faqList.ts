@@ -1,4 +1,4 @@
-type FaqList = {
+export type FaqList = {
   idx: number
   question: string
   answer: string

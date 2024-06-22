@@ -1,9 +1,10 @@
 'use client'
 import { useToggle } from '@repo/hook'
 import { cn } from '@repo/util'
-import React, { PropsWithChildren, ReactNode } from 'react'
+import React, { PropsWithChildren } from 'react'
 
 import { FAQToggleButton } from '@/feature/link/ui'
+import type { FaqList } from '@/widget/landing/constants/faqList'
 
 type Props = {
   className?: string
@@ -54,16 +55,13 @@ function Answer({ isToggle, children }: AnswerProps) {
   )
 }
 
-type FAQCardProps = {
-  question: ReactNode
-  answer: ReactNode
-}
-
-function FAQCardContainer({ question, answer }: FAQCardProps) {
+function FAQCardContainer({ idx, question, answer }: FaqList) {
   const { isToggle, openToggle, closeToggle } = useToggle()
 
   return (
-    <li className='xl:w-full xl:max-w-[1244px]'>
+    <li
+      key={idx}
+      className='xl:w-full xl:max-w-[1244px]'>
       <Question
         isToggle={isToggle}
         openToggle={openToggle}
