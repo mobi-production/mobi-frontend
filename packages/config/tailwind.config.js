@@ -129,6 +129,19 @@ module.exports = {
         'landing-card-background-gradient-blue': 'linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)',
         'landing-card-background-gradient-lavender':
           'linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%)'
+      },
+      keyframes: {
+        slider: {
+          '0%': {
+            transform: 'translateY(0px)'
+          },
+          '100%': {
+            transform: 'translateY(100px)'
+          }
+        }
+      },
+      animation: {
+        slider: 'slider 5s linear infinite'
       }
     }
   },

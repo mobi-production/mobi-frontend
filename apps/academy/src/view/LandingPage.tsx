@@ -3,6 +3,8 @@ import Image from 'next/image'
 
 import SlideImage from '/public/svg/landing/charity-sample.svg'
 import { pretendard } from '@/common/font'
+import { MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
+import { FAQCardList, FAQSection, MainBanner } from '@/widget/landing/ui'
 import {
   LandingCharityInfoSection,
   LandingEducationFeatureListSection,
@@ -12,8 +14,10 @@ import {
 
 export function LandingPage() {
   return (
-    <main className={cn(pretendard.className)}>
+    <main className={cn(pretendard.className, 'flex w-full flex-col items-center')}>
       {/* LandingPage Top Section */}
+      <MainBanner />
+      <MobiDescriptionWithScrollEvent />
 
       {/* LandingPage Center Section */}
       <LandingCharityInfoSection
@@ -52,6 +56,10 @@ export function LandingPage() {
       <LandingEducationFeatureListSection />
 
       {/* LandingPage Bottom Section */}
+      <FAQSection
+        title={<FAQSection.title>자주 묻는 질문</FAQSection.title>}
+        faq={<FAQCardList />}
+      />
     </main>
   )
 }
