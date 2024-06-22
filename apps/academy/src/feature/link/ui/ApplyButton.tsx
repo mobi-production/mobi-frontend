@@ -1,8 +1,7 @@
 'use client'
 
 import { Button } from '@repo/ui'
-
-import { blankOpener } from '@/feature/link/lib'
+import { blankOpener } from '@repo/util'
 
 export function ApplyButton() {
   return (
