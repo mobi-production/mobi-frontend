@@ -1,15 +1,11 @@
 'use client'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
+import { useCloneRollingBanner } from '@/feature/rolling/lib'
 import { STACK_IMAGES } from '@/widget/landing/constants'
 
 export function StackBanner() {
-  const [cloneCreated, setCloneCreated] = useState(false)
-
-  useEffect(() => {
-    setCloneCreated(true)
-  }, [])
+  const { cloneCreated } = useCloneRollingBanner()
 
   const imageList = (className: string) => (
     <div className={`rolling-list flex gap-8 ${className}`}>

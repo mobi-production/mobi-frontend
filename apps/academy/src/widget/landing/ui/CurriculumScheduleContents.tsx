@@ -1,12 +1,13 @@
 import { getBoundaryProps } from '@repo/util'
 
+import { StackBanner } from '@/feature/rolling/ui'
 import {
   ADVANCED_COURSES,
   EMPLOYMENT_SUPPORT_COURSES,
   INITIAL_COURSES,
   PROJECT_COURSES
 } from '@/widget/landing/constants'
-import { CurriculumScheduleCard, StackBanner } from '@/widget/landing/ui'
+import { CurriculumScheduleCard } from '@/widget/landing/ui'
 
 export function CurriculumScheduleContents() {
   return (
@@ -27,8 +28,9 @@ export function CurriculumScheduleContents() {
           </CurriculumScheduleCard.ContentList>
         }
       />
-      {/* 이미지 롤링 영역 */}
+
       <StackBanner />
+
       <CurriculumScheduleCard
         contents={
           <CurriculumScheduleCard.ContentList>
@@ -46,7 +48,6 @@ export function CurriculumScheduleContents() {
         }
       />
 
-      {/* 세 번째 카드 - 단일 콘텐츠 */}
       <CurriculumScheduleCard
         isBackground={false}
         contents={
@@ -59,7 +60,6 @@ export function CurriculumScheduleContents() {
         }
       />
 
-      {/* 네 번째 카드 - 단일 콘텐츠 */}
       <CurriculumScheduleCard
         isBackground={false}
         contents={
