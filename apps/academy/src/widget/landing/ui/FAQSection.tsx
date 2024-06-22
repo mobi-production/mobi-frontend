@@ -24,7 +24,7 @@ type FAQProps = {
 
 function FAQContainer({ title, faq }: FAQProps) {
   return (
-    <section className='flex flex-col items-center gap-20 xl:w-full xl:max-w-[1244px]'>
+    <section className='my-[140px] flex flex-col items-center gap-20 xl:w-full xl:max-w-[1244px]'>
       {title}
       {faq}
     </section>
