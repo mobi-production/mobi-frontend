@@ -22,13 +22,21 @@ export function LandingPage() {
       {/* LandingPage Center Section */}
       <LandingCharityInfoSection
         title={
-          <LandingCharityInfoSection.Title>
-            모비는 <br />
-            최소한의 운영비를 제외하고 기부하고있어요.
-          </LandingCharityInfoSection.Title>
+          <>
+            <LandingCharityInfoSection.Title className='mobile-hidden'>
+              모비는 <br />
+              최소한의 운영비를 제외하고 기부하고있어요.
+            </LandingCharityInfoSection.Title>
+            <LandingCharityInfoSection.Title className='desktop-hidden text-text-heading-3'>
+              모비는 <br />
+              최소한의 운영비를
+              <br /> 제외하고 <br />
+              기부하고있어요.
+            </LandingCharityInfoSection.Title>
+          </>
         }
         description={
-          <LandingCharityInfoSection.Description>
+          <LandingCharityInfoSection.Description className='mobile:pl-[1.25rem] mobile:pr-[1.25rem]'>
             모비가 최소한의 금액으로 이러한 질 좋은 콘텐츠 제공이 가능한 이유는 모비의 설립 취지에
             있습니다. <br />
             모비는 운영비용을 제외한 금액을 개인의 이윤으로 추구하지 않습니다.

@@ -26,7 +26,7 @@ function StatisticCardContainer({ title, count, className }: StatisticCardProps)
   return (
     <section
       className={cn(
-        'relative z-10 flex h-[14.125rem] w-[24.688rem] flex-col items-center justify-center gap-[1rem] rounded-[0.5rem] border border-white bg-white/60 pb-[4rem] pl-[2rem] pr-[2rem] pt-[4rem] backdrop-blur-md',
+        'relative z-10 flex h-[14.125rem] w-[24.688rem] flex-col items-center justify-center gap-[1rem] rounded-[0.5rem] border border-white bg-white/60 pb-[4rem] pl-[2rem] pr-[2rem] pt-[4rem] backdrop-blur-md mobile:w-[20rem]',
         className
       )}>
       {title}
