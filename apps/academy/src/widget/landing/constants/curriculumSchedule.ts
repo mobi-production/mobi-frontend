@@ -1,4 +1,4 @@
-import { ContentCardProps } from '@/widget/landing/ui/CurriculumScheduleCard'
+import type { ContentCardProps } from '@/widget/landing/ui/CurriculumScheduleCard'
 
 export const INITIAL_COURSES: ContentCardProps[] = [
   {
