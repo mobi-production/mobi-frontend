@@ -1,4 +1,10 @@
-export const FAQ_DATA = [
+type FaqList = {
+  idx: number
+  question: string
+  answer: string
+}
+
+export const FAQ_LIST: FaqList[] = [
   {
     idx: 0,
     question: '모집 및 활동 일정이 궁금해요',

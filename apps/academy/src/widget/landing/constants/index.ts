@@ -1,1 +1,1 @@
-export { FAQ_DATA } from './FAQ_DATA'
+export { FAQ_LIST } from './faqList'
