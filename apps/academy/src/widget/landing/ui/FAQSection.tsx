@@ -1,11 +1,11 @@
 import { cn } from '@repo/util'
 import { ReactNode } from 'react'
 
-type FAQProps = {
+type Props = {
   className?: string
 }
 
-function FAQTitle({ className, children }: PropsNeedChildren<FAQProps>) {
+function FAQTitle({ className, children }: PropsNeedChildren<Props>) {
   return (
     <h2
       className={cn(
@@ -17,12 +17,12 @@ function FAQTitle({ className, children }: PropsNeedChildren<FAQProps>) {
   )
 }
 
-type Props = {
+type FAQProps = {
   title: ReactNode
   faq: ReactNode
 }
 
-function FAQContainer({ title, faq }: Props) {
+function FAQContainer({ title, faq }: FAQProps) {
   return (
     <section className='flex flex-col items-center gap-20 xl:w-full xl:max-w-[1244px]'>
       {title}
