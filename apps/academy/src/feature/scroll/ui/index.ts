@@ -1,0 +1,1 @@
+export { MobiDescriptionWithScrollEvent } from './MobiDescriptionWithScrollEvent'
