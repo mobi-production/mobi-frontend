@@ -7,6 +7,26 @@ module.exports = {
     '../../packages/ui/src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    screens: {
+      mobile: {
+        max: '479px'
+      },
+      mobileAndTablet: {
+        min: '480px',
+        max: '767px'
+      },
+      tablet: {
+        min: '768px',
+        max: '1023px'
+      },
+      tabletAndLaptop: {
+        min: '1024px',
+        max: '1279px'
+      },
+      desktop: {
+        min: '1280px'
+      }
+    },
     extend: {
       colors: {
         primary: '#00C892',
@@ -111,6 +131,10 @@ module.exports = {
           'linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%)'
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
         slider: {
           '0%': {
             transform: 'translateY(0px)'
@@ -121,9 +145,10 @@ module.exports = {
         }
       },
       animation: {
-        slider: 'slider 5s linear infinite'
-      },
+        'fade-in': 'fadeIn 2s ease-in-out',
+        'vertical-slider': 'slider 3s linear infinite'
+      }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animate')]
 }

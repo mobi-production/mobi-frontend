@@ -2,7 +2,7 @@ import { cn } from '@repo/util'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
-import EllipseSvg from '/public/svg/ellipse.svg'
+import EllipseSvg from '/public/svg/apply/ellipse.svg'
 
 type Props = {
   className?: string
@@ -40,15 +40,16 @@ function List({ className, children }: PropsNeedChildren<Props>) {
   return (
     <li
       className={cn(
-        'flex justify-center gap-2 text-center text-text-body-1',
+        'flex gap-2 text-center text-text-body-1 mobile:text-start mobileAndTablet:text-start',
         'text-gray-1',
         className
       )}>
       <Image
+        className='flex items-center justify-center'
         src={EllipseSvg}
         alt='Ellipse'
       />
-      {children}
+      <span>{children}</span>
     </li>
   )
 }
@@ -61,7 +62,7 @@ type ApplyCardProps = {
 
 function DescriptionContainer({ info, title, price }: ApplyCardProps) {
   return (
-    <section className='filter-[7px] box-content flex w-[528px] flex-col items-center gap-8 rounded-2xl bg-white px-8 py-16'>
+    <section className='filter-[0.438rem] box-content flex flex-col items-center gap-8 rounded-2xl bg-white px-8 py-16 mobile:px-6 mobile:py-10 mobileAndTablet:px-6 mobileAndTablet:py-10'>
       {title}
       {price}
       {info}

@@ -9,7 +9,7 @@ function FAQTitle({ className, children }: PropsNeedChildren<Props>) {
   return (
     <h2
       className={cn(
-        'text-text-heading-3 md:text-text-heading-3 xl:text-text-heading-2',
+        'md:text-text-heading-3 xl:text-text-heading-2 text-text-heading-3',
         className
       )}>
       {children}
@@ -24,7 +24,7 @@ type FAQProps = {
 
 function FAQContainer({ title, faq }: FAQProps) {
   return (
-    <section className='my-[140px] flex flex-col items-center gap-20 xl:w-full xl:max-w-[1244px]'>
+    <section className='xl:w-full xl:max-w-[1244px] my-[140px] flex flex-col items-center gap-20'>
       {title}
       {faq}
     </section>
