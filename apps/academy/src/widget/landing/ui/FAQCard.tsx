@@ -11,10 +11,11 @@ type Props = {
 
 type QuestionProps = {
   isToggle: boolean
-  toggle: () => void
+  openToggle: () => void
+  closeToggle: () => void
 } & PropsNeedChildren<Props>
 
-function Question({ className, children, isToggle, toggle }: QuestionProps) {
+function Question({ className, children, isToggle, openToggle, closeToggle }: QuestionProps) {
   return (
     <div
       className={cn(
@@ -30,7 +31,7 @@ function Question({ className, children, isToggle, toggle }: QuestionProps) {
         <h4>{children}</h4>
       </div>
       <FAQToggleButton
-        onClick={toggle}
+        onClick={isToggle ? closeToggle : openToggle}
         isToggle={isToggle}
       />
     </div>
@@ -59,13 +60,14 @@ type FAQCardProps = {
 }
 
 function FAQCardContainer({ question, answer }: FAQCardProps) {
-  const { isToggle, toggle } = useToggle()
+  const { isToggle, openToggle, closeToggle } = useToggle()
 
   return (
     <div className='xl:w-full xl:max-w-[1244px]'>
       <Question
         isToggle={isToggle}
-        toggle={toggle}>
+        openToggle={openToggle}
+        closeToggle={closeToggle}>
         {question}
       </Question>
       <Answer isToggle={isToggle}>{answer}</Answer>
