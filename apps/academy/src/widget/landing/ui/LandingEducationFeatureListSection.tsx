@@ -93,7 +93,7 @@ export function LandingEducationFeatureListSection() {
                 '같은 기수 내에서 학습 시간대가 비슷한 인원끼리\n' +
                 '페어와 또 페어가 모여 하나의 조를 이루어 학습을 진행합니다.\n\n' +
                 '매주 본인의 학습 내용을 발표하는 WIL\n' +
-                '그새 정이 들어버린 페어들과 학습 내용을 공유해요!\n' +
+                '그새 정이 들어버린 페어들과 학습 내용을 공유해요!\n\n' +
                 '힘든 시간을 이기고 나면 끈끈해진 전우애가 함께 할 거에요!'
               }
               mobileDescriptions={
@@ -121,7 +121,7 @@ export function LandingEducationFeatureListSection() {
               mobileTitle='학습 동기 부여를 위한 자체 학습 플래너 시스템'
               descriptions={
                 '학습 플래너 시스템을 통해 학습 시간을 확인하고 다른 기수\n' +
-                '또는 다른 페어들과 경쟁합니다.\n' +
+                '또는 다른 페어들과 경쟁합니다.\n\n' +
                 '경쟁에서 이기면 상위권 페어에게 경품 응모가 가능한\n' +
                 '포인트도 드리고 있어요!'
               }
@@ -137,7 +137,7 @@ export function LandingEducationFeatureListSection() {
               mobileTitle='나만의 플래너'
               descriptions={
                 '강의 수강, 질문에 관한 답변 등 사용하는 활동에 따라\n' +
-                '나만의 플래너를 채워갈 수 있어요.\n' +
+                '나만의 플래너를 채워갈 수 있어요.\n\n' +
                 '또한 멘토들의 리뷰와 애정 가득한 격려가 매주 쏟아집니다.\n' +
                 '혼자서 가는 것이 아니라 늘 함께 있다는 기분이 들게 해드릴게요!'
               }
@@ -165,7 +165,7 @@ export function LandingEducationFeatureListSection() {
               mobileTitle={'모비만이 가능한 상세한\n' + '과제 리뷰'}
               descriptions={
                 '실무진의 상세한 과제 리뷰를 통해 안티 패턴을 해결하고\n' +
-                '미처 발견하지 못한 에러들을 발견할 수 있어요!\n' +
+                '미처 발견하지 못한 에러들을 발견할 수 있어요!\n\n' +
                 '국가지원을 받는 부트캠프를 제외하고는 오직 좋은 뜻으로 모인\n' +
                 '실무진들이 포진해 있는 모비만이 가능한 리뷰입니다.'
               }

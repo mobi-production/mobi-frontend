@@ -41,7 +41,7 @@ export function LandingCharityInfoContainer({
   images
 }: LandingCharityInfoSectionProps) {
   return (
-    <section className='flex w-full flex-col items-center gap-[5rem]'>
+    <section className='flex w-full flex-col items-center gap-[5rem] whitespace-pre-line'>
       {title}
       {description}
       {images}
