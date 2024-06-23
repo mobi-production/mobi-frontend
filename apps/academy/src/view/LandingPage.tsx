@@ -4,12 +4,16 @@ import Image from 'next/image'
 import SlideImage from '/public/svg/landing/charity-sample.svg'
 import { pretendard } from '@/common/font'
 import { MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
-import { FAQCardList, FAQSection, MainBanner } from '@/widget/landing/ui'
 import {
+  CurriculumScheduleContents,
+  CurriculumScheduleSection,
+  FAQCardList,
+  FAQSection,
   LandingCharityInfoSection,
   LandingEducationFeatureListSection,
   LandingStatisticsBanner,
-  LandingTextAnimatedSection
+  LandingTextAnimatedSection,
+  MainBanner
 } from '@/widget/landing/ui'
 
 export function LandingPage() {
@@ -56,6 +60,15 @@ export function LandingPage() {
       <LandingEducationFeatureListSection />
 
       {/* LandingPage Bottom Section */}
+      <CurriculumScheduleSection
+        title={
+          <CurriculumScheduleSection.title className='text-center'>
+            모비 프론트 2기 <br />
+            커리큘럼 및 일정
+          </CurriculumScheduleSection.title>
+        }
+        info={<CurriculumScheduleContents />}
+      />
       <FAQSection
         title={<FAQSection.title>자주 묻는 질문</FAQSection.title>}
         faq={<FAQCardList />}

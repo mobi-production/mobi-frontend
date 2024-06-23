@@ -1,3 +1,6 @@
+export { CurriculumScheduleCard } from './CurriculumScheduleCard'
+export { CurriculumScheduleContents } from './CurriculumScheduleContents'
+export { CurriculumScheduleSection } from './CurriculumScheduleSection'
 export { FAQCardList } from './FAQCardList'
 export { FAQSection } from './FAQSection'
 export { LandingCharityInfoSection } from './LandingCharityInfoSection'
