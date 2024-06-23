@@ -26,12 +26,16 @@ const subjectStyles = cva(
   }
 )
 
-type SubjectProps = {
-  className?: string
+type BoundaryProps = {
   isFirst?: boolean
   isLast?: boolean
   isSingle?: boolean
-} & VariantProps<typeof subjectStyles>
+}
+
+type SubjectProps = {
+  className?: string
+} & BoundaryProps &
+  VariantProps<typeof subjectStyles>
 
 function Subject({
   className,
@@ -95,9 +99,7 @@ function List({
   startDate,
   endDate,
   boundaryProps
-}: ContentCardProps & {
-  boundaryProps: { isFirst: boolean; isLast: boolean; isSingle: boolean }
-}) {
+}: ContentCardProps & { boundaryProps: BoundaryProps }) {
   return (
     <li className='flex w-full flex-col gap-2'>
       <Subject {...boundaryProps}>{subject}</Subject>
