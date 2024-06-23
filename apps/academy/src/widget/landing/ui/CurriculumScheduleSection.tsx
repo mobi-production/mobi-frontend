@@ -10,13 +10,7 @@ function CurriculumScheduleTitle({
   children
 }: PropsNeedChildren<CurriculumScheduleProps>) {
   return (
-    <h2
-      className={cn(
-        'text-text-heading-3 md:text-text-heading-3 xl:text-text-heading-2',
-        className
-      )}>
-      {children}
-    </h2>
+    <h2 className={cn('text-text-heading-2 mobile:text-text-heading-3', className)}>{children}</h2>
   )
 }
 
@@ -27,7 +21,7 @@ type Props = {
 
 function CurriculumScheduleContainer({ title, info }: Props) {
   return (
-    <section className='flex flex-col items-center gap-20 bg-curriculum-background-gradient pb-[160px] pt-[140px] xl:w-full'>
+    <section className='flex w-full flex-col items-center gap-20 bg-curriculum-background-gradient pb-[160px] pt-[140px]'>
       {title}
       {info}
     </section>

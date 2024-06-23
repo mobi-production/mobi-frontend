@@ -84,7 +84,7 @@ export type ContentCardProps = {
 }
 
 function ContentList({ className, children }: PropsNeedChildren<Props>) {
-  return <ul className={cn('flex gap-px xl:w-full xl:max-w-[1244px]', className)}>{children}</ul>
+  return <ul className={cn('flex w-full max-w-[1244px] gap-px', className)}>{children}</ul>
 }
 
 function List({

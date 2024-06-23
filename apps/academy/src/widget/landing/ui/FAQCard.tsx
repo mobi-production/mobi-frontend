@@ -61,7 +61,7 @@ function FAQCardContainer({ idx, question, answer }: FaqList) {
   return (
     <li
       key={idx}
-      className='xl:w-full xl:max-w-[1244px]'>
+      className='w-full max-w-[1244px]'>
       <Question
         isToggle={isToggle}
         openToggle={openToggle}

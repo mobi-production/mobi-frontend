@@ -26,8 +26,8 @@ export function StackBanner() {
 
   return (
     <div className='relative flex overflow-hidden'>
-      {imageList('curriculum-stack-original')}
-      {cloneCreated && imageList('clone')}
+      {imageList('animate-stack-banner-loop')}
+      {cloneCreated && imageList('animate-stack-banner-continuous absolute left-0 top-0')}
     </div>
   )
 }

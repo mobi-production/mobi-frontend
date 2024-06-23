@@ -23,13 +23,6 @@ body {
   -ms-overflow-style: scrollbar;
 }
 
-.curriculum-stack-original {
-  @apply animate-stackBannerLoop;
-}
-
-.clone {
-  @apply absolute left-0 top-0 animate-stackBannerSlideContinuous;
-
 @layer base {
   .mobile-hidden {
     @apply mobile:hidden mobileAndTablet:hidden;
