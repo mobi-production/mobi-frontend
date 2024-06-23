@@ -49,15 +49,15 @@ function Subject({
   )
 }
 
-function Title({ children }: { children: ReactNode }) {
+function Title({ children }: PropsNeedChildren) {
   return <h2 className='mb-8 text-text-heading-3 font-semibold'>{children}</h2>
 }
 
-function Description({ children }: { children: ReactNode }) {
+function Description({ children }: PropsNeedChildren) {
   return <span className='mb-[40px] block h-[64px] text-balance break-keep'>{children}</span>
 }
 
-function Stack({ children }: { children: ReactNode }) {
+function Stack({ children }: PropsNeedChildren) {
   return (
     <div className='flex max-h-[88px] items-center justify-center text-balance rounded-lg bg-white/60 px-4 py-8 backdrop-blur-[7px]'>
       {children}
@@ -132,7 +132,7 @@ function ContentsContainer({
   return (
     <section
       className={`relative flex w-full justify-center gap-8 ${isBackground ? 'bg-curriculum-contents-background-gradient' : ''}`}>
-      <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green'></div>
+      <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green' />
       {contents}
     </section>
   )

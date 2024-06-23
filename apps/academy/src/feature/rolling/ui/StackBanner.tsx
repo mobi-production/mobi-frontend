@@ -12,7 +12,7 @@ export function StackBanner() {
       {STACK_IMAGES.map((image) => (
         <div
           key={image.id}
-          className='h-[96px] w-[96px] flex-none'>
+          className='h-24 w-24 flex-none'>
           <Image
             src={image.src}
             alt={image.alt}

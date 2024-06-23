@@ -9,13 +9,11 @@ import {
   CurriculumScheduleSection,
   FAQCardList,
   FAQSection,
-  MainBanner
-} from '@/widget/landing/ui'
-import {
   LandingCharityInfoSection,
   LandingEducationFeatureListSection,
   LandingStatisticsBanner,
-  LandingTextAnimatedSection
+  LandingTextAnimatedSection,
+  MainBanner
 } from '@/widget/landing/ui'
 
 export function LandingPage() {

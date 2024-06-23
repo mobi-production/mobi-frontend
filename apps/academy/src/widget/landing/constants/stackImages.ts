@@ -16,85 +16,85 @@ import Tailwind from '/public/svg/landing/tailwind-css.svg'
 import Typescript from '/public/svg/landing/ts.svg'
 import Vite from '/public/svg/landing/vite.svg'
 
-type Props = {
-  id: string
+type StackImageProps = {
+  id: number
   src: StaticImageData
   alt: string
 }
 
-export const STACK_IMAGES: Props[] = [
+export const STACK_IMAGES: StackImageProps[] = [
   {
-    id: 'Html',
+    id: 0,
     src: Html,
     alt: 'Html Logo'
   },
   {
-    id: 'Css',
+    id: 1,
     src: Css,
     alt: 'Css Logo'
   },
   {
-    id: 'Git',
+    id: 2,
     src: Git,
     alt: 'Git Logo'
   },
   {
-    id: 'Javascript',
+    id: 3,
     src: Javascript,
     alt: 'Javascript Logo'
   },
   {
-    id: 'Typescript',
+    id: 4,
     src: Typescript,
     alt: 'Typescript Logo'
   },
   {
-    id: 'React',
+    id: 5,
     src: React,
     alt: 'React Logo'
   },
   {
-    id: 'Vite',
+    id: 6,
     src: Vite,
     alt: 'Vite Logo'
   },
   {
-    id: 'Tailwind',
+    id: 7,
     src: Tailwind,
     alt: 'Tailwind Logo'
   },
   {
-    id: 'Storybook',
+    id: 8,
     src: Storybook,
     alt: 'Storybook Logo'
   },
   {
-    id: 'NextJs',
+    id: 9,
     src: NextJs,
     alt: 'NextJs Logo'
   },
   {
-    id: 'ReactQuery',
+    id: 10,
     src: ReactQuery,
     alt: 'ReactQuery Logo'
   },
   {
-    id: 'Axios',
+    id: 11,
     src: Axios,
     alt: 'Axios Logo'
   },
   {
-    id: 'StyledComponent',
+    id: 12,
     src: StyledComponent,
     alt: 'StyledComponent Logo'
   },
   {
-    id: 'Rhf',
+    id: 13,
     src: Rhf,
     alt: 'Rhf Logo'
   },
   {
-    id: 'Recoil',
+    id: 14,
     src: Recoil,
     alt: 'Recoil Logo'
   }
