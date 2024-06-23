@@ -29,4 +29,13 @@ body {
 
 .clone {
   @apply absolute left-0 top-0 animate-stackBannerSlideContinuous;
+
+@layer base {
+  .mobile-hidden {
+    @apply mobile:hidden mobileAndTablet:hidden;
+  }
+
+  .desktop-hidden {
+    @apply tablet:hidden tabletAndLaptop:hidden desktop:hidden;
+  }
 }

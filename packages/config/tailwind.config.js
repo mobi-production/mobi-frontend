@@ -7,6 +7,26 @@ module.exports = {
     '../../packages/ui/src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    screens: {
+      mobile: {
+        max: '479px'
+      },
+      mobileAndTablet: {
+        min: '480px',
+        max: '767px'
+      },
+      tablet: {
+        min: '768px',
+        max: '1023px'
+      },
+      tabletAndLaptop: {
+        min: '1024px',
+        max: '1279px'
+      },
+      desktop: {
+        min: '1280px'
+      }
+    },
     extend: {
       colors: {
         primary: '#00C892',
@@ -121,8 +141,36 @@ module.exports = {
       animation: {
         stackBannerLoop: 'stackBannerLoop 66s linear infinite',
         stackBannerSlideContinuous: 'stackBannerSlideContinuous 66s linear infinite'
+        'landing-card-background-gradient-green':
+          'linear-gradient(90deg, #1CD8D2 0%, #93EDC7 100%)',
+        'landing-card-background-gradient-purple':
+          'linear-gradient(90deg, #439CFB 0%, #F187FB 100%)',
+        'landing-card-background-gradient-orange':
+          'linear-gradient(90deg, #F9C58D 0%, #F492F0 100%)',
+        'landing-card-background-gradient-red': 'linear-gradient(90deg, #FF5858 0%, #FA9372 100%)',
+        'landing-card-background-gradient-blue': 'linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)',
+        'landing-card-background-gradient-lavender':
+          'linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%)'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
+        slider: {
+          '0%': {
+            transform: 'translateY(0px)'
+          },
+          '100%': {
+            transform: 'translateY(100px)'
+          }
+        }
+      },
+      animation: {
+        'fade-in': 'fadeIn 2s ease-in-out',
+        'vertical-slider': 'slider 3s linear infinite'
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animate')]
 }
