@@ -40,7 +40,8 @@ module.exports = {
         'gray-4': '#dddddd',
         'gray-5': '#F3F3F3',
         'gray-6': '#F9F9F9',
-        red: '#F03838'
+        red: '#F03838',
+        'glass-stroke': 'rgba(255, 255, 255, 0.97)'
       },
       fontSize: {
         'text-heading-1': [
@@ -119,6 +120,11 @@ module.exports = {
       backgroundImage: {
         'apply-background-gradient':
           'linear-gradient(0deg, rgba(255, 255, 255, 0.00) 44.95%, #FFF 81.3%)',
+        'curriculum-background-gradient': 'linear-gradient(to bottom, #F1FBF8, #F9F9F9)',
+        'curriculum-subject-background-gradient':
+          'linear-gradient(15deg, #00C892 53.73%, #A5E9BC 129.63%)',
+        'curriculum-contents-background-gradient':
+          'radial-gradient(58.73% 58.73% at 50% 50%, rgba(0, 200, 146, 0.20) 0%, rgba(255, 255, 255, 0.00) 70%)',
         'landing-card-background-gradient-green':
           'linear-gradient(90deg, #1CD8D2 0%, #93EDC7 100%)',
         'landing-card-background-gradient-purple':
@@ -142,11 +148,23 @@ module.exports = {
           '100%': {
             transform: 'translateY(100px)'
           }
+        },
+        'stack-banner-loop': {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-100%)' },
+          '50.01%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
+        'stack-banner-continuous': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' }
         }
       },
       animation: {
         'fade-in': 'fadeIn 2s ease-in-out',
-        'vertical-slider': 'slider 3s linear infinite'
+        'vertical-slider': 'slider 3s linear infinite',
+        'stack-banner-loop': 'stack-banner-loop 66s linear infinite',
+        'stack-banner-continuous': 'stack-banner-continuous 66s linear infinite'
       }
     }
   },
