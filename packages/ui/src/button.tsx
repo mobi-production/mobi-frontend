@@ -42,7 +42,7 @@ export function Button({
 }: PropsWithChildren<ButtonProps>) {
   return (
     <button
-      className={cn(button({ intent, size, rounded }), className)}
+      className={cn(button({ intent, size, rounded }), 'relative', className)}
       {...rest}>
       {children}
     </button>
