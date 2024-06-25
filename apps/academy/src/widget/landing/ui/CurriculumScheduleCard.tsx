@@ -1,23 +1,19 @@
 import { cn, formatDate } from '@repo/util'
-import { cva, VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 import Image from 'next/image'
-import { PropsWithChildren, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 import rangeEllipse from '/public/svg/range-ellipse.svg'
 
-type Props = {
-  className?: string
-}
-
 const subjectStyles = cva(
-  'flex items-center justify-center gap-[8px] border border-glass-stroke border-box bg-curriculum-subject-background-gradient px-4 py-8',
+  'flex items-center justify-center gap-2 border border-glass-stroke border-box bg-curriculum-subject-background-gradient px-4 py-8',
   {
     variants: {
       borderRadius: {
         none: '',
         tl: 'rounded-tl-[16px]',
         tr: 'rounded-tr-[16px]',
-        both: 'rounded-tl-[16px] rounded-tr-[16px]'
+        both: 'rounded-t-[16px]'
       }
     },
     defaultVariants: {
@@ -26,29 +22,35 @@ const subjectStyles = cva(
   }
 )
 
-type BoundaryProps = {
-  isFirst?: boolean
-  isLast?: boolean
-  isSingle?: boolean
+type Props = {
+  className?: string
+}
+
+type GroupType = 'firstGroup' | 'secondGroup' | 'thirdGroup' | 'fourthGroup'
+
+type GroupIndexProps = {
+  index: number
+  group: GroupType
 }
 
 type SubjectProps = {
   className?: string
-} & BoundaryProps &
-  VariantProps<typeof subjectStyles>
+  children: React.ReactNode
+} & GroupIndexProps
 
-function Subject({
-  className,
-  children,
-  isFirst,
-  isLast,
-  isSingle
-}: PropsWithChildren<SubjectProps>) {
-  const borderRadius = isSingle ? 'both' : isFirst ? 'tl' : isLast ? 'tr' : 'none'
+function Subject({ className, children, index, group }: SubjectProps) {
+  const borderRadius =
+    group === 'firstGroup' || group === 'secondGroup'
+      ? index % 3 === 0
+        ? 'tl'
+        : index % 3 === 2
+          ? 'tr'
+          : 'none'
+      : 'both'
 
   return (
-    <div className={cn(subjectStyles({ borderRadius }), className)}>
-      <h4 className={cn('text-text-title-1 font-normal')}>{children}</h4>
+    <div className={cn(subjectStyles({ borderRadius }), 'mobile:rounded-t-[16px]', className)}>
+      <h4 className='text-text-title-1 font-normal'>{children}</h4>
     </div>
   )
 }
@@ -58,7 +60,7 @@ function Title({ children }: PropsNeedChildren) {
 }
 
 function Description({ children }: PropsNeedChildren) {
-  return <span className='mb-[40px] block h-[64px] text-balance break-keep'>{children}</span>
+  return <span className='mb-10 block h-16 text-balance break-keep mobile:h-auto'>{children}</span>
 }
 
 function Stack({ children }: PropsNeedChildren) {
@@ -71,11 +73,11 @@ function Stack({ children }: PropsNeedChildren) {
 
 function DateRange({ startDate, endDate }: { startDate: Date; endDate: Date }) {
   return (
-    <div className='mt-12 flex justify-between'>
-      <span className='text-text-body-2 font-normal mobile:text-text-body-3'>
+    <div className='mt-12 flex justify-between mobile:mt-10'>
+      <span className='text-text-body-2 font-normal text-green mobile:text-text-body-3'>
         {formatDate(startDate)}
       </span>
-      <span className='text-text-body-2 font-normal mobile:text-text-body-3'>
+      <span className='text-text-body-2 font-normal text-green mobile:text-text-body-3'>
         {formatDate(endDate)}
       </span>
     </div>
@@ -91,11 +93,20 @@ export type ContentCardProps = {
   endDate: Date
 }
 
-function ContentList({ className, children }: PropsNeedChildren<Props>) {
+function ContentList({
+  className,
+  children,
+  group
+}: PropsNeedChildren<Props> & { group: GroupType }) {
   return (
     <ul
       className={cn(
-        'flex w-full max-w-[1244px] gap-px mobile:px-5 mobileAndTablet:px-5 tablet:px-5 tabletAndLaptop:px-5',
+        'grid w-full max-w-[1244px] gap-4 mobile:px-5 mobileAndTablet:px-5 tablet:px-5 tabletAndLaptop:px-5',
+        {
+          'grid-cols-1 mobile:grid-cols-1': true,
+          'grid-cols-3 gap-px mobile:gap-4': group === 'firstGroup' || group === 'secondGroup',
+          'grid-cols-1': group === 'thirdGroup' || group === 'fourthGroup'
+        },
         className
       )}>
       {children}
@@ -110,12 +121,18 @@ function List({
   stack,
   startDate,
   endDate,
-  boundaryProps
-}: ContentCardProps & { boundaryProps: BoundaryProps }) {
+  index,
+  group
+}: ContentCardProps & GroupIndexProps) {
   return (
-    <li className='flex w-full flex-col gap-2'>
-      <Subject {...boundaryProps}>{subject}</Subject>
-      <div className='px-8 py-14 text-center shadow-[0_0_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[7px]'>
+    <li className='flex w-full flex-col gap-2 mobile:relative'>
+      <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green mobile:left-6 mobile:right-6' />
+      <Subject
+        index={index}
+        group={group}>
+        {subject}
+      </Subject>
+      <div className='px-8 py-14 text-center shadow-[0_0_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[7px] mobile:px-6'>
         <Title>{title}</Title>
         {description && <Description>{description}</Description>}
         {stack && <Stack>{stack}</Stack>}
@@ -145,8 +162,7 @@ function ContentsContainer({
 }: ContentsProps & { isBackground?: boolean }) {
   return (
     <section
-      className={`relative flex w-full justify-center gap-8 ${isBackground ? 'bg-curriculum-contents-background-gradient' : ''}`}>
-      <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green' />
+      className={`relative flex w-full justify-center gap-8 ${isBackground ? 'bg-curriculum-contents-background-gradient mobile:bg-none' : ''}`}>
       {contents}
     </section>
   )
