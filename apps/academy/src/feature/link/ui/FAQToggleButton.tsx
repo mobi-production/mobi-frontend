@@ -13,6 +13,7 @@ export function FAQToggleButton({ onClick, isToggle }: Props) {
       onClick={onClick}
       className={`transform transition-transform duration-200 ${isToggle ? 'rotate-180' : ''}`}>
       <Image
+        className='mobile:w-4'
         src={ArrowWebp}
         alt='arrow toggle icon'
       />

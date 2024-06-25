@@ -20,7 +20,7 @@ function Question({ className, children, isToggle, openToggle, closeToggle }: Qu
   return (
     <div
       className={cn(
-        'flex w-full justify-between rounded-lg border px-8 py-6',
+        'flex w-full items-center justify-between rounded-lg border px-8 py-6 mobile:px-4 mobile:py-6',
         {
           'border-gray-4': !isToggle,
           'border-primary bg-primary bg-opacity-5': isToggle
@@ -28,8 +28,8 @@ function Question({ className, children, isToggle, openToggle, closeToggle }: Qu
         className
       )}>
       <div className='flex gap-2'>
-        <h4 className='text-text-title-2 text-secondary'>Q</h4>
-        <h4 className='text-text-title-2'>{children}</h4>
+        <h4 className='text-text-title-2 text-secondary mobile:text-text-body-1'>Q</h4>
+        <h4 className='text-text-title-2 mobile:text-text-body-1'>{children}</h4>
       </div>
       <FAQToggleButton
         onClick={isToggle ? closeToggle : openToggle}
@@ -50,7 +50,7 @@ function Answer({ isToggle, children }: AnswerProps) {
         'max-h-0': !isToggle,
         'max-h-screen': isToggle
       })}>
-      <div className='px-8 pb-10 pt-6 text-gray-1'>{children}</div>
+      <div className='px-8 pb-10 pt-6 text-gray-1 mobile:px-0 mobile:py-6'>{children}</div>
     </div>
   )
 }
