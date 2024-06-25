@@ -21,7 +21,7 @@ type Props = {
 
 function CurriculumScheduleContainer({ title, info }: Props) {
   return (
-    <section className='flex w-full flex-col items-center gap-20 bg-curriculum-background-gradient pb-[160px] pt-[140px]'>
+    <section className='flex w-full flex-col items-center gap-20 bg-curriculum-background-gradient pb-[160px] pt-[140px] mobile:gap-10 mobile:py-[70px]'>
       {title}
       {info}
     </section>

@@ -18,7 +18,7 @@ type FAQProps = {
 
 function FAQContainer({ title, faq }: FAQProps) {
   return (
-    <section className='my-[140px] flex w-full max-w-[1244px] flex-col items-center gap-20 mobile:my-14 mobile:gap-[40px] mobile:px-5 mobileAndTablet:px-5 tablet:px-5 tabletAndLaptop:px-5'>
+    <section className='my-[140px] flex w-full max-w-[1244px] flex-col items-center gap-20 mobile:my-[70px] mobile:gap-[40px] mobile:px-5 mobileAndTablet:px-5 tablet:px-5 tabletAndLaptop:px-5'>
       {title}
       {faq}
     </section>

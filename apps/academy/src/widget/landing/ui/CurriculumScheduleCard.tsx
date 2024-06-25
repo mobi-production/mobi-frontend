@@ -54,7 +54,7 @@ function Subject({
 }
 
 function Title({ children }: PropsNeedChildren) {
-  return <h2 className='mb-8 text-text-heading-3 font-semibold'>{children}</h2>
+  return <h2 className='mb-8 break-keep text-text-heading-3 font-semibold'>{children}</h2>
 }
 
 function Description({ children }: PropsNeedChildren) {
@@ -72,8 +72,12 @@ function Stack({ children }: PropsNeedChildren) {
 function DateRange({ startDate, endDate }: { startDate: Date; endDate: Date }) {
   return (
     <div className='mt-12 flex justify-between'>
-      <span>{formatDate(startDate)}</span>
-      <span>{formatDate(endDate)}</span>
+      <span className='text-text-body-2 font-normal mobile:text-text-body-3'>
+        {formatDate(startDate)}
+      </span>
+      <span className='text-text-body-2 font-normal mobile:text-text-body-3'>
+        {formatDate(endDate)}
+      </span>
     </div>
   )
 }
@@ -88,7 +92,15 @@ export type ContentCardProps = {
 }
 
 function ContentList({ className, children }: PropsNeedChildren<Props>) {
-  return <ul className={cn('flex w-full max-w-[1244px] gap-px', className)}>{children}</ul>
+  return (
+    <ul
+      className={cn(
+        'flex w-full max-w-[1244px] gap-px mobile:px-5 mobileAndTablet:px-5 tablet:px-5 tabletAndLaptop:px-5',
+        className
+      )}>
+      {children}
+    </ul>
+  )
 }
 
 function List({
