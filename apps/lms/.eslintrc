@@ -2,13 +2,7 @@
   "root": true,
   "extends": [
     "@repo/eslint-config/next.js",
-    "plugin:storybook/recommended",
     "@repo/eslint-config/library.js"
-  ],
-  "ignorePatterns": [
-    "prettier.config.js",
-    "postcss.config.js",
-    "tailwind.config.js"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
