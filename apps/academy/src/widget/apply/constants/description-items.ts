@@ -10,7 +10,7 @@ type ApplyScheduleItems = {
   description: string
 }
 
-export const BENEFIT_CARD_ITEM: ApplyScheduleItems[] = [
+export const DESCRIPTION_ITEMS: ApplyScheduleItems[] = [
   {
     icon: ComputerSvg,
     iconClass: 'px-3 py-[14px]',

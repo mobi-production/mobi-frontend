@@ -1,11 +1,11 @@
-type ApplyDescriptionCard = {
+type OperatingCostItems = {
   icon: string
   alt: string
   title: string
   description: string
 }
 
-export const DESCRIPTION_CARD_ITEM: ApplyDescriptionCard[] = [
+export const OPERATING_COST_ITEMS: OperatingCostItems[] = [
   {
     icon: '/webp/apply/description-1.webp',
     alt: 'description-1',

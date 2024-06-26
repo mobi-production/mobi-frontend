@@ -70,7 +70,7 @@ function DescriptionContainer({ info, title, price }: ApplyCardProps) {
   )
 }
 
-export const ApplyCard = Object.assign(DescriptionContainer, {
+export const PriceBannerCard = Object.assign(DescriptionContainer, {
   Title,
   Price,
   DescriptionList,

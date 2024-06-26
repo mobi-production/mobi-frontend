@@ -2,40 +2,44 @@ import { cn } from '@repo/util'
 import Image from 'next/image'
 
 import { pretendard } from '@/common/font'
-import { APPLY_TITLE } from '@/widget/apply/constants'
+import { APPLY_CONTENT } from '@/widget/apply/constants'
 import {
-  ApplyPriceBanner,
-  ApplyScheduleBanner,
   ApplySection,
-  ApplyTopBanner,
-  BenefitCardList,
-  DescriptionCardList
+  DescriptionCardList,
+  OperatingCardList,
+  PriceBanner,
+  ScheduleBanner,
+  TopBanner
 } from '@/widget/apply/ui'
 
 export function ApplyPage() {
   return (
     <main className={cn(pretendard.className, 'flex w-full flex-col items-center')}>
-      <ApplyTopBanner />
+      <TopBanner />
       <ApplySection
         title={
           <>
             <ApplySection.title className='mobile-hidden'>
-              {APPLY_TITLE.section_1.title}
+              {APPLY_CONTENT.description_section.title}
             </ApplySection.title>
             <ApplySection.title className='desktop-hidden text-balance'>
-              {APPLY_TITLE.section_1.mobile_title}
+              {APPLY_CONTENT.description_section.mobile_title}
             </ApplySection.title>
           </>
         }
-        info={<BenefitCardList />}
+        info={<DescriptionCardList />}
       />
       <ApplySection
         title={
           <div className='flex flex-col gap-12 whitespace-pre-wrap'>
-            <ApplySection.title>{APPLY_TITLE.section_2.title}</ApplySection.title>
+            <ApplySection.title>{APPLY_CONTENT.communication_section.title}</ApplySection.title>
             <div className='flex flex-col gap-4'>
-              <span className='whitespace-pre-wrap'>{APPLY_TITLE.section_2.sub_title_1}</span>
-              <span className='whitespace-pre-wrap'>{APPLY_TITLE.section_2.sub_title_2}</span>
+              <span className='whitespace-pre-wrap'>
+                {APPLY_CONTENT.communication_section.sub_title_1}
+              </span>
+              <span className='whitespace-pre-wrap'>
+                {APPLY_CONTENT.communication_section.sub_title_2}
+              </span>
             </div>
           </div>
         }
@@ -62,17 +66,17 @@ export function ApplyPage() {
         title={
           <>
             <ApplySection.title className='mobile-hidden'>
-              {APPLY_TITLE.section_3.title}
+              {APPLY_CONTENT.operating_cost_section.title}
             </ApplySection.title>
             <ApplySection.title className='desktop-hidden text-balance'>
-              {APPLY_TITLE.section_3.title}
+              {APPLY_CONTENT.operating_cost_section.title}
             </ApplySection.title>
           </>
         }
-        info={<DescriptionCardList />}
+        info={<OperatingCardList />}
       />
-      <ApplyPriceBanner />
-      <ApplyScheduleBanner />
+      <PriceBanner />
+      <ScheduleBanner />
     </main>
   )
 }

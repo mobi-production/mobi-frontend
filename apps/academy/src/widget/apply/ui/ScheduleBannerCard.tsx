@@ -31,7 +31,7 @@ type ApplyScheduleContainerProps = {
   title: ReactNode
 }
 
-function ApplyScheduleContainer({ icon, title, date }: ApplyScheduleContainerProps) {
+function ScheduleContainer({ icon, title, date }: ApplyScheduleContainerProps) {
   return (
     <section
       className={cn(
@@ -47,7 +47,7 @@ function ApplyScheduleContainer({ icon, title, date }: ApplyScheduleContainerPro
   )
 }
 
-export const ApplyScheduleCard = Object.assign(ApplyScheduleContainer, {
+export const ScheduleBannerCard = Object.assign(ScheduleContainer, {
   Date,
   Icon,
   Title

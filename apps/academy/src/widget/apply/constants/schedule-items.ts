@@ -3,14 +3,14 @@ import ChatSvg from '/public/svg/apply/chat.svg'
 import MailSvg from '/public/svg/apply/mail.svg'
 import SendSvg from '/public/svg/apply/send.svg'
 
-type ApplyScheduleItems = {
+type ScheduleItems = {
   icon: string
   alt: string
   title: string
   date: string
 }
 
-export const APPLY_SCHEDULE_ITEM: ApplyScheduleItems[] = [
+export const SCHEDULE_ITEMS: ScheduleItems[] = [
   {
     icon: MailSvg,
     alt: 'mail-icon',
