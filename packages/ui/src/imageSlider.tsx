@@ -1,8 +1,6 @@
 import { cn } from '@repo/util'
-
+import { cva, VariantProps } from 'class-variance-authority'
 import { ComponentPropsWithoutRef, HTMLProps, PropsWithChildren } from 'react'
-
-import { VariantProps, cva } from 'class-variance-authority'
 
 const imageSlider = cva('div', {
   variants: {
