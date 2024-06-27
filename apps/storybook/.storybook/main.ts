@@ -7,7 +7,7 @@ function getAbsolutePath(value: string): any {
 }
 
 const config: StorybookConfig = {
-  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/**/*.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     getAbsolutePath('@storybook/addon-onboarding'),
     getAbsolutePath('@storybook/addon-links'),
@@ -30,7 +30,7 @@ const config: StorybookConfig = {
       resolve: {
         alias: [
           {
-            find: '@repo/ui',
+            find: 'ui',
             replacement: resolve(__dirname, '../../../packages/ui/')
           }
         ]

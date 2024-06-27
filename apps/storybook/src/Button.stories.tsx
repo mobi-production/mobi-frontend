@@ -18,7 +18,8 @@ type Story = StoryObj<typeof Button>
 export const Primary: Story = {
   render: () => (
     <Button
-      className='border-gray-2 bg-blue-600 text-white'
+      intent='apply'
+      className='bg-amber-600'
       onClick={(): void => {
         console.info('Hello from Turborepo!')
       }}>
