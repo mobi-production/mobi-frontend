@@ -15,7 +15,7 @@ export default meta
 
 type Story = StoryObj<typeof Button>
 
-export const Primary: Story = {
+export const ApplyButton: Story = {
   args: {
     rounded: 'full',
     intent: 'apply',
