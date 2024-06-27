@@ -1,4 +1,4 @@
-import '@/common/styles/globals.css'
+import '@mobi/config/styles.css'
 
 import type { Metadata } from 'next'
 
