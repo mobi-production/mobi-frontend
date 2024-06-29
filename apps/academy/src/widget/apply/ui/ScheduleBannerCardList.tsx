@@ -1,27 +1,28 @@
 import Image from 'next/image'
 
-import { APPLY_SCHEDULE_ITEM } from '@/widget/apply/constants'
-import { ApplyScheduleCard } from '@/widget/apply/ui/ApplyScheduleCard'
+import { SCHEDULE_ITEMS } from '@/widget/apply/constants'
 
-export function ApplyScheduleCardList() {
+import { ScheduleBannerCard } from './ScheduleBannerCard'
+
+export function ScheduleBannerCardList() {
   return (
     <div className='mobile: grid w-full max-w-[1244px] grid-cols-4 justify-items-center gap-4 mobile:grid-cols-1 mobileAndTablet:grid-cols-1 tablet:grid-cols-2 tabletAndLaptop:grid-cols-3'>
-      {APPLY_SCHEDULE_ITEM.map((item, index) => {
+      {SCHEDULE_ITEMS.map((item, index) => {
         {
           const { icon, title, date, alt } = item
           return (
-            <ApplyScheduleCard
+            <ScheduleBannerCard
               key={index}
-              date={<ApplyScheduleCard.Date>{date}</ApplyScheduleCard.Date>}
+              date={<ScheduleBannerCard.Date>{date}</ScheduleBannerCard.Date>}
               icon={
-                <ApplyScheduleCard.Icon>
+                <ScheduleBannerCard.Icon>
                   <Image
                     src={icon}
                     alt={alt}
                   />
-                </ApplyScheduleCard.Icon>
+                </ScheduleBannerCard.Icon>
               }
-              title={<ApplyScheduleCard.Title>{title}</ApplyScheduleCard.Title>}
+              title={<ScheduleBannerCard.Title>{title}</ScheduleBannerCard.Title>}
             />
           )
         }

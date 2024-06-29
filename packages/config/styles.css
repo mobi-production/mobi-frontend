@@ -31,4 +31,8 @@ body {
   .desktop-hidden {
     @apply tablet:hidden tabletAndLaptop:hidden desktop:hidden;
   }
+
+  .apply-box {
+    @apply w-full py-[8.75rem] mobile:px-5 mobile:py-[4.375rem] mobileAndTablet:px-5 mobileAndTablet:py-[4.375rem];
+  }
 }

@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
-import { APPLY_TITLE } from '@/widget/apply/constants'
-import { ApplyBox } from '@/widget/apply/ui/ApplyBox'
-import { ApplyCardList } from '@/widget/apply/ui/ApplyCardList'
+import { APPLY_CONTENT } from '@/widget/apply/constants'
+import { PriceBannerCardList } from '@/widget/apply/ui/PriceBannerCardList'
 
-export function ApplyPriceBanner() {
+export function PriceBanner() {
   return (
     <section className='relative max-h-fit w-full'>
       <div className='absolute z-10 h-full w-full'>
@@ -23,12 +22,12 @@ export function ApplyPriceBanner() {
           objectFit='cover'
         />
       </div>
-      <ApplyBox className='relative z-20 flex flex-col items-center gap-8 mobile:gap-10 mobileAndTablet:gap-10'>
+      <div className='apply-box relative z-20 flex flex-col items-center gap-8 mobile:gap-10 mobileAndTablet:gap-10'>
         <h1 className='text-text-heading-2 text-white mobile:text-text-heading-3 mobileAndTablet:text-text-heading-3'>
-          {APPLY_TITLE.price_banner.title}
+          {APPLY_CONTENT.price_banner.title}
         </h1>
-        <ApplyCardList />
-      </ApplyBox>
+        <PriceBannerCardList />
+      </div>
     </section>
   )
 }
