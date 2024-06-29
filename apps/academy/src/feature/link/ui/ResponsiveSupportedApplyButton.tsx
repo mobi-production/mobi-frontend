@@ -4,9 +4,6 @@ import { Button } from '@repo/ui'
 import { blankOpener } from '@repo/util'
 
 export function ResponsiveSupportedApplyButton() {
-  const onClick = () => {
-    blankOpener(process.env.ACADEMY_APPLY_FORM_URL)
-  }
   return (
     <>
       <Button
@@ -14,7 +11,7 @@ export function ResponsiveSupportedApplyButton() {
         intent='apply'
         size='big'
         rounded='full'
-        onClick={onClick}>
+        onClick={blankOpener(process.env.ACADEMY_APPLY_FORM_URL)}>
         지원하기
       </Button>
       <Button
@@ -22,7 +19,7 @@ export function ResponsiveSupportedApplyButton() {
         intent='apply'
         size='big'
         rounded='full'
-        onClick={onClick}>
+        onClick={blankOpener(process.env.ACADEMY_APPLY_FORM_URL)}>
         지원하기
       </Button>
     </>
