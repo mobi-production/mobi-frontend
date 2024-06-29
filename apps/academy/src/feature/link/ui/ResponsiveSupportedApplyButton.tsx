@@ -8,16 +8,13 @@ export function ResponsiveSupportedApplyButton() {
     <>
       <Button
         className='mobile-hidden'
-        intent='apply'
-        size='big'
         rounded='full'
         onClick={blankOpener(process.env.ACADEMY_APPLY_FORM_URL)}>
         지원하기
       </Button>
       <Button
         className='desktop-hidden'
-        intent='apply'
-        size='big'
+        size='full'
         rounded='full'
         onClick={blankOpener(process.env.ACADEMY_APPLY_FORM_URL)}>
         지원하기

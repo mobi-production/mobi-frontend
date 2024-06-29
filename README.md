@@ -19,7 +19,7 @@ pnpm build:<app build>
 ### Amplify Build Link
 
 <a href="https://academy.d25tvblg1tazl2.amplifyapp.com/">**Admin Link**</a>
-
+e
 <a href="https://lms.d31erl6jig4q6q.amplifyapp.com/">**LMS Link**</a>
 
 ### Mobi Design System
