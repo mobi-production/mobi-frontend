@@ -1,8 +1,8 @@
 import { cn } from '@repo/util'
+import { cva, VariantProps } from 'class-variance-authority'
 import { ComponentPropsWithoutRef, HTMLProps, PropsWithChildren } from 'react'
-import { VariantProps, cva } from 'class-variance-authority'
 
-const button = cva('button', {
+const ButtonVariants = cva('button', {
   variants: {
     intent: {
       apply: ['bg-primary', 'text-white', 'rounded-full'],
@@ -29,7 +29,7 @@ const button = cva('button', {
 
 type ButtonProps = {
   className?: HTMLProps<HTMLElement>['className']
-} & VariantProps<typeof button> &
+} & VariantProps<typeof ButtonVariants> &
   ComponentPropsWithoutRef<'button'>
 
 export function Button({
@@ -42,7 +42,7 @@ export function Button({
 }: PropsWithChildren<ButtonProps>) {
   return (
     <button
-      className={cn(button({ intent, size, rounded }), 'relative', className)}
+      className={cn(ButtonVariants({ intent, size, rounded }), className)}
       {...rest}>
       {children}
     </button>
