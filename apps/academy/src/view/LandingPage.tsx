@@ -1,7 +1,5 @@
 import { cn } from '@repo/util'
-import Image from 'next/image'
 
-import SlideImage from '/public/svg/landing/charity-sample.svg'
 import { pretendard } from '@/common/font'
 import { MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
 import { FAQCardList, FAQSection, MainBanner } from '@/widget/landing/ui'
@@ -11,6 +9,7 @@ import {
   LandingStatisticsBanner,
   LandingTextAnimatedSection
 } from '@/widget/landing/ui'
+import { LandingCharityImageSlide } from '@/widget/landing/ui/LandingCharityImageSlide'
 
 export function LandingPage() {
   return (
@@ -43,10 +42,8 @@ export function LandingPage() {
         images={
           <LandingCharityInfoSection.ImageSlider>
             {/* Todo: 실제 슬라이드 기능 컴포넌트 추가하기 */}
-            <Image
-              src={SlideImage}
-              alt='slide_image'
-            />
+            {/* LandingCharityImageSlide */}
+            <LandingCharityImageSlide />
           </LandingCharityInfoSection.ImageSlider>
         }
       />
