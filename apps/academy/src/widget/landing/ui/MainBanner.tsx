@@ -32,7 +32,7 @@ export function MainBanner() {
         <div>
           <NavigationButton
             href='/apply'
-            intent='ghost'
+            intent='outline'
             rounded='full'
             size='large'
             className='font-semibold text-green'>
