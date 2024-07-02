@@ -1,9 +1,10 @@
-import { cn, formatDate, getBorderRadius } from '@repo/util'
+import { cn, formatDate } from '@repo/util'
 import { cva } from 'class-variance-authority'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
 import rangeEllipse from '/public/svg/range-ellipse.svg'
+import { getBorderRadius } from '@/widget/landing/util'
 
 type Props = {
   className?: string

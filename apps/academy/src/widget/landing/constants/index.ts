@@ -3,8 +3,7 @@ export {
   EMPLOYMENT_SUPPORT_COURSES,
   INITIAL_COURSES,
   PROJECT_COURSES
-} from './curriculumSchedule'
-export type { FaqList } from './faq-list'
-export { FAQ_LIST } from './faq-list'
+} from './curriculum-schedule'
+export { FAQ_LIST, type FaqList } from './faq-list'
 export { MOBI_DESCRIPTION, MOBI_DESCRIPTION_IMAGES } from './MobiDescription'
-export { STACK_IMAGES } from './stackImages'
+export { STACK_IMAGES } from './stack-images'
