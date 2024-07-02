@@ -14,27 +14,26 @@ export function CurriculumScheduleContents() {
         <CurriculumScheduleCard
           contents={
             <CurriculumScheduleCard.ContentList group='firstGroup'>
-              {[...INITIAL_COURSES].map((course, index) => (
+              {INITIAL_COURSES.map((course) => (
                 <CurriculumScheduleCard.List
-                  key={index}
-                  {...course}
-                  index={index}
+                  key={course.idx}
+                  index={course.idx}
                   group='firstGroup'
+                  {...course}
                 />
               ))}
             </CurriculumScheduleCard.ContentList>
           }
         />
-
         <CurriculumScheduleCard
           contents={
             <CurriculumScheduleCard.ContentList group='secondGroup'>
-              {[...ADVANCED_COURSES].map((course, index) => (
+              {ADVANCED_COURSES.map((course) => (
                 <CurriculumScheduleCard.List
-                  key={index}
-                  {...course}
-                  index={index}
+                  key={course.idx}
+                  index={course.idx}
                   group='secondGroup'
+                  {...course}
                 />
               ))}
             </CurriculumScheduleCard.ContentList>
@@ -48,9 +47,9 @@ export function CurriculumScheduleContents() {
           contents={
             <CurriculumScheduleCard.ContentList group='thirdGroup'>
               <CurriculumScheduleCard.List
-                {...PROJECT_COURSES}
-                index={0}
+                index={PROJECT_COURSES.idx}
                 group='thirdGroup'
+                {...PROJECT_COURSES}
               />
             </CurriculumScheduleCard.ContentList>
           }
@@ -60,9 +59,9 @@ export function CurriculumScheduleContents() {
           contents={
             <CurriculumScheduleCard.ContentList group='fourthGroup'>
               <CurriculumScheduleCard.List
-                {...EMPLOYMENT_SUPPORT_COURSES}
-                index={0}
+                index={EMPLOYMENT_SUPPORT_COURSES.idx}
                 group='fourthGroup'
+                {...EMPLOYMENT_SUPPORT_COURSES}
               />
             </CurriculumScheduleCard.ContentList>
           }
@@ -70,68 +69,4 @@ export function CurriculumScheduleContents() {
       </div>
     </div>
   )
-
-  // return (
-  //   <div className='flex w-full flex-col gap-20'>
-  //     <CurriculumScheduleCard
-  //       contents={
-  //         <CurriculumScheduleCard.ContentList>
-  //           {INITIAL_COURSES.map((cardData, index) => {
-  //             const boundaryProps = getBoundaryProps(index, INITIAL_COURSES.length)
-  //             return (
-  //               <CurriculumScheduleCard.List
-  //                 key={index}
-  //                 {...cardData}
-  //                 boundaryProps={boundaryProps}
-  //               />
-  //             )
-  //           })}
-  //         </CurriculumScheduleCard.ContentList>
-  //       }
-  //     />
-
-  //     <StackBanner />
-
-  //     <CurriculumScheduleCard
-  //       contents={
-  //         <CurriculumScheduleCard.ContentList>
-  //           {ADVANCED_COURSES.map((cardData, index) => {
-  //             const boundaryProps = getBoundaryProps(index, ADVANCED_COURSES.length)
-  //             return (
-  //               <CurriculumScheduleCard.List
-  //                 key={index}
-  //                 {...cardData}
-  //                 boundaryProps={boundaryProps}
-  //               />
-  //             )
-  //           })}
-  //         </CurriculumScheduleCard.ContentList>
-  //       }
-  //     />
-
-  //     <CurriculumScheduleCard
-  //       isBackground={false}
-  //       contents={
-  //         <CurriculumScheduleCard.ContentList>
-  //           <CurriculumScheduleCard.List
-  //             {...PROJECT_COURSES}
-  //             boundaryProps={{ isFirst: true, isLast: true, isSingle: true }}
-  //           />
-  //         </CurriculumScheduleCard.ContentList>
-  //       }
-  //     />
-
-  //     <CurriculumScheduleCard
-  //       isBackground={false}
-  //       contents={
-  //         <CurriculumScheduleCard.ContentList>
-  //           <CurriculumScheduleCard.List
-  //             {...EMPLOYMENT_SUPPORT_COURSES}
-  //             boundaryProps={{ isFirst: true, isLast: true, isSingle: true }}
-  //           />
-  //         </CurriculumScheduleCard.ContentList>
-  //       }
-  //     />
-  //   </div>
-  // )
 }

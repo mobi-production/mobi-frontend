@@ -1,26 +1,9 @@
-import { cn, formatDate } from '@repo/util'
+import { cn, formatDate, getBorderRadius } from '@repo/util'
 import { cva } from 'class-variance-authority'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
 import rangeEllipse from '/public/svg/range-ellipse.svg'
-
-const subjectStyles = cva(
-  'flex items-center justify-center gap-2 border border-glass-stroke border-box bg-curriculum-subject-background-gradient px-4 py-8',
-  {
-    variants: {
-      borderRadius: {
-        none: '',
-        tl: 'rounded-tl-[16px]',
-        tr: 'rounded-tr-[16px]',
-        both: 'rounded-t-[16px]'
-      }
-    },
-    defaultVariants: {
-      borderRadius: 'none'
-    }
-  }
-)
 
 type Props = {
   className?: string
@@ -38,18 +21,28 @@ type SubjectProps = {
   children: React.ReactNode
 } & GroupIndexProps
 
+const subjectStyles = cva(
+  'flex items-center justify-center gap-2 border border-glass-stroke border-box bg-curriculum-subject-background-gradient px-4 py-8',
+  {
+    variants: {
+      borderRadius: {
+        none: '',
+        tl: 'rounded-tl-2xl',
+        tr: 'rounded-tr-2xl',
+        both: 'rounded-t-2xl'
+      }
+    },
+    defaultVariants: {
+      borderRadius: 'none'
+    }
+  }
+)
+
 function Subject({ className, children, index, group }: SubjectProps) {
-  const borderRadius =
-    group === 'firstGroup' || group === 'secondGroup'
-      ? index % 3 === 0
-        ? 'tl'
-        : index % 3 === 2
-          ? 'tr'
-          : 'none'
-      : 'both'
+  const borderRadius = getBorderRadius(group, index)
 
   return (
-    <div className={cn(subjectStyles({ borderRadius }), 'mobile:rounded-t-[16px]', className)}>
+    <div className={cn(subjectStyles({ borderRadius }), 'mobile:rounded-t-2xl', className)}>
       <h4 className='text-text-title-1 font-normal'>{children}</h4>
     </div>
   )
@@ -85,6 +78,7 @@ function DateRange({ startDate, endDate }: { startDate: Date; endDate: Date }) {
 }
 
 export type ContentCardProps = {
+  idx: number
   subject: ReactNode
   title: ReactNode
   description?: ReactNode
@@ -121,14 +115,14 @@ function List({
   stack,
   startDate,
   endDate,
-  index,
+  idx,
   group
 }: ContentCardProps & GroupIndexProps) {
   return (
     <li className='flex w-full flex-col gap-2 mobile:relative'>
       <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green mobile:left-6 mobile:right-6' />
       <Subject
-        index={index}
+        index={idx}
         group={group}>
         {subject}
       </Subject>
@@ -140,7 +134,6 @@ function List({
           startDate={startDate}
           endDate={endDate}
         />
-
         <div className='mt-4 flex justify-center'>
           <Image
             src={rangeEllipse}
@@ -152,14 +145,12 @@ function List({
   )
 }
 
-type ContentsProps = {
+type ContentsContainerProps = {
   contents: ReactNode
+  isBackground?: boolean
 }
 
-function ContentsContainer({
-  contents,
-  isBackground = true
-}: ContentsProps & { isBackground?: boolean }) {
+function ContentsContainer({ contents, isBackground = true }: ContentsContainerProps) {
   return (
     <section
       className={`relative flex w-full justify-center gap-8 ${isBackground ? 'bg-curriculum-contents-background-gradient mobile:bg-none' : ''}`}>
