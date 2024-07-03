@@ -10,7 +10,7 @@ import { useScrollSlideHandler } from '../lib'
 
 export function LandingCharityImageSlide() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
-  useScrollSlideHandler(scrollContainerRef, 1720, 0.8)
+  useScrollSlideHandler(scrollContainerRef, 1720, 0.9)
 
   return (
     <div className='relative h-auto w-full overflow-hidden'>
