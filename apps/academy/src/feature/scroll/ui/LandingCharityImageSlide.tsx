@@ -17,7 +17,7 @@ export function LandingCharityImageSlide() {
       <div
         ref={scrollContainerRef}
         className='flex h-auto w-full space-x-4 overflow-x-hidden'>
-        <div className='w-[30%] flex-none'>
+        <div className='mobile-hidden w-[30%] flex-none'>
           <Image
             src={charitySlideImage01}
             alt='charity_slide_image_01'
@@ -25,7 +25,7 @@ export function LandingCharityImageSlide() {
             height={350}
           />
         </div>
-        <div className='w-[30%] flex-none'>
+        <div className='mobile-hidden w-[30%] flex-none'>
           <Image
             src={charitySlideImage02}
             alt='charity_slide_image_02'
@@ -33,7 +33,7 @@ export function LandingCharityImageSlide() {
             height={350}
           />
         </div>
-        <div className='w-[30%] flex-none'>
+        <div className='mobile-hidden w-[30%] flex-none'>
           <Image
             src={charitySlideImage03}
             alt='charity_slide_image_03'
@@ -41,7 +41,7 @@ export function LandingCharityImageSlide() {
             height={350}
           />
         </div>
-        <div className='w-[30%] flex-none'>
+        <div className='mobile-hidden w-[30%] flex-none'>
           <Image
             src={charitySlideImage04}
             alt='charity_slide_image_04'
@@ -49,6 +49,14 @@ export function LandingCharityImageSlide() {
             height={350}
           />
         </div>
+      </div>
+      <div className='desktop-hidden w-full'>
+        <Image
+          src={charitySlideImage01}
+          alt='charity_slide_image_01'
+          width={300}
+          height={150}
+        />
       </div>
     </div>
   )
