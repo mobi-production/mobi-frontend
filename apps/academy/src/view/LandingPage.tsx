@@ -1,7 +1,7 @@
 import { cn } from '@repo/util'
 
 import { pretendard } from '@/common/font'
-import { MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
+import { LandingCharityImageSlide, MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
 import { FAQCardList, FAQSection, MainBanner } from '@/widget/landing/ui'
 import {
   LandingCharityInfoSection,
@@ -9,7 +9,6 @@ import {
   LandingStatisticsBanner,
   LandingTextAnimatedSection
 } from '@/widget/landing/ui'
-import { LandingCharityImageSlide } from '@/widget/landing/ui/LandingCharityImageSlide'
 
 export function LandingPage() {
   return (
@@ -41,8 +40,6 @@ export function LandingPage() {
         }
         images={
           <LandingCharityInfoSection.ImageSlider>
-            {/* Todo: 실제 슬라이드 기능 컴포넌트 추가하기 */}
-            {/* LandingCharityImageSlide */}
             <LandingCharityImageSlide />
           </LandingCharityInfoSection.ImageSlider>
         }
