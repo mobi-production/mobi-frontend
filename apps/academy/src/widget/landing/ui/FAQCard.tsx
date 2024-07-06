@@ -3,7 +3,7 @@ import { useToggle } from '@repo/hook'
 import { cn } from '@repo/util'
 import React, { PropsWithChildren } from 'react'
 
-import { FAQToggleButton } from '@/feature/link/ui'
+import { FAQToggleButton } from '@/feature/toggle/ui'
 import type { FaqList } from '@/widget/landing/constants'
 
 type Props = {
@@ -19,8 +19,9 @@ type QuestionProps = {
 function Question({ className, children, isToggle, openToggle, closeToggle }: QuestionProps) {
   return (
     <div
+      onClick={isToggle ? closeToggle : openToggle}
       className={cn(
-        'flex w-full justify-between rounded-lg border px-8 py-6',
+        'flex w-full cursor-pointer items-center justify-between rounded-lg border px-8 py-6 mobile:px-4 mobile:py-6',
         {
           'border-gray-4': !isToggle,
           'border-primary bg-primary bg-opacity-5': isToggle
@@ -28,13 +29,10 @@ function Question({ className, children, isToggle, openToggle, closeToggle }: Qu
         className
       )}>
       <div className='flex gap-2'>
-        <h4 className='text-text-title-2 text-secondary'>Q</h4>
-        <h4 className='text-text-title-2'>{children}</h4>
+        <h4 className='text-text-title-2 text-secondary mobile:text-text-body-1'>Q</h4>
+        <h4 className='text-text-title-2 mobile:text-text-body-1'>{children}</h4>
       </div>
-      <FAQToggleButton
-        onClick={isToggle ? closeToggle : openToggle}
-        isToggle={isToggle}
-      />
+      <FAQToggleButton isToggle={isToggle} />
     </div>
   )
 }
@@ -46,11 +44,11 @@ type AnswerProps = PropsWithChildren<Props> & {
 function Answer({ isToggle, children }: AnswerProps) {
   return (
     <div
-      className={cn('transition-max-height overflow-hidden duration-700 ease-in-out', {
-        'max-h-0': !isToggle,
-        'max-h-screen': isToggle
+      className={cn('transition-max-height overflow-hidden ease-in-out', {
+        'max-h-0 duration-300': !isToggle,
+        'max-h-screen duration-700': isToggle
       })}>
-      <div className='px-8 pb-10 pt-6 text-gray-1'>{children}</div>
+      <div className='px-8 pb-10 pt-6 text-gray-1 mobile:px-0 mobile:py-6'>{children}</div>
     </div>
   )
 }

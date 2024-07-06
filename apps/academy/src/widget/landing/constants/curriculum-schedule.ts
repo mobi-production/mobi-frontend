@@ -1,7 +1,18 @@
-import type { ContentCardProps } from '@/widget/landing/ui/CurriculumScheduleCard'
+import { ReactNode } from 'react'
+
+export type ContentCardProps = {
+  idx: number
+  subject: ReactNode
+  title: ReactNode
+  description?: ReactNode
+  stack?: ReactNode
+  startDate: Date
+  endDate: Date
+}
 
 export const INITIAL_COURSES: ContentCardProps[] = [
   {
+    idx: 0,
     subject: 'pre-course',
     title: '프리코스',
     description:
@@ -11,6 +22,7 @@ export const INITIAL_COURSES: ContentCardProps[] = [
     endDate: new Date(2024, 5, 30)
   },
   {
+    idx: 1,
     subject: 'javascript',
     title: '자바스크립트',
     description:
@@ -20,6 +32,7 @@ export const INITIAL_COURSES: ContentCardProps[] = [
     endDate: new Date(2024, 12, 15)
   },
   {
+    idx: 2,
     subject: 'react-js',
     title: '리액트',
     description: '리엑트의 동작 원리부터 관심사 분리와 디자인 시스템 적용까지!',
@@ -30,6 +43,7 @@ export const INITIAL_COURSES: ContentCardProps[] = [
 ]
 export const ADVANCED_COURSES: ContentCardProps[] = [
   {
+    idx: 0,
     subject: 'typescript',
     title: '타입스크립트',
     description:
@@ -38,6 +52,7 @@ export const ADVANCED_COURSES: ContentCardProps[] = [
     endDate: new Date(2024, 5, 30)
   },
   {
+    idx: 1,
     subject: 'next-js',
     title: '넥스트',
     description:
@@ -46,6 +61,7 @@ export const ADVANCED_COURSES: ContentCardProps[] = [
     endDate: new Date(2024, 5, 30)
   },
   {
+    idx: 2,
     subject: 'test-code / monorepo',
     title: '심화',
     description:
@@ -56,6 +72,7 @@ export const ADVANCED_COURSES: ContentCardProps[] = [
 ]
 
 export const PROJECT_COURSES: ContentCardProps = {
+  idx: 0,
   subject: '프로젝트',
   title: '팀빌딩, 일정관리, 멘토링',
   startDate: new Date(2025, 2, 1),
@@ -63,6 +80,7 @@ export const PROJECT_COURSES: ContentCardProps = {
 }
 
 export const EMPLOYMENT_SUPPORT_COURSES: ContentCardProps = {
+  idx: 0,
   subject: '전 과정 수료자',
   title: '이력서 작성 및 첨삭, 모의 면접과 면접 스터디',
   startDate: new Date(2025, 3, 1),
