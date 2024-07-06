@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ReactNode } from 'react'
 
 import rangeEllipse from '/public/svg/range-ellipse.svg'
+import { CurriculumGroupType } from '@/types/landing'
 import type { ContentCardProps } from '@/widget/landing/constants'
 import { getBorderRadius } from '@/widget/landing/util'
 
@@ -11,11 +12,9 @@ type Props = {
   className?: string
 }
 
-type GroupType = 'firstGroup' | 'secondGroup' | 'thirdGroup' | 'fourthGroup'
-
 type GroupIndexProps = {
   index: number
-  group: GroupType
+  group: CurriculumGroupType
 }
 
 type SubjectProps = Props & PropsNeedChildren & GroupIndexProps
@@ -85,7 +84,7 @@ function ContentList({
   className,
   children,
   group
-}: PropsNeedChildren<Props> & { group: GroupType }) {
+}: PropsNeedChildren<Props> & { group: CurriculumGroupType }) {
   return (
     <ul
       className={cn(
@@ -93,8 +92,8 @@ function ContentList({
         {
           'grid-cols-1 mobile:grid-cols-1 mobileAndTablet:grid-cols-1 tablet:grid-cols-1': true,
           'grid-cols-3 gap-px mobile:gap-4 mobileAndTablet:gap-4 tablet:gap-4':
-            group === 'firstGroup' || group === 'secondGroup',
-          'grid-cols-1': group === 'thirdGroup' || group === 'fourthGroup'
+            group === 1 || group === 2,
+          'grid-cols-1': group === 3 || group === 4
         },
         className
       )}>

@@ -13,12 +13,12 @@ export function CurriculumScheduleContents() {
       <div className='flex flex-col gap-20 mobile:gap-4'>
         <CurriculumScheduleCard
           contents={
-            <CurriculumScheduleCard.ContentList group='firstGroup'>
+            <CurriculumScheduleCard.ContentList group={1}>
               {INITIAL_COURSES.map((course) => (
                 <CurriculumScheduleCard.List
                   key={course.idx}
                   index={course.idx}
-                  group='firstGroup'
+                  group={1}
                   {...course}
                 />
               ))}
@@ -27,12 +27,12 @@ export function CurriculumScheduleContents() {
         />
         <CurriculumScheduleCard
           contents={
-            <CurriculumScheduleCard.ContentList group='secondGroup'>
+            <CurriculumScheduleCard.ContentList group={2}>
               {ADVANCED_COURSES.map((course) => (
                 <CurriculumScheduleCard.List
                   key={course.idx}
                   index={course.idx}
-                  group='secondGroup'
+                  group={2}
                   {...course}
                 />
               ))}
@@ -45,10 +45,10 @@ export function CurriculumScheduleContents() {
         <CurriculumScheduleCard
           isBackground={false}
           contents={
-            <CurriculumScheduleCard.ContentList group='thirdGroup'>
+            <CurriculumScheduleCard.ContentList group={3}>
               <CurriculumScheduleCard.List
                 index={PROJECT_COURSES.idx}
-                group='thirdGroup'
+                group={3}
                 {...PROJECT_COURSES}
               />
             </CurriculumScheduleCard.ContentList>
@@ -57,10 +57,10 @@ export function CurriculumScheduleContents() {
         <CurriculumScheduleCard
           isBackground={false}
           contents={
-            <CurriculumScheduleCard.ContentList group='fourthGroup'>
+            <CurriculumScheduleCard.ContentList group={4}>
               <CurriculumScheduleCard.List
                 index={EMPLOYMENT_SUPPORT_COURSES.idx}
-                group='fourthGroup'
+                group={4}
                 {...EMPLOYMENT_SUPPORT_COURSES}
               />
             </CurriculumScheduleCard.ContentList>
