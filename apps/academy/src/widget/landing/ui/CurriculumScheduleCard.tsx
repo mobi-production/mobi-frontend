@@ -41,7 +41,12 @@ function Subject({ className, children, index, group }: SubjectProps) {
   const borderRadius = getBorderRadius(group, index)
 
   return (
-    <div className={cn(subjectStyles({ borderRadius }), 'mobile:rounded-t-2xl', className)}>
+    <div
+      className={cn(
+        subjectStyles({ borderRadius }),
+        'mobile:rounded-t-2xl mobileAndTablet:rounded-t-2xl tablet:rounded-t-2xl',
+        className
+      )}>
       <h4 className='text-text-title-1 font-normal'>{children}</h4>
     </div>
   )
@@ -86,8 +91,9 @@ function ContentList({
       className={cn(
         'grid w-full max-w-[1244px] gap-4 mobile:px-5 mobileAndTablet:px-5 tablet:px-5 tabletAndLaptop:px-5',
         {
-          'grid-cols-1 mobile:grid-cols-1': true,
-          'grid-cols-3 gap-px mobile:gap-4': group === 'firstGroup' || group === 'secondGroup',
+          'grid-cols-1 mobile:grid-cols-1 mobileAndTablet:grid-cols-1 tablet:grid-cols-1': true,
+          'grid-cols-3 gap-px mobile:gap-4 mobileAndTablet:gap-4 tablet:gap-4':
+            group === 'firstGroup' || group === 'secondGroup',
           'grid-cols-1': group === 'thirdGroup' || group === 'fourthGroup'
         },
         className
@@ -108,7 +114,7 @@ function List({
   group
 }: ContentCardProps & GroupIndexProps) {
   return (
-    <li className='flex w-full flex-col gap-2 mobile:relative'>
+    <li className='flex w-full flex-col gap-2 mobile:relative mobileAndTablet:relative tablet:relative'>
       <div className='absolute bottom-[60px] left-8 right-8 z-[1] m-auto h-px max-w-[1180px] bg-green mobile:left-6 mobile:right-6' />
       <Subject
         index={idx}
@@ -142,7 +148,11 @@ type ContentsContainerProps = {
 function ContentsContainer({ contents, isBackground = true }: ContentsContainerProps) {
   return (
     <section
-      className={`relative flex w-full justify-center gap-8 ${isBackground ? 'bg-curriculum-contents-background-gradient mobile:bg-none' : ''}`}>
+      className={cn(
+        'relative flex w-full justify-center gap-8',
+        isBackground &&
+          'bg-curriculum-contents-background-gradient mobile:bg-none mobileAndTablet:bg-none tablet:bg-none'
+      )}>
       {contents}
     </section>
   )
