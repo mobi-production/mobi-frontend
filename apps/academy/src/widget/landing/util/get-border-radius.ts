@@ -1,4 +1,4 @@
-import { CurriculumGroupType } from '@/types/landing'
+import type { CurriculumGroupType } from '@/types/landing'
 
 type BorderRadius = 'none' | 'tl' | 'tr' | 'both'
 

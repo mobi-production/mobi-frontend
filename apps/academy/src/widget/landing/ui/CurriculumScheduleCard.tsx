@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { ReactNode } from 'react'
 
 import rangeEllipse from '/public/svg/range-ellipse.svg'
-import { CurriculumGroupType } from '@/types/landing'
+import type { CurriculumGroupType } from '@/types/landing'
 import type { ContentCardProps } from '@/widget/landing/constants'
 import { getBorderRadius } from '@/widget/landing/util'
 
