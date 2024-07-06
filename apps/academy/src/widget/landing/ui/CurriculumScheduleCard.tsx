@@ -17,10 +17,7 @@ type GroupIndexProps = {
   group: GroupType
 }
 
-type SubjectProps = {
-  className?: string
-  children: React.ReactNode
-} & GroupIndexProps
+type SubjectProps = Props & PropsNeedChildren & GroupIndexProps
 
 const subjectStyles = cva(
   'flex items-center justify-center gap-2 border border-glass-stroke border-box bg-curriculum-subject-background-gradient px-4 py-8',

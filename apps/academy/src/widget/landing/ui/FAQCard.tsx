@@ -3,7 +3,7 @@ import { useToggle } from '@repo/hook'
 import { cn } from '@repo/util'
 import React, { PropsWithChildren } from 'react'
 
-import { FAQToggleButton } from '@/feature/link/ui'
+import { FAQToggleButton } from '@/feature/toggle/ui'
 import type { FaqList } from '@/widget/landing/constants'
 
 type Props = {
