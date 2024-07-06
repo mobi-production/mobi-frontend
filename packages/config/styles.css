@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 1px;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: darkgrey white;
+}
+
+/* For Edge, IE, and other browsers (optional, limited support) */
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+@layer base {
+  .mobile-hidden {
+    @apply mobile:hidden mobileAndTablet:hidden;
+  }
+
+  .desktop-hidden {
+    @apply tablet:hidden tabletAndLaptop:hidden desktop:hidden;
+  }
+
+  .apply-box {
+    @apply w-full py-[8.75rem] mobile:px-5 mobile:py-[4.375rem] mobileAndTablet:px-5 mobileAndTablet:py-[4.375rem];
+  }
+}
