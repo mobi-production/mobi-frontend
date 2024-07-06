@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ReactNode } from 'react'
 
 import rangeEllipse from '/public/svg/range-ellipse.svg'
+import type { ContentCardProps } from '@/widget/landing/constants'
 import { getBorderRadius } from '@/widget/landing/util'
 
 type Props = {
@@ -73,16 +74,6 @@ function DateRange({ startDate, endDate }: { startDate: Date; endDate: Date }) {
       </span>
     </div>
   )
-}
-
-export type ContentCardProps = {
-  idx: number
-  subject: ReactNode
-  title: ReactNode
-  description?: ReactNode
-  stack?: ReactNode
-  startDate: Date
-  endDate: Date
 }
 
 function ContentList({

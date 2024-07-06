@@ -1,4 +1,14 @@
-import type { ContentCardProps } from '@/widget/landing/ui/CurriculumScheduleCard'
+import { ReactNode } from 'react'
+
+export type ContentCardProps = {
+  idx: number
+  subject: ReactNode
+  title: ReactNode
+  description?: ReactNode
+  stack?: ReactNode
+  startDate: Date
+  endDate: Date
+}
 
 export const INITIAL_COURSES: ContentCardProps[] = [
   {
