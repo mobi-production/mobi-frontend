@@ -1,8 +1,6 @@
 import { cn } from '@repo/util'
 import { ReactNode } from 'react'
 
-import { ApplyBox } from '@/widget/apply/ui/ApplyBox'
-
 type ApplyTitleProps = {
   className?: string
 }
@@ -27,10 +25,10 @@ type Props = {
 function ApplyContainer({ title, info }: Props) {
   return (
     <section className='flex w-full max-w-[1244px] flex-col items-start'>
-      <ApplyBox>
+      <div className='apply-box'>
         <div className='mb-20 mobile:mb-10 mobileAndTablet:mb-10'>{title}</div>
         {info}
-      </ApplyBox>
+      </div>
     </section>
   )
 }

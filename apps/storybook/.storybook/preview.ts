@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react'
-import '../app/globals.css'
+import '@mobi/config/styles.css'
 
 const preview: Preview = {
   parameters: {

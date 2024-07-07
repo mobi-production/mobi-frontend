@@ -5,7 +5,7 @@ declare global {
 
   namespace NodeJS {
     interface ProcessEnv {
-      NEXT_PUBLIC_APPLY_LINK: string
+      ACADEMY_APPLY_FORM_URL: string
     }
   }
 }
