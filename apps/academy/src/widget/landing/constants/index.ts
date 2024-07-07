@@ -1,3 +1,4 @@
+export { CHARITY_SLIDE_IMAGES } from './charity-slide-images'
 export {
   ADVANCED_COURSES,
   type ContentCardProps,
