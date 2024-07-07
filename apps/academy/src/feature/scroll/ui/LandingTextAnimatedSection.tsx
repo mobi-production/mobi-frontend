@@ -22,7 +22,7 @@ export function LandingTextAnimatedSection() {
                 transform: `translateX(${getTranslateX()}px)`,
                 transition: 'transform 0.1s ease'
               }}>
-              <div className='h-96 w-96 rounded-full bg-[#93EDC7] bg-opacity-80 blur-lg'></div>
+              <div className='h-72 w-72 rounded-full bg-white bg-opacity-70 blur-xl'></div>
             </div>
           </div>
         </div>
