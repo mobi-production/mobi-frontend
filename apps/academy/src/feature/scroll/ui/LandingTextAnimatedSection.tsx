@@ -3,27 +3,28 @@
 import { useTextScrollAnimation } from '../lib'
 
 export function LandingTextAnimatedSection() {
-  const { sectionRef, isFixed, getTranslateX } = useTextScrollAnimation()
+  const { sectionRef, isSticky, gradientStyle } = useTextScrollAnimation()
 
   return (
     <div>
       <div className='mobile-hidden'>
         <div
           ref={sectionRef}
-          className={`relative flex h-screen flex-col items-center justify-center ${isFixed ? 'fixed left-0 top-0' : 'relative'}`}>
+          className={`relative flex h-screen flex-col items-center justify-center ${isSticky ? 'sticky top-0' : ''}`}>
           <div
-            className={`flex h-screen w-full items-center justify-center ${isFixed ? 'fixed left-0 top-0' : 'relative'}`}>
-            <h2 className='text-center text-text-heading-1'>
+            className={`flex h-screen w-full items-center justify-center ${isSticky ? 'sticky top-0' : ''}`}>
+            <h2
+              className='bg-[radial-gradient(var(--shape)_at_var(--position),#FFF,#1B1B1C)] bg-clip-text text-center text-text-heading-1 text-transparent'
+              style={gradientStyle}>
               모비에서는 이런 것을 경험 할 수 있어요
             </h2>
             <div
               className='absolute -left-[700px] top-0 flex h-full w-full items-center justify-center'
               style={{
-                transform: `translateX(${getTranslateX()}px)`,
-                transition: 'transform 0.1s ease'
-              }}>
-              <div className='h-72 w-72 rounded-full bg-white bg-opacity-70 blur-xl'></div>
-            </div>
+                ...gradientStyle,
+                transform: `translateX(${gradientStyle['--position']})`
+              }}
+            />
           </div>
         </div>
         <div className='h-screen' />

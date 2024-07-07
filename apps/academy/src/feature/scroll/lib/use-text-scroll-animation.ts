@@ -1,14 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 
-type UseTextScrollAnimationReturn = {
-  sectionRef: React.RefObject<HTMLDivElement>
-  isFixed: boolean
-  getTranslateX: () => number
+type ExtendedCSSProperties = React.CSSProperties & {
+  '--position': string
+  '--shape': string
 }
-export function useTextScrollAnimation(): UseTextScrollAnimationReturn {
+
+type UseScrollGradientAnimationReturn = {
+  sectionRef: React.RefObject<HTMLDivElement>
+  isSticky: boolean
+  gradientStyle: ExtendedCSSProperties
+}
+
+export function useTextScrollAnimation(): UseScrollGradientAnimationReturn {
   const [scrollPosition, setScrollPosition] = useState(0)
-  const [isFixed, setIsFixed] = useState(false)
-  const [isScrollable, setIsScrollable] = useState(true)
+  const [isSticky, setIsSticky] = useState(true)
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -19,66 +24,32 @@ export function useTextScrollAnimation(): UseTextScrollAnimationReturn {
       if (sectionRef.current) {
         const sectionTop = sectionRef.current.offsetTop
         const sectionHeight = sectionRef.current.offsetHeight
-        if (currentPosition >= sectionTop && currentPosition < sectionTop + sectionHeight) {
-          setIsFixed(true)
-        } else {
-          setIsFixed(false)
-        }
+        const progress = (currentPosition - sectionTop) / sectionHeight
 
-        if (getTranslateX() < window.innerWidth) {
-          setIsScrollable(false)
+        if (progress >= 1) {
+          setIsSticky(false)
         } else {
-          setIsScrollable(true)
-        }
-
-        if (!isScrollable) {
-          window.scrollTo(0, currentPosition)
+          setIsSticky(true)
         }
       }
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: false })
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsScrollable(false)
-          } else {
-            setIsScrollable(true)
-          }
-        })
-      },
-      {
-        threshold: 0.1
-      }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
     }
-  }, [isScrollable])
+  }, [])
 
-  const getTranslateX = () => {
-    if (sectionRef.current) {
-      const sectionTop = sectionRef.current.offsetTop
-      const sectionHeight = sectionRef.current.offsetHeight
-      const progress = (scrollPosition - sectionTop) / sectionHeight
-      return Math.min(Math.max(progress * window.innerWidth, 0), window.innerWidth)
-    }
-    return 0
-  }
+  const gradientPosition = `${(scrollPosition / 10) % 100}% 50%`
 
   return {
     sectionRef,
-    isFixed,
-    getTranslateX
+    isSticky,
+    gradientStyle: {
+      '--position': gradientPosition,
+      '--shape': '25% 200%',
+      transition: 'transform 0.1s ease'
+    }
   }
 }
