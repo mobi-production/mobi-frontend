@@ -9,17 +9,18 @@ import { useScrollSlideHandler } from '../lib'
 
 export function LandingCharityImageSlide() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
-  useScrollSlideHandler(scrollContainerRef, 1720, 0.9)
+  useScrollSlideHandler(scrollContainerRef, 1720, 0.8)
 
   return (
     <div className='relative h-auto w-full overflow-hidden'>
       <div
         ref={scrollContainerRef}
-        className='flex h-auto w-full space-x-4 overflow-x-hidden'>
+        className='flex h-auto w-full items-center space-x-4 overflow-x-hidden'>
         {CHARITY_SLIDE_IMAGES.map((image, index) => (
           <div
             key={index}
-            className='mobile-hidden w-[30%] flex-none'>
+            className='mobile-hidden w-[30%] flex-none'
+            style={{ marginBottom: image.marginBottom }}>
             <Image
               src={image.src}
               alt={image.alt}
