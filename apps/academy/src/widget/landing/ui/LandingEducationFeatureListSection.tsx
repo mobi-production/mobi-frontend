@@ -28,15 +28,9 @@ export function LandingEducationFeatureListSection() {
       <LandingEducationFeatureSection
         className='mobile-pt-0 pb-[8.75rem] pt-[8.75rem] mobile:pb-0'
         title={
-          <>
-            <LandingEducationFeatureSection.Title className='mobile-hidden mb-[5rem]'>
-              체계적인 커리큘럼으로부터 배우는 <span className='text-primary'>코딩</span>부터!
-            </LandingEducationFeatureSection.Title>
-            <LandingEducationFeatureSection.Title className='desktop-hidden mb-[5rem] text-text-heading-3'>
-              체계적인 커리큘럼으로부터
-              <br /> 배우는 <span className='text-primary'>코딩</span>부터!
-            </LandingEducationFeatureSection.Title>
-          </>
+          <LandingEducationFeatureSection.Title className='mb-[5rem] mobile:pl-[1.3rem] mobile:pr-[1.3rem] mobile:text-text-heading-3'>
+            체계적인 커리큘럼으로부터 배우는 <span className='text-primary'>코딩</span>부터!
+          </LandingEducationFeatureSection.Title>
         }
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
@@ -78,9 +72,15 @@ export function LandingEducationFeatureListSection() {
       <LandingEducationFeatureSection
         className='mobile-pt-[4.375rem] pb-[8.75rem] pt-[8.75rem] mobile:pb-[4.375rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
-            조별 학습과 페어프로그래밍을 통한 <span className='text-primary'>협업</span>
-          </LandingEducationFeatureSection.Title>
+          <>
+            <LandingEducationFeatureSection.Title className='mobile-hidden mb-[5rem]'>
+              조별 학습과 페어프로그래밍을 통한 <span className='text-primary'>협업</span>
+            </LandingEducationFeatureSection.Title>
+            <LandingEducationFeatureSection.Title className='desktop-hidden mb-[5rem] pl-[1.3rem] pr-[1.3rem] text-text-heading-3'>
+              조별 학습과 <br />
+              페어프로그래밍을 통한 <span className='text-primary'>협업</span>
+            </LandingEducationFeatureSection.Title>
+          </>
         }
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
@@ -108,9 +108,15 @@ export function LandingEducationFeatureListSection() {
       <LandingEducationFeatureSection
         className='pb-[8.75rem] pt-[8.75rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
-            동기부여를 위한 학습 <span className='text-primary'>플래너와 관리</span>
-          </LandingEducationFeatureSection.Title>
+          <>
+            <LandingEducationFeatureSection.Title className='mobile-hidden mb-[5rem]'>
+              동기부여를 위한 학습 <span className='text-primary'>플래너와 관리</span>
+            </LandingEducationFeatureSection.Title>
+            <LandingEducationFeatureSection.Title className='desktop-hidden mb-[5rem] pl-[1.3rem] pr-[1.3rem] text-text-heading-3'>
+              동기부여를 위한 학습 <br />
+              <span className='text-primary'>플래너와 관리</span>
+            </LandingEducationFeatureSection.Title>
+          </>
         }
         info={
           <LandingEducationFeatureSection.Info className='flex flex-col gap-[1.5rem]'>
@@ -152,7 +158,7 @@ export function LandingEducationFeatureListSection() {
       <LandingEducationFeatureSection
         className='pb-[8.75rem] pt-[8.75rem]'
         title={
-          <LandingEducationFeatureSection.Title className='mb-[5rem]'>
+          <LandingEducationFeatureSection.Title className='mb-[5rem] mobile:pl-[1.3rem] mobile:pr-[1.3rem] mobile:text-text-heading-3'>
             실무진의 멘토링과 코드 리뷰까지!
           </LandingEducationFeatureSection.Title>
         }

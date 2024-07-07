@@ -1,13 +1,16 @@
 import { cn } from '@repo/util'
 
 import { pretendard } from '@/common/font'
-import { LandingCharityImageSlide, MobiDescriptionWithScrollEvent } from '@/feature/scroll/ui'
+import {
+  LandingCharityImageSlide,
+  LandingTextAnimatedSection,
+  MobiDescriptionWithScrollEvent
+} from '@/feature/scroll/ui'
 import { FAQCardList, FAQSection, MainBanner } from '@/widget/landing/ui'
 import {
   LandingCharityInfoSection,
   LandingEducationFeatureListSection,
-  LandingStatisticsBanner,
-  LandingTextAnimatedSection
+  LandingStatisticsBanner
 } from '@/widget/landing/ui'
 
 export function LandingPage() {
