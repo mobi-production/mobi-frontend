@@ -35,5 +35,5 @@ export function useScrollSlideHandler(
       }
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [scrollContainerRef, startScrollThreshold, speedFactor]) // 의존성 배열에 추가하여 useEffect가 변경될 때마다 실행되도록 함
+  }, [scrollContainerRef, startScrollThreshold, speedFactor])
 }
