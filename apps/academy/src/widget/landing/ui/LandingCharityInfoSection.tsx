@@ -1,19 +1,15 @@
 import { cn } from '@repo/util'
 import { ReactNode } from 'react'
 
-type TitleProps = {
+type Props = {
   className?: string
 }
 
-function Title({ className, children }: PropsNeedChildren<TitleProps>) {
+function Title({ className, children }: PropsNeedChildren<Props>) {
   return <h1 className={cn('pt-[140px] text-center text-text-heading-2', className)}>{children}</h1>
 }
 
-type DescriptionProps = {
-  className?: string
-}
-
-function Description({ className, children }: PropsNeedChildren<DescriptionProps>) {
+function Description({ className, children }: PropsNeedChildren<Props>) {
   return (
     <p className={cn('text-center text-text-body-1', className)}>
       <span className='font-normal text-[#545454]'>{children}</span>
@@ -21,11 +17,7 @@ function Description({ className, children }: PropsNeedChildren<DescriptionProps
   )
 }
 
-type ImageSliderProps = {
-  className?: string
-}
-
-function ImageSlider({ className, children }: PropsNeedChildren<ImageSliderProps>) {
+function ImageSlider({ className, children }: PropsNeedChildren<Props>) {
   return <div className={cn('mb-[160px] flex justify-center', className)}>{children}</div>
 }
 
