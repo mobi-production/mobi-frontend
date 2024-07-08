@@ -21,7 +21,6 @@ export function LandingTextAnimatedSection() {
             <div
               className='absolute -left-[700px] top-0 flex h-full w-full items-center justify-center'
               style={{
-                ...gradientStyle,
                 transform: `translateX(${gradientStyle['--position']})`
               }}
             />
