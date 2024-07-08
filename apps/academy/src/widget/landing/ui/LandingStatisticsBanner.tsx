@@ -12,16 +12,16 @@ export function LandingStatisticsBanner() {
         src={landingStatisticImage}
         alt='landing-statistics-banner-image'
         className='mobile-hidden'
-        layout='fill'
-        objectFit='cover'
+        fill
+        style={{ objectFit: 'cover' }}
         quality={100}
       />
       <Image
         src={landingStatisticMobileImage}
         alt='landing-statistics-banner-image-mobile'
         className='desktop-hidden'
-        layout='fill'
-        objectFit='cover'
+        fill
+        style={{ objectFit: 'cover' }}
         quality={100}
       />
       <StatisticCardList />
