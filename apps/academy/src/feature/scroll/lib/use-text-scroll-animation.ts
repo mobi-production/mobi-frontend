@@ -44,7 +44,7 @@ export function useTextScrollAnimation(): UseScrollGradientAnimationReturn {
     }
   }, [])
 
-  const gradientPosition = `${(scrollPosition / 10) % 100}% 50%`
+  const gradientPosition = `${(scrollPosition / 15) % 100}% 50%`
 
   return {
     sectionRef,
