@@ -9,6 +9,9 @@ type UseScrollGradientAnimationReturn = {
   sectionRef: React.RefObject<HTMLDivElement>
   isSticky: boolean
   gradientStyle: ExtendedCSSProperties
+  stickyPosition: {
+    '--position': string
+  }
 }
 
 export function useTextScrollAnimation(): UseScrollGradientAnimationReturn {
@@ -50,6 +53,9 @@ export function useTextScrollAnimation(): UseScrollGradientAnimationReturn {
       '--position': gradientPosition,
       '--shape': '25% 200%',
       transition: 'transform 0.1s ease'
+    },
+    stickyPosition: {
+      '--position': gradientPosition
     }
   }
 }
