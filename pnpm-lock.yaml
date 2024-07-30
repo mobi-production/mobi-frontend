@@ -473,6 +473,7 @@ packages:
         integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
       }
     engines: { node: '>=10' }
+    dev: true
 
   /@ampproject/remapping@2.3.0:
     resolution:
@@ -3049,6 +3050,7 @@ packages:
     dependencies:
       eslint: 8.57.0
       eslint-visitor-keys: 3.4.3
+    dev: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@9.5.0):
     resolution:
@@ -3100,6 +3102,7 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@eslint/eslintrc@3.1.0:
     resolution:
@@ -3161,6 +3164,7 @@ packages:
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@humanwhocodes/module-importer@1.0.1:
     resolution:
@@ -6327,6 +6331,7 @@ packages:
     dependencies:
       mime-types: 2.1.35
       negotiator: 0.6.3
+    dev: true
 
   /acorn-jsx@5.3.2(acorn@7.4.1):
     resolution:
@@ -6489,6 +6494,7 @@ packages:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+    dev: true
 
   /app-root-dir@1.0.2:
     resolution:
@@ -6742,6 +6748,7 @@ packages:
       picocolors: 1.0.1
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+    dev: true
 
   /available-typed-arrays@1.0.7:
     resolution:
@@ -6941,6 +6948,7 @@ packages:
       }
     dependencies:
       balanced-match: 1.0.2
+    dev: true
 
   /braces@3.0.3:
     resolution:
@@ -6950,6 +6958,7 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       fill-range: 7.1.1
+    dev: true
 
   /browser-assert@1.2.1:
     resolution:
@@ -7171,6 +7180,7 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+    dev: true
 
   /chownr@1.1.4:
     resolution:
@@ -7414,6 +7424,7 @@ packages:
     engines: { node: '>= 0.6' }
     dependencies:
       mime-db: 1.52.0
+    dev: true
 
   /compression@1.7.4:
     resolution:
@@ -7431,6 +7442,7 @@ packages:
       vary: 1.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /concat-map@0.0.1:
     resolution:
@@ -7686,6 +7698,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.0.0
+    dev: true
 
   /debug@3.2.7:
     resolution:
@@ -7960,6 +7973,7 @@ packages:
     engines: { node: '>=6.0.0' }
     dependencies:
       esutils: 2.0.3
+    dev: true
 
   /dom-accessibility-api@0.5.16:
     resolution:
@@ -9231,6 +9245,7 @@ packages:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /eslint@9.5.0:
     resolution:
@@ -9298,6 +9313,7 @@ packages:
       acorn: 8.12.0
       acorn-jsx: 5.3.2(acorn@8.12.0)
       eslint-visitor-keys: 3.4.3
+    dev: true
 
   /esprima@4.0.1:
     resolution:
@@ -9388,6 +9404,7 @@ packages:
       onetime: 5.1.2
       signal-exit: 3.0.7
       strip-final-newline: 2.0.0
+    dev: true
 
   /execa@8.0.1:
     resolution:
@@ -9474,6 +9491,7 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.7
+    dev: true
 
   /fast-json-stable-stringify@2.1.0:
     resolution:
@@ -9519,6 +9537,7 @@ packages:
     engines: { node: ^10.12.0 || >=12.0.0 }
     dependencies:
       flat-cache: 3.2.0
+    dev: true
 
   /file-entry-cache@8.0.0:
     resolution:
@@ -9564,6 +9583,7 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       to-regex-range: 5.0.1
+    dev: true
 
   /finalhandler@1.2.0:
     resolution:
@@ -9660,6 +9680,7 @@ packages:
       flatted: 3.3.1
       keyv: 4.5.4
       rimraf: 3.0.2
+    dev: true
 
   /flat-cache@4.0.1:
     resolution:
@@ -9703,6 +9724,7 @@ packages:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
+    dev: true
 
   /forwarded@0.2.0:
     resolution:
@@ -10017,6 +10039,7 @@ packages:
       minipass: 7.1.2
       package-json-from-dist: 1.0.0
       path-scurry: 1.11.1
+    dev: true
 
   /glob@7.2.3:
     resolution:
@@ -10031,6 +10054,7 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+    dev: true
 
   /global-directory@4.0.1:
     resolution:
@@ -10058,6 +10082,7 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       type-fest: 0.20.2
+    dev: true
 
   /globals@14.0.0:
     resolution:
@@ -10238,6 +10263,7 @@ packages:
     engines: { node: '>= 0.4' }
     dependencies:
       function-bind: 1.1.2
+    dev: true
 
   /hast-util-heading-rank@3.0.0:
     resolution:
@@ -10384,6 +10410,7 @@ packages:
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
+    dev: true
 
   /inherits@2.0.4:
     resolution:
@@ -10499,6 +10526,7 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       binary-extensions: 2.3.0
+    dev: true
 
   /is-boolean-object@1.1.2:
     resolution:
@@ -10537,6 +10565,7 @@ packages:
     engines: { node: '>= 0.4' }
     dependencies:
       hasown: 2.0.2
+    dev: true
 
   /is-data-view@1.0.1:
     resolution:
@@ -10851,6 +10880,7 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       is-docker: 2.2.1
+    dev: true
 
   /isarray@1.0.0:
     resolution:
@@ -10915,6 +10945,7 @@ packages:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
+    dev: true
 
   /jake@10.9.1:
     resolution:
@@ -11194,7 +11225,6 @@ packages:
       {
         integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
       }
-
   /locate-path@3.0.0:
     resolution:
       {
@@ -11485,6 +11515,7 @@ packages:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
+    dev: true
 
   /mime-db@1.33.0:
     resolution:
@@ -11519,6 +11550,7 @@ packages:
     engines: { node: '>= 0.6' }
     dependencies:
       mime-db: 1.52.0
+    dev: true
 
   /mime@1.6.0:
     resolution:
@@ -11588,6 +11620,7 @@ packages:
     engines: { node: '>=16 || 14 >=14.17' }
     dependencies:
       brace-expansion: 2.0.1
+    dev: true
 
   /minimist@1.2.8:
     resolution:
@@ -11683,6 +11716,7 @@ packages:
       any-promise: 1.3.0
       object-assign: 4.1.1
       thenify-all: 1.6.0
+    dev: true
 
   /nanoid@3.3.7:
     resolution:
@@ -11829,6 +11863,7 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       path-key: 3.1.1
+    dev: true
 
   /npm-run-path@5.3.0:
     resolution:
@@ -12001,6 +12036,7 @@ packages:
       }
     dependencies:
       wrappy: 1.0.2
+    dev: true
 
   /onetime@5.1.2:
     resolution:
@@ -12010,6 +12046,7 @@ packages:
     engines: { node: '>=6' }
     dependencies:
       mimic-fn: 2.1.0
+    dev: true
 
   /onetime@6.0.0:
     resolution:
@@ -12251,6 +12288,7 @@ packages:
     dependencies:
       lru-cache: 10.2.2
       minipass: 7.1.2
+    dev: true
 
   /path-to-regexp@0.1.7:
     resolution:
@@ -12419,6 +12457,7 @@ packages:
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
+    dev: true
 
   /postcss-js@4.0.1(postcss@8.4.38):
     resolution:
@@ -12431,6 +12470,7 @@ packages:
     dependencies:
       camelcase-css: 2.0.1
       postcss: 8.4.38
+    dev: true
 
   /postcss-load-config@4.0.2(postcss@8.4.38):
     resolution:
@@ -12462,6 +12502,7 @@ packages:
     dependencies:
       postcss: 8.4.38
       postcss-selector-parser: 6.1.0
+    dev: true
 
   /postcss-selector-parser@6.1.0:
     resolution:
@@ -12472,6 +12513,7 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
+    dev: true
 
   /postcss-value-parser@4.2.0:
     resolution:
@@ -13020,6 +13062,7 @@ packages:
       }
     dependencies:
       pify: 2.3.0
+    dev: true
 
   /read-pkg-up@7.0.1:
     resolution:
@@ -13081,6 +13124,7 @@ packages:
     engines: { node: '>=8.10.0' }
     dependencies:
       picomatch: 2.3.1
+    dev: true
 
   /recast@0.23.9:
     resolution:
@@ -13323,6 +13367,7 @@ packages:
       is-core-module: 2.14.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: true
 
   /resolve@2.0.0-next.5:
     resolution:
@@ -13374,6 +13419,7 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
 
   /rollup@4.18.0:
     resolution:
@@ -13851,6 +13897,7 @@ packages:
       emoji-regex: 8.0.0
       is-fullwidth-code-point: 3.0.0
       strip-ansi: 6.0.1
+    dev: true
 
   /string-width@5.1.2:
     resolution:
@@ -13862,6 +13909,7 @@ packages:
       eastasianwidth: 0.2.0
       emoji-regex: 9.2.2
       strip-ansi: 7.1.0
+    dev: true
 
   /string.prototype.includes@2.0.0:
     resolution:
@@ -13965,6 +14013,7 @@ packages:
     engines: { node: '>=12' }
     dependencies:
       ansi-regex: 6.0.1
+    dev: true
 
   /strip-bom@3.0.0:
     resolution:
@@ -14040,6 +14089,7 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
+      '@babel/core': 7.24.7
       client-only: 0.0.1
       react: 18.3.1
     dev: false
@@ -14059,6 +14109,7 @@ packages:
       mz: 2.7.0
       pirates: 4.0.6
       ts-interface-checker: 0.1.13
+    dev: true
 
   /supports-color@5.5.0:
     resolution:
@@ -14158,6 +14209,7 @@ packages:
       sucrase: 3.35.0
     transitivePeerDependencies:
       - ts-node
+    dev: true
 
   /tapable@2.2.1:
     resolution:
@@ -14270,6 +14322,7 @@ packages:
     engines: { node: '>=0.8' }
     dependencies:
       thenify: 3.3.1
+    dev: true
 
   /thenify@3.3.1:
     resolution:
@@ -14278,6 +14331,7 @@ packages:
       }
     dependencies:
       any-promise: 1.3.0
+    dev: true
 
   /through2@2.0.5:
     resolution:
@@ -14327,6 +14381,7 @@ packages:
     engines: { node: '>=8.0' }
     dependencies:
       is-number: 7.0.0
+    dev: true
 
   /tocbot@4.28.2:
     resolution:
@@ -14375,7 +14430,6 @@ packages:
       {
         integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
       }
-
   /tsconfig-paths@3.15.0:
     resolution:
       {
@@ -15116,6 +15170,7 @@ packages:
       ansi-styles: 4.3.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
+    dev: true
 
   /wrap-ansi@8.1.0:
     resolution:
@@ -15127,6 +15182,7 @@ packages:
       ansi-styles: 6.2.1
       string-width: 5.1.2
       strip-ansi: 7.1.0
+    dev: true
 
   /wrappy@1.0.2:
     resolution:

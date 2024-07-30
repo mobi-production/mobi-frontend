@@ -1,3 +1,4 @@
+export { CHARITY_SLIDE_IMAGES } from './charity-slide-images'
 export {
   ADVANCED_COURSES,
   type ContentCardProps,
@@ -8,3 +9,4 @@ export {
 export { FAQ_LIST, type FaqList } from './faq-list'
 export { MOBI_DESCRIPTION, MOBI_DESCRIPTION_IMAGES } from './MobiDescription'
 export { STACK_IMAGES } from './stack-images'
+export { STATISTIC_CARDS } from './statistic-card'

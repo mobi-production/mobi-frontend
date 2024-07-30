@@ -16,7 +16,11 @@ type Props = {
   className?: string
 }
 function Title({ className, children }: PropsNeedChildren<Props>) {
-  return <h2 className={cn('mb-[32px] text-text-heading-3', className)}>{children}</h2>
+  return (
+    <h2 className={cn('mb-[32px] text-text-heading-3 mobile:text-text-title-1', className)}>
+      {children}
+    </h2>
+  )
 }
 
 function DescriptionList({ className, children }: PropsNeedChildren<Props>) {
@@ -25,7 +29,7 @@ function DescriptionList({ className, children }: PropsNeedChildren<Props>) {
 
 function Description({ className, children }: PropsNeedChildren<Props>) {
   return (
-    <li className={cn('text-text-body-1', className)}>
+    <li className={cn('mobile:text-body-2 text-text-body-1', className)}>
       <span className='font-normal text-gray-1'>{children}</span>
     </li>
   )
@@ -47,11 +51,11 @@ function EducationFeatureCardContainer({
   return (
     <section
       className={cn(
-        'flex h-[23.125rem] w-[77.75rem] flex-row items-center rounded-[1rem] bg-transparent',
+        'flex h-[23.125rem] w-[77.75rem] flex-row items-center rounded-[1rem] bg-transparent mobile:h-auto mobile:w-[20rem] mobile:flex-col',
         className
       )}>
       <div>{image}</div>
-      <div className='border-color-gray-4 flex h-[23.125rem] w-[38.875rem] flex-col justify-center rounded-br-[1rem] rounded-tr-[1rem] border bg-white pl-[4rem] shadow-[0_0_2.5rem_0_rgba(0,0,0,0.05)]'>
+      <div className='border-color-gray-4 flex h-[23.125rem] w-[38.875rem] flex-col justify-center rounded-br-[1rem] rounded-tr-[1rem] border bg-white pl-[4rem] shadow-[0_0_2.5rem_0_rgba(0,0,0,0.05)] mobile:h-auto mobile:w-[20rem] mobile:rounded-bl-[1rem] mobile:rounded-tr-[0rem] mobile:p-[2rem]'>
         {title}
         {info}
       </div>
