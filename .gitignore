@@ -39,3 +39,5 @@ yarn-error.log*
 
 # for Webstorm (IntelliJ)
 .idea
+undefined
+*storybook.log

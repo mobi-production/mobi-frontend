@@ -1,0 +1,26 @@
+{
+  "name": "@mobi/config",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "config",
+    "configuration"
+  ],
+  "main": "index.js",
+  "files": [
+    "postcss.config.js",
+    "tailwind.config.js",
+    "prettier.config.js",
+    "commitlint.config.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.6.1"
+  },
+  "devDependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

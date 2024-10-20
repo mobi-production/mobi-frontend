@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": [".env"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -12,6 +12,22 @@
     "lint": {
       "dependsOn": ["^lint"],
       "cache": false
+    },
+    "academy#dev": {
+      "env": ["ACADEMY_*"],
+      "passThroughEnv": ["ACADEMY_*"]
+    },
+    "lms#dev": {
+      "env": ["LMS_*"],
+      "passThroughEnv": ["LMS_*"]
+    },
+    "academy#build": {
+      "env": ["ACADEMY_*"],
+      "passThroughEnv": ["ACADEMY_*"]
+    },
+    "lms#build": {
+      "env": ["LMS_*"],
+      "passThroughEnv": ["LMS_*"]
     },
     "dev": {
       "cache": false,
