@@ -7,8 +7,8 @@ module.exports = {
     {
       rules: {
         'mobi-jira-rule': (parsed) => {
-          // 커밋 메시지에서 '[MOBI-(이슈 번호)-setting]' 패턴을 제외한 나머지 부분
-          const modifiedHeader = parsed.raw.replace(/^\[MOBI-\d+-[^\]]+\]\s* /, '')
+          // 커밋 메시지에서 '[XXXX-XXXX-XXXX]' 패턴을 제외한 나머지 부분
+          const modifiedHeader = parsed.raw.replace(/^\[[^\]]+\]\s*/, '')
           // 수정된 헤더로부터 type과 subject를 추출
           const match = modifiedHeader.match(/(\w+): (.+)/)
           if (match) {
